@@ -72,99 +72,99 @@
   // ----------------------------------------------------------- //
 
   // Theme colors
-  --#{$prefix}theme-primary: #{tokens.$it-theme-italia-base}; // Theme primary color
-  --#{$prefix}theme-primary-light: #{tokens.$it-theme-italia-light};
-  --#{$prefix}theme-primary-lighter: #{tokens.$it-theme-italia-lighter};
-  --#{$prefix}theme-primary-subtle: #{tokens.$it-theme-italia-subtle};
-  --#{$prefix}theme-primary-muted: #{tokens.$it-theme-italia-muted};
-  --#{$prefix}theme-primary-deep: #{tokens.$it-theme-italia-deep};
+  --#{$prefix}theme-primary: #{tokens.$it-theme-italia-base}; // Base theme color
+  --#{$prefix}theme-primary-light: #{tokens.$it-theme-italia-light}; // Light theme color
+  --#{$prefix}theme-primary-lighter: #{tokens.$it-theme-italia-lighter}; // Very light theme color
+  --#{$prefix}theme-primary-subtle: #{tokens.$it-theme-italia-subtle}; // Less saturated theme color
+  --#{$prefix}theme-primary-muted: #{tokens.$it-theme-italia-muted}; // Much less saturated theme color
+  --#{$prefix}theme-primary-deep: #{tokens.$it-theme-italia-deep}; // Dark theme color
 
   // Colors
-  --#{$prefix}color-blue-30: #{tokens.$it-color-blue-30}; // Color blue 30% (eg. for header slim background)
-  --#{$prefix}color-slate-36: #{tokens.$it-color-slate-36}; // Color for text on chip label disabled state
-  --#{$prefix}color-slate-52: #{tokens.$it-color-slate-52};
-  --#{$prefix}color-slate-62: #{tokens.$it-color-slate-62};
-  --#{$prefix}color-slate-85: #{tokens.$it-color-slate-85};
+  --#{$prefix}color-blue-30: #{tokens.$it-color-blue-30}; // Default theme color (e.g. header slim background)
+  --#{$prefix}color-slate-36: #{tokens.$it-color-slate-36}; // Neutral color (e.g. chip label text, disabled state)
+  --#{$prefix}color-slate-52: #{tokens.$it-color-slate-52}; // Neutral color
+  --#{$prefix}color-slate-62: #{tokens.$it-color-slate-62}; // Neutral color
+  --#{$prefix}color-slate-85: #{tokens.$it-color-slate-85}; // Neutral color
   // ... ? do we nneed to add more colors here or can we just reference the tokens directly in the components?
 
   // Spacing
-  --#{$prefix}spacing-3xl: #{tokens.$it-spacing-3xl}; // equal to 6rem (96px)
-  --#{$prefix}spacing-xxl: #{tokens.$it-spacing-xxl}; // equal to 3rem (48px)
-  --#{$prefix}spacing-xl: #{tokens.$it-spacing-xl}; // equal to 2.5rem (40px)
-  --#{$prefix}spacing-l: #{tokens.$it-spacing-l}; // equal to 2rem (32px)
-  --#{$prefix}spacing-m: #{tokens.$it-spacing-m}; // equal to 1.5rem (24px)
-  --#{$prefix}spacing-s: #{tokens.$it-spacing-s}; // equal to 1rem (16px)
-  --#{$prefix}spacing-14x: #{tokens.$it-spacing-14x}; // equal to 0.875rem (14px)
-  --#{$prefix}spacing-xs: #{tokens.$it-spacing-xs}; // equal to 0.75rem (12px)
-  --#{$prefix}spacing-xxs: #{tokens.$it-spacing-xxs}; // equal to 0.5rem (8px)
-  --#{$prefix}spacing-3xs: #{tokens.$it-spacing-3xs}; // equal to 0.25rem (4px)
+  --#{$prefix}spacing-3xl: #{tokens.$it-spacing-3xl}; // 3-extra-large value of the spacing scale (96px / 6rem)
+  --#{$prefix}spacing-xxl: #{tokens.$it-spacing-xxl}; // Extra-extra-large value of the spacing scale (48px / 3rem)
+  --#{$prefix}spacing-xl: #{tokens.$it-spacing-xl}; // Extra-large value of the spacing scale (40px / 2.5rem)
+  --#{$prefix}spacing-l: #{tokens.$it-spacing-l}; // Large value of the spacing scale (32px / 2rem)
+  --#{$prefix}spacing-m: #{tokens.$it-spacing-m}; // Medium value of the spacing scale (24px / 1.5rem)
+  --#{$prefix}spacing-s: #{tokens.$it-spacing-s}; // Small value of the spacing scale (16px / 1rem)
+  --#{$prefix}spacing-14x: #{tokens.$it-spacing-14x}; // 14x the baseline size (56px / 3.5rem)
+  --#{$prefix}spacing-xs: #{tokens.$it-spacing-xs}; // Extra-small value of the spacing scale (12px / 0.75rem)
+  --#{$prefix}spacing-xxs: #{tokens.$it-spacing-xxs}; // Extra-extra-small value of the spacing scale (8px / 0.5rem)
+  --#{$prefix}spacing-3xs: #{tokens.$it-spacing-3xs}; // 3-extra-small value of the spacing scale (4px / 0.25rem)
   --#{$prefix}heading-spacing: #{tokens.$it-spacing-s};
   --#{$prefix}paragraph-spacing: #{tokens.$it-spacing-m};
 
   // Typography
-  --#{$prefix}font-mono: #{tokens.$it-font-mono};
-  --#{$prefix}font-serif: #{tokens.$it-font-serif};
-  --#{$prefix}font-sans: 'Titillium Web', 'Titillium Sans Pro', #{tokens.$it-font-sans};
-  --#{$prefix}font-weight-strong: #{tokens.$it-font-weight-bold};
-  --#{$prefix}font-weight-solid: #{tokens.$it-font-weight-semibold};
-  --#{$prefix}font-weight-base: #{tokens.$it-font-weight-regular};
-  --#{$prefix}font-weight-thin: #{tokens.$it-font-weight-light};
-  --#{$prefix}font-size-11: #{tokens.$it-font-size-11};
-  --#{$prefix}font-size-10: #{tokens.$it-font-size-10};
-  --#{$prefix}font-size-9: #{tokens.$it-font-size-9};
-  --#{$prefix}font-size-8: #{tokens.$it-font-size-8};
-  --#{$prefix}font-size-7: #{tokens.$it-font-size-7};
-  --#{$prefix}font-size-6: #{tokens.$it-font-size-6};
-  --#{$prefix}font-size-5: #{tokens.$it-font-size-5};
-  --#{$prefix}font-size-4: #{tokens.$it-font-size-4};
-  --#{$prefix}font-size-3: #{tokens.$it-font-size-3};
-  --#{$prefix}font-size-2: #{tokens.$it-font-size-2};
-  --#{$prefix}font-size-1: #{tokens.$it-font-size-1};
-  --#{$prefix}font-leading-5: #{tokens.$it-font-leading-5};
-  --#{$prefix}font-leading-4: #{tokens.$it-font-leading-4};
-  --#{$prefix}font-leading-3: #{tokens.$it-font-leading-3};
-  --#{$prefix}font-leading-2: #{tokens.$it-font-leading-2};
-  --#{$prefix}font-leading-1: #{tokens.$it-font-leading-1};
-  --#{$prefix}font-tracking-normal: #{tokens.$it-font-tracking-normal};
-  --#{$prefix}font-tracking-tight: #{tokens.$it-font-tracking-tight};
-  --#{$prefix}font-tracking-narrow: #{tokens.$it-font-tracking-narrow};
-  --#{$prefix}font-tracking-short: #{tokens.$it-font-tracking-short};
+  --#{$prefix}font-mono: #{tokens.$it-font-mono}; // Monospace font family
+  --#{$prefix}font-serif: #{tokens.$it-font-serif}; // Serif font family
+  --#{$prefix}font-sans: 'Titillium Web', 'Titillium Sans Pro', #{tokens.$it-font-sans}; // Sans-serif font family
+  --#{$prefix}font-weight-strong: #{tokens.$it-font-weight-bold}; // Font weight
+  --#{$prefix}font-weight-solid: #{tokens.$it-font-weight-semibold}; // Font weight
+  --#{$prefix}font-weight-base: #{tokens.$it-font-weight-regular}; // Font weight
+  --#{$prefix}font-weight-thin: #{tokens.$it-font-weight-light}; // Font weight
+  --#{$prefix}font-size-11: #{tokens.$it-font-size-11}; // Type scale size
+  --#{$prefix}font-size-10: #{tokens.$it-font-size-10}; // Type scale size
+  --#{$prefix}font-size-9: #{tokens.$it-font-size-9}; // Type scale size
+  --#{$prefix}font-size-8: #{tokens.$it-font-size-8}; // Type scale size
+  --#{$prefix}font-size-7: #{tokens.$it-font-size-7}; // Type scale size
+  --#{$prefix}font-size-6: #{tokens.$it-font-size-6}; // Type scale size
+  --#{$prefix}font-size-5: #{tokens.$it-font-size-5}; // Type scale size
+  --#{$prefix}font-size-4: #{tokens.$it-font-size-4}; // Type scale size
+  --#{$prefix}font-size-3: #{tokens.$it-font-size-3}; // Type scale size
+  --#{$prefix}font-size-2: #{tokens.$it-font-size-2}; // Type scale size
+  --#{$prefix}font-size-1: #{tokens.$it-font-size-1}; // Type scale size
+  --#{$prefix}font-leading-5: #{tokens.$it-font-leading-5}; // Line height
+  --#{$prefix}font-leading-4: #{tokens.$it-font-leading-4}; // Line height
+  --#{$prefix}font-leading-3: #{tokens.$it-font-leading-3}; // Line height
+  --#{$prefix}font-leading-2: #{tokens.$it-font-leading-2}; // Line height
+  --#{$prefix}font-leading-1: #{tokens.$it-font-leading-1}; // Line height
+  --#{$prefix}font-tracking-normal: #{tokens.$it-font-tracking-normal}; // Letter spacing
+  --#{$prefix}font-tracking-tight: #{tokens.$it-font-tracking-tight}; // Letter spacing
+  --#{$prefix}font-tracking-narrow: #{tokens.$it-font-tracking-narrow}; // Letter spacing
+  --#{$prefix}font-tracking-short: #{tokens.$it-font-tracking-short}; // Letter spacing
   --#{$prefix}display-font-size: #{tokens.$it-font-size-10};
-  --#{$prefix}heading-6-font-size: #{tokens.$it-heading-6-font-size};
-  --#{$prefix}heading-5-font-size: #{tokens.$it-heading-5-font-size};
-  --#{$prefix}heading-4-font-size: #{tokens.$it-heading-4-font-size};
-  --#{$prefix}heading-3-font-size: #{tokens.$it-heading-3-font-size};
-  --#{$prefix}heading-2-font-size: #{tokens.$it-heading-2-font-size};
-  --#{$prefix}heading-1-font-size: #{tokens.$it-heading-1-font-size};
-  --#{$prefix}heading-font-weight: #{tokens.$it-heading-font-weight};
-  --#{$prefix}heading-font-weight-weak: #{tokens.$it-heading-font-weight-weak};
-  --#{$prefix}heading-leading: #{tokens.$it-heading-leading};
-  --#{$prefix}body-font-size: #{tokens.$it-body-font-size};
-  --#{$prefix}body-leading: #{tokens.$it-body-leading};
+  --#{$prefix}heading-6-font-size: #{tokens.$it-heading-6-font-size}; // Default font size for heading 6
+  --#{$prefix}heading-5-font-size: #{tokens.$it-heading-5-font-size}; // Default font size for heading 5
+  --#{$prefix}heading-4-font-size: #{tokens.$it-heading-4-font-size}; // Default font size for heading 4
+  --#{$prefix}heading-3-font-size: #{tokens.$it-heading-3-font-size}; // Default font size for heading 3
+  --#{$prefix}heading-2-font-size: #{tokens.$it-heading-2-font-size}; // Default font size for heading 2
+  --#{$prefix}heading-1-font-size: #{tokens.$it-heading-1-font-size}; // Default font size for heading 1
+  --#{$prefix}heading-font-weight: #{tokens.$it-heading-font-weight}; // Default font weight for headings
+  --#{$prefix}heading-font-weight-weak: #{tokens.$it-heading-font-weight-weak}; // Alternative font weight for secondary headings
+  --#{$prefix}heading-leading: #{tokens.$it-heading-leading}; // Default line height for headings
+  --#{$prefix}body-font-size: #{tokens.$it-body-font-size}; // Default font size for body text
+  --#{$prefix}body-leading: #{tokens.$it-body-leading}; // Default line height for body text
   --#{$prefix}body-font-weight: #{tokens.$it-body-font-weight};
-  --#{$prefix}lead-font-size: #{tokens.$it-lead-font-size};
-  --#{$prefix}lead-leading: #{tokens.$it-lead-leading};
+  --#{$prefix}lead-font-size: #{tokens.$it-lead-font-size}; // Default font size for lead text
+  --#{$prefix}lead-leading: #{tokens.$it-lead-leading}; // Default line height for lead text
   --#{$prefix}lead-font-weight: #{tokens.$it-lead-font-weight};
-  --#{$prefix}caption-font-size: #{tokens.$it-caption-font-size};
-  --#{$prefix}caption-leading: #{tokens.$it-caption-leading};
+  --#{$prefix}caption-font-size: #{tokens.$it-caption-font-size}; // Default font size for captions
+  --#{$prefix}caption-leading: #{tokens.$it-caption-leading}; // Default line height for captions
   --#{$prefix}caption-font-weight-regular: #{tokens.$it-caption-font-weight-regular};
   --#{$prefix}caption-font-weight-semibold: #{tokens.$it-caption-font-weight-semibold};
-  --#{$prefix}label-font-size: #{tokens.$it-label-font-size};
-  --#{$prefix}label-font-size-s: #{tokens.$it-label-font-size-s};
-  --#{$prefix}label-font-size-xs: #{tokens.$it-label-font-size-xs};
-  --#{$prefix}label-font-size-l: #{tokens.$it-label-font-size-l};
-  --#{$prefix}label-leading: #{tokens.$it-label-leading};
+  --#{$prefix}label-font-size: #{tokens.$it-label-font-size}; // Default font size for medium labels
+  --#{$prefix}label-font-size-s: #{tokens.$it-label-font-size-s}; // Default font size for small labels
+  --#{$prefix}label-font-size-xs: #{tokens.$it-label-font-size-xs}; // Default font size for extra-small labels
+  --#{$prefix}label-font-size-l: #{tokens.$it-label-font-size-l}; // Default font size for large labels
+  --#{$prefix}label-leading: #{tokens.$it-label-leading}; // Default line height for labels
 
   // Typography responsive properties
   @include media-breakpoint-up(sm) {
-    --#{$prefix}heading-1-font-size: #{tokens.$it-heading-1-font-size-l};
-    --#{$prefix}heading-2-font-size: #{tokens.$it-heading-2-font-size-l};
-    --#{$prefix}heading-3-font-size: #{tokens.$it-heading-3-font-size-l};
-    --#{$prefix}heading-4-font-size: #{tokens.$it-heading-4-font-size-l};
-    --#{$prefix}heading-5-font-size: #{tokens.$it-heading-5-font-size-l};
-    --#{$prefix}heading-6-font-size: #{tokens.$it-heading-6-font-size-l};
-    --#{$prefix}lead-font-size: #{tokens.$it-lead-font-size-l};
-    --#{$prefix}body-font-size: #{tokens.$it-body-font-size-l};
+    --#{$prefix}heading-1-font-size: #{tokens.$it-heading-1-font-size-l}; // Default font size for large heading 1
+    --#{$prefix}heading-2-font-size: #{tokens.$it-heading-2-font-size-l}; // Default font size for large heading 2
+    --#{$prefix}heading-3-font-size: #{tokens.$it-heading-3-font-size-l}; // Default font size for large heading 3
+    --#{$prefix}heading-4-font-size: #{tokens.$it-heading-4-font-size-l}; // Default font size for large heading 4
+    --#{$prefix}heading-5-font-size: #{tokens.$it-heading-5-font-size-l}; // Default font size for large heading 5
+    --#{$prefix}heading-6-font-size: #{tokens.$it-heading-6-font-size-l}; // Default font size for large heading 6
+    --#{$prefix}lead-font-size: #{tokens.$it-lead-font-size-l}; // Default font size for large lead text
+    --#{$prefix}body-font-size: #{tokens.$it-body-font-size-l}; // Default font size for large body text
   }
 
   @include media-breakpoint-up(md) {
@@ -172,29 +172,29 @@
   }
 
   // Icons
-  --#{$prefix}icon-size-xl: #{tokens.$it-icon-size-xl};
-  --#{$prefix}icon-size-l: #{tokens.$it-icon-size-l};
-  --#{$prefix}icon-size-m: #{tokens.$it-icon-size-m};
-  --#{$prefix}icon-size-s: #{tokens.$it-icon-size-s};
-  --#{$prefix}icon-size-xs: #{tokens.$it-icon-size-xs};
+  --#{$prefix}icon-size-xl: #{tokens.$it-icon-size-xl}; // Extra-large icon size
+  --#{$prefix}icon-size-l: #{tokens.$it-icon-size-l}; // Large icon size
+  --#{$prefix}icon-size-m: #{tokens.$it-icon-size-m}; // Medium icon size
+  --#{$prefix}icon-size-s: #{tokens.$it-icon-size-s}; // Small icon size
+  --#{$prefix}icon-size-xs: #{tokens.$it-icon-size-xs}; // Extra-small icon size
 
   // Border
   --#{$prefix}border-width: 1px;
   --#{$prefix}border-style: solid;
-  --#{$prefix}border-color: #{tokens.$it-color-border-subtle};
-  --#{$prefix}border-broad: #{tokens.$it-border-broad};
-  --#{$prefix}border-thick: #{tokens.$it-border-thick};
-  --#{$prefix}border-double: #{tokens.$it-border-double};
-  --#{$prefix}border-base: #{tokens.$it-border-base};
-  --#{$prefix}radius-rounded: #{tokens.$it-radius-rounded};
-  --#{$prefix}radius-circle: #{tokens.$it-radius-circle};
-  --#{$prefix}radius-smooth: #{tokens.$it-radius-smooth};
+  --#{$prefix}border-color: #{tokens.$it-color-border-subtle}; // Separator border, delimits page sections, components or single elements
+  --#{$prefix}border-broad: #{tokens.$it-border-broad}; // Broad border width
+  --#{$prefix}border-thick: #{tokens.$it-border-thick}; // Thick border width
+  --#{$prefix}border-double: #{tokens.$it-border-double}; // Double border width
+  --#{$prefix}border-base: #{tokens.$it-border-base}; // Base border width
+  --#{$prefix}radius-rounded: #{tokens.$it-radius-rounded}; // Border radius
+  --#{$prefix}radius-circle: #{tokens.$it-radius-circle}; // Border radius
+  --#{$prefix}radius-smooth: #{tokens.$it-radius-smooth}; // Border radius
 
   // Sizing
-  --#{$prefix}sizing-full: #{tokens.$it-sizing-full};
-  --#{$prefix}sizing-two-thirds: #{tokens.$it-sizing-two-thirds};
-  --#{$prefix}sizing-half: #{tokens.$it-sizing-half};
-  --#{$prefix}sizing-quarter: #{tokens.$it-sizing-quarter};
+  --#{$prefix}sizing-full: #{tokens.$it-sizing-full}; // 100% of the containing element
+  --#{$prefix}sizing-two-thirds: #{tokens.$it-sizing-two-thirds}; // Three quarters (75%) of the containing element
+  --#{$prefix}sizing-half: #{tokens.$it-sizing-half}; // Half of the containing element
+  --#{$prefix}sizing-quarter: #{tokens.$it-sizing-quarter}; // A quarter of the containing element
 
   // Shadow
   --#{$prefix}elevation-high: #{tokens.$it-elevation-high};
@@ -202,89 +202,89 @@
   --#{$prefix}elevation-low: #{tokens.$it-elevation-low};
 
   // Text colors
-  --#{$prefix}color-text-accent: #{tokens.$it-color-text-accent};
-  --#{$prefix}color-text-inverse: #{tokens.$it-color-text-inverse};
-  --#{$prefix}color-text-danger-active: #{tokens.$it-color-text-danger-active};
-  --#{$prefix}color-text-danger-hover: #{tokens.$it-color-text-danger-hover};
-  --#{$prefix}color-text-danger: #{tokens.$it-color-text-danger};
-  --#{$prefix}color-text-warning-active: #{tokens.$it-color-text-warning-active};
-  --#{$prefix}color-text-warning-hover: #{tokens.$it-color-text-warning-hover};
-  --#{$prefix}color-text-warning: #{tokens.$it-color-text-warning};
-  --#{$prefix}color-text-success-active: #{tokens.$it-color-text-success-active};
-  --#{$prefix}color-text-success-hover: #{tokens.$it-color-text-success-hover};
-  --#{$prefix}color-text-success: #{tokens.$it-color-text-success};
-  --#{$prefix}color-text-disabled: #{tokens.$it-color-text-disabled};
-  --#{$prefix}color-text-muted: #{tokens.$it-color-text-muted};
-  --#{$prefix}color-text-secondary: #{tokens.$it-color-text-secondary};
-  --#{$prefix}color-text-primary: #{tokens.$it-color-text-primary};
-  --#{$prefix}color-text-base: #{tokens.$it-color-text-base};
+  --#{$prefix}color-text-accent: #{tokens.$it-color-text-accent}; // Accent text, alternative to primary for interactive elements on contrasting backgrounds
+  --#{$prefix}color-text-inverse: #{tokens.$it-color-text-inverse}; // Inverse text for contrasting backgrounds (primary, secondary, emphasis)
+  --#{$prefix}color-text-danger-active: #{tokens.$it-color-text-danger-active}; // Interactive problem/error text in active and pressed state
+  --#{$prefix}color-text-danger-hover: #{tokens.$it-color-text-danger-hover}; // Interactive problem/error text in hover state
+  --#{$prefix}color-text-danger: #{tokens.$it-color-text-danger}; // Text color for a problem or error, can also be interactive (link, button)
+  --#{$prefix}color-text-warning-active: #{tokens.$it-color-text-warning-active}; // Interactive warning text in active and pressed state
+  --#{$prefix}color-text-warning-hover: #{tokens.$it-color-text-warning-hover}; // Interactive warning text in hover state
+  --#{$prefix}color-text-warning: #{tokens.$it-color-text-warning}; // Warning text, can also be interactive (button, link)
+  --#{$prefix}color-text-success-active: #{tokens.$it-color-text-success-active}; // Interactive success text in active and pressed state
+  --#{$prefix}color-text-success-hover: #{tokens.$it-color-text-success-hover}; // Interactive success text in hover state
+  --#{$prefix}color-text-success: #{tokens.$it-color-text-success}; // Success text, can also be interactive (button, link)
+  --#{$prefix}color-text-disabled: #{tokens.$it-color-text-disabled}; // Disabled text
+  --#{$prefix}color-text-muted: #{tokens.$it-color-text-muted}; // Supporting text for very short content
+  --#{$prefix}color-text-secondary: #{tokens.$it-color-text-secondary}; // Alternative body text, detail content, secondary button text
+  --#{$prefix}color-text-primary: #{tokens.$it-color-text-primary}; // Primary text, used for links
+  --#{$prefix}color-text-base: #{tokens.$it-color-text-base}; // Base body text
   --#{$prefix}color-code: #{tokens.$it-color-red-44};
-  --#{$prefix}color-link: #{tokens.$it-color-link-base};
-  --#{$prefix}color-link-hover: #{tokens.$it-color-link-hover};
-  --#{$prefix}color-link-active: #{tokens.$it-color-link-active};
-  --#{$prefix}color-link-secondary: #{tokens.$it-color-link-secondary};
-  --#{$prefix}color-link-secondary-hover: #{tokens.$it-color-link-secondary-hover};
-  --#{$prefix}color-link-secondary-active: #{tokens.$it-color-link-secondary-active};
-  --#{$prefix}color-link-inverse: #{tokens.$it-color-link-inverse};
-  --#{$prefix}color-link-disabled: #{tokens.$it-color-link-disabled};
-  --#{$prefix}color-link-accent: #{tokens.$it-color-link-accent};
-  --#{$prefix}color-link-accent-hover: #{tokens.$it-color-link-accent-hover};
+  --#{$prefix}color-link: #{tokens.$it-color-link-base}; // Base link color
+  --#{$prefix}color-link-hover: #{tokens.$it-color-link-hover}; // Link color in hover state
+  --#{$prefix}color-link-active: #{tokens.$it-color-link-active}; // Link color in active state
+  --#{$prefix}color-link-secondary: #{tokens.$it-color-link-secondary}; // Secondary link color, always requires underline
+  --#{$prefix}color-link-secondary-hover: #{tokens.$it-color-link-secondary-hover}; // Secondary link color in hover state
+  --#{$prefix}color-link-secondary-active: #{tokens.$it-color-link-secondary-active}; // Secondary link color in active and pressed state
+  --#{$prefix}color-link-inverse: #{tokens.$it-color-link-inverse}; // Inverse link color
+  --#{$prefix}color-link-disabled: #{tokens.$it-color-link-disabled}; // Disabled link color
+  --#{$prefix}color-link-accent: #{tokens.$it-color-link-accent}; // Accent link color
+  --#{$prefix}color-link-accent-hover: #{tokens.$it-color-link-accent-hover}; // Accent link color in hover state
 
   // Border colors
-  --#{$prefix}color-border-danger-active: #{tokens.$it-color-border-danger-active};
-  --#{$prefix}color-border-danger-hover: #{tokens.$it-color-border-danger-hover};
-  --#{$prefix}color-border-danger: #{tokens.$it-color-border-danger};
-  --#{$prefix}color-border-warning-active: #{tokens.$it-color-border-warning-active};
-  --#{$prefix}color-border-warning-hover: #{tokens.$it-color-border-warning-hover};
-  --#{$prefix}color-border-warning: #{tokens.$it-color-border-warning};
-  --#{$prefix}color-border-success-active: #{tokens.$it-color-border-success-active};
-  --#{$prefix}color-border-success-hover: #{tokens.$it-color-border-success-hover};
-  --#{$prefix}color-border-success: #{tokens.$it-color-border-success};
-  --#{$prefix}color-border-subtle: #{tokens.$it-color-border-subtle};
-  --#{$prefix}color-border-disabled: #{tokens.$it-color-border-disabled};
-  --#{$prefix}color-border-inverse: #{tokens.$it-color-border-inverse};
-  --#{$prefix}color-border-secondary-active: #{tokens.$it-color-border-secondary-active};
-  --#{$prefix}color-border-secondary-hover: #{tokens.$it-color-border-secondary-hover};
-  --#{$prefix}color-border-secondary: #{tokens.$it-color-border-secondary};
-  --#{$prefix}color-border-primary-active: #{tokens.$it-color-border-primary-active};
-  --#{$prefix}color-border-primary-hover: #{tokens.$it-color-border-primary-hover};
-  --#{$prefix}color-border-primary: #{tokens.$it-color-border-primary};
-  --#{$prefix}color-outline-focus: #{tokens.$it-color-outline-focus};
+  --#{$prefix}color-border-danger-active: #{tokens.$it-color-border-danger-active}; // Danger/error border in active and pressed state
+  --#{$prefix}color-border-danger-hover: #{tokens.$it-color-border-danger-hover}; // Danger/error border in hover state
+  --#{$prefix}color-border-danger: #{tokens.$it-color-border-danger}; // Danger/error border, used for interactive or static elements (alerts, notifications, etc.)
+  --#{$prefix}color-border-warning-active: #{tokens.$it-color-border-warning-active}; // Warning border in active and pressed state
+  --#{$prefix}color-border-warning-hover: #{tokens.$it-color-border-warning-hover}; // Warning border in hover state
+  --#{$prefix}color-border-warning: #{tokens.$it-color-border-warning}; // Warning border, used for interactive or static elements (alerts, notifications, etc.)
+  --#{$prefix}color-border-success-active: #{tokens.$it-color-border-success-active}; // Success border in active and pressed state
+  --#{$prefix}color-border-success-hover: #{tokens.$it-color-border-success-hover}; // Success border in hover state
+  --#{$prefix}color-border-success: #{tokens.$it-color-border-success}; // Success border, used for interactive or static elements (alerts, notifications, etc.)
+  --#{$prefix}color-border-subtle: #{tokens.$it-color-border-subtle}; // Separator border, delimits page sections, components or single elements
+  --#{$prefix}color-border-disabled: #{tokens.$it-color-border-disabled}; // Border for disabled interactive elements
+  --#{$prefix}color-border-inverse: #{tokens.$it-color-border-inverse}; // Inverse border, used on contrasting primary, secondary or emphasis backgrounds
+  --#{$prefix}color-border-secondary-active: #{tokens.$it-color-border-secondary-active}; // Secondary border in active and pressed state
+  --#{$prefix}color-border-secondary-hover: #{tokens.$it-color-border-secondary-hover}; // Secondary border in hover state
+  --#{$prefix}color-border-secondary: #{tokens.$it-color-border-secondary}; // Secondary border, used for clickable interactive elements
+  --#{$prefix}color-border-primary-active: #{tokens.$it-color-border-primary-active}; // Primary border in active and pressed state
+  --#{$prefix}color-border-primary-hover: #{tokens.$it-color-border-primary-hover}; // Primary border in hover state
+  --#{$prefix}color-border-primary: #{tokens.$it-color-border-primary}; // Primary border, used for clickable interactive elements
+  --#{$prefix}color-outline-focus: #{tokens.$it-color-outline-focus}; // Focus state highlight color
 
   // Background colors
-  --#{$prefix}color-background-primary: #{tokens.$it-color-background-primary};
-  --#{$prefix}color-background-primary-lighter: #{tokens.$it-color-background-primary-lighter};
-  --#{$prefix}color-background-primary-light: #{tokens.$it-color-background-primary-light};
-  --#{$prefix}color-background-primary-deep: #{tokens.$it-color-background-primary-deep};
-  --#{$prefix}color-background-primary-muted: #{tokens.$it-color-background-primary-muted};
-  --#{$prefix}color-background-primary-active: #{tokens.$it-color-background-primary-active};
-  --#{$prefix}color-background-primary-hover: #{tokens.$it-color-background-primary-hover};
-  --#{$prefix}color-background-danger-active: #{tokens.$it-color-background-danger-active};
-  --#{$prefix}color-background-danger-hover: #{tokens.$it-color-background-danger-hover};
-  --#{$prefix}color-background-danger-light: #{tokens.$it-color-background-danger-light};
-  --#{$prefix}color-background-danger: #{tokens.$it-color-background-danger};
-  --#{$prefix}color-background-warning-active: #{tokens.$it-color-background-warning-active};
-  --#{$prefix}color-background-warning-hover: #{tokens.$it-color-background-warning-hover};
-  --#{$prefix}color-background-warning-light: #{tokens.$it-color-background-warning-light};
-  --#{$prefix}color-background-warning: #{tokens.$it-color-background-warning};
-  --#{$prefix}color-background-success-active: #{tokens.$it-color-background-success-active};
-  --#{$prefix}color-background-success-hover: #{tokens.$it-color-background-success-hover};
-  --#{$prefix}color-background-success-light: #{tokens.$it-color-background-success-light};
+  --#{$prefix}color-background-primary: #{tokens.$it-color-background-primary}; // Primary background, used for interactive elements (buttons, links) and elements carrying the visual identity
+  --#{$prefix}color-background-primary-lighter: #{tokens.$it-color-background-primary-lighter}; // Low-contrast primary background, defines a section (or part of it) within the page
+  --#{$prefix}color-background-primary-light: #{tokens.$it-color-background-primary-light}; // Light-contrast background, alternative to the primary color for interactive elements
+  --#{$prefix}color-background-primary-deep: #{tokens.$it-color-background-primary-deep}; // Background used on page sections
+  --#{$prefix}color-background-primary-muted: #{tokens.$it-color-background-primary-muted}; // Background used on page sections
+  --#{$prefix}color-background-primary-active: #{tokens.$it-color-background-primary-active}; // Background for primary interactive components in active and pressed state
+  --#{$prefix}color-background-primary-hover: #{tokens.$it-color-background-primary-hover}; // Background for primary interactive components in hover state
+  --#{$prefix}color-background-danger-active: #{tokens.$it-color-background-danger-active}; // Danger/error background for interactive elements in active and pressed state
+  --#{$prefix}color-background-danger-hover: #{tokens.$it-color-background-danger-hover}; // Danger/error background for interactive elements in hover state
+  --#{$prefix}color-background-danger-light: #{tokens.$it-color-background-danger-light}; // Danger/error background for sections and components with medium/long content; text can use any variant except inverse
+  --#{$prefix}color-background-danger: #{tokens.$it-color-background-danger}; // Danger/error background for interactive elements or components; text must be inverse
+  --#{$prefix}color-background-warning-active: #{tokens.$it-color-background-warning-active}; // Warning background for interactive elements in active and pressed state
+  --#{$prefix}color-background-warning-hover: #{tokens.$it-color-background-warning-hover}; // Warning background for interactive elements in hover state
+  --#{$prefix}color-background-warning-light: #{tokens.$it-color-background-warning-light}; // Warning background for sections and components with medium/long content; text can use any variant except inverse
+  --#{$prefix}color-background-warning: #{tokens.$it-color-background-warning}; // Warning background for interactive elements or components; text must be inverse
+  --#{$prefix}color-background-success-active: #{tokens.$it-color-background-success-active}; // Success background for interactive elements in active and pressed state
+  --#{$prefix}color-background-success-hover: #{tokens.$it-color-background-success-hover}; // Success background for interactive elements in hover state
+  --#{$prefix}color-background-success-light: #{tokens.$it-color-background-success-light}; // Success background for sections and components with medium/long content; text can use any variant except inverse
   // --#{$prefix}color-background-success-lighter: #{tokens.$it-color-background-success-lighter};
-  --#{$prefix}color-background-success: #{tokens.$it-color-background-success};
-  --#{$prefix}color-background-emphasis: #{tokens.$it-color-background-emphasis};
-  --#{$prefix}color-background-subtle: #{tokens.$it-color-background-subtle};
-  --#{$prefix}color-background-disabled: #{tokens.$it-color-background-disabled};
-  --#{$prefix}color-background-inverse: #{tokens.$it-color-background-inverse};
+  --#{$prefix}color-background-success: #{tokens.$it-color-background-success}; // Success background for interactive elements or components; text must be inverse
+  --#{$prefix}color-background-emphasis: #{tokens.$it-color-background-emphasis}; // Emphasis background, used to highlight specific page sections
+  --#{$prefix}color-background-subtle: #{tokens.$it-color-background-subtle}; // Light background, used to define page sections
+  --#{$prefix}color-background-disabled: #{tokens.$it-color-background-disabled}; // Background for disabled/inactive interactive elements
+  --#{$prefix}color-background-inverse: #{tokens.$it-color-background-inverse}; // Inverse background, used together with a primary, secondary or neutral page/section background
   --#{$prefix}color-background-inverse-hover: #{tokens.$it-color-slate-93}; // TODO: replace with semantic token
-  --#{$prefix}color-background-muted: #{tokens.$it-color-background-muted};
-  --#{$prefix}color-background-accent-hover: #{tokens.$it-color-background-accent-hover};
-  --#{$prefix}color-background-accent: #{tokens.$it-color-background-accent};
-  --#{$prefix}color-background-secondary-lighter: #{tokens.$it-color-background-secondary-lighter};
-  --#{$prefix}color-background-secondary-light: #{tokens.$it-color-background-secondary-light};
-  --#{$prefix}color-background-secondary-active: #{tokens.$it-color-background-secondary-active};
-  --#{$prefix}color-background-secondary-hover: #{tokens.$it-color-background-secondary-hover};
-  --#{$prefix}color-background-secondary: #{tokens.$it-color-background-secondary};
+  --#{$prefix}color-background-muted: #{tokens.$it-color-background-muted}; // Very low-contrast background, defines page sections or text paragraphs
+  --#{$prefix}color-background-accent-hover: #{tokens.$it-color-background-accent-hover}; // Accent background for interactive elements in hover state
+  --#{$prefix}color-background-accent: #{tokens.$it-color-background-accent}; // Accent background for interactive elements
+  --#{$prefix}color-background-secondary-lighter: #{tokens.$it-color-background-secondary-lighter}; // Very light secondary background
+  --#{$prefix}color-background-secondary-light: #{tokens.$it-color-background-secondary-light}; // Light secondary background
+  --#{$prefix}color-background-secondary-active: #{tokens.$it-color-background-secondary-active}; // Background for secondary interactive elements in active and pressed state
+  --#{$prefix}color-background-secondary-hover: #{tokens.$it-color-background-secondary-hover}; // Background for secondary interactive elements in hover state
+  --#{$prefix}color-background-secondary: #{tokens.$it-color-background-secondary}; // Alternative background, used for secondary interactive elements or page sections
   --#{$prefix}color-background-secondary-deep: #{tokens.$it-color-slate-20};
   --#{$prefix}overlay-background-light: hsla(0, 0%, 0%, 0.5);
   --#{$prefix}overlay-background-primary: hsla(210, 100%, 40%, 0.85);
@@ -307,24 +307,24 @@
   --#{$prefix}color-status-warning-active: #{tokens.$it-color-background-warning-active};
 
   // Icons colors
-  --#{$prefix}icon-danger-active: #{tokens.$it-icon-danger-active};
-  --#{$prefix}icon-danger-hover: #{tokens.$it-icon-danger-hover};
-  --#{$prefix}icon-danger: #{tokens.$it-icon-danger};
-  --#{$prefix}icon-warning-active: #{tokens.$it-icon-warning-active};
-  --#{$prefix}icon-warning-hover: #{tokens.$it-icon-warning-hover};
-  --#{$prefix}icon-warning: #{tokens.$it-icon-warning};
-  --#{$prefix}icon-success-active: #{tokens.$it-icon-success-active};
-  --#{$prefix}icon-success-hover: #{tokens.$it-icon-success-hover};
-  --#{$prefix}icon-success: #{tokens.$it-icon-success};
-  --#{$prefix}icon-secondary-active: #{tokens.$it-icon-secondary-active};
-  --#{$prefix}icon-inverse: #{tokens.$it-icon-inverse};
-  --#{$prefix}icon-secondary-hover: #{tokens.$it-icon-secondary-hover};
-  --#{$prefix}icon-secondary: #{tokens.$it-icon-secondary};
-  --#{$prefix}icon-primary-active: #{tokens.$it-icon-primary-active};
-  --#{$prefix}icon-primary-hover: #{tokens.$it-icon-primary-hover};
-  --#{$prefix}icon-primary: #{tokens.$it-icon-primary};
-  --#{$prefix}icon-default: #{tokens.$it-icon-default};
-  --#{$prefix}icon-disabled: #{tokens.$it-icon-disabled};
+  --#{$prefix}icon-danger-active: #{tokens.$it-icon-danger-active}; // Supporting icon color for failed actions, active state
+  --#{$prefix}icon-danger-hover: #{tokens.$it-icon-danger-hover}; // Supporting icon color for failed actions, hover state
+  --#{$prefix}icon-danger: #{tokens.$it-icon-danger}; // Supporting icon color for failed actions
+  --#{$prefix}icon-warning-active: #{tokens.$it-icon-warning-active}; // Supporting icon color for messages that require attention, active state
+  --#{$prefix}icon-warning-hover: #{tokens.$it-icon-warning-hover}; // Supporting icon color for messages that require attention, hover state
+  --#{$prefix}icon-warning: #{tokens.$it-icon-warning}; // Supporting icon color for messages that require attention
+  --#{$prefix}icon-success-active: #{tokens.$it-icon-success-active}; // Supporting icon color for successful actions, active state
+  --#{$prefix}icon-success-hover: #{tokens.$it-icon-success-hover}; // Supporting icon color for successful actions, hover state
+  --#{$prefix}icon-success: #{tokens.$it-icon-success}; // Supporting icon color for successful actions
+  --#{$prefix}icon-secondary-active: #{tokens.$it-icon-secondary-active}; // Supporting icon color, active state
+  --#{$prefix}icon-inverse: #{tokens.$it-icon-inverse}; // Inverse icon color
+  --#{$prefix}icon-secondary-hover: #{tokens.$it-icon-secondary-hover}; // Supporting icon color, hover state
+  --#{$prefix}icon-secondary: #{tokens.$it-icon-secondary}; // Supporting icon color
+  --#{$prefix}icon-primary-active: #{tokens.$it-icon-primary-active}; // Link icon color, active state
+  --#{$prefix}icon-primary-hover: #{tokens.$it-icon-primary-hover}; // Link icon color, hover state
+  --#{$prefix}icon-primary: #{tokens.$it-icon-primary}; // Link icon color
+  --#{$prefix}icon-default: #{tokens.$it-icon-default}; // Base icon color
+  --#{$prefix}icon-disabled: #{tokens.$it-icon-disabled}; // Disabled icon color
   --#{$prefix}icon-spacing: #{tokens.$it-spacing-xs};
 
   // Transitions
