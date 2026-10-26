@@ -17,6 +17,15 @@ mapped_vars = {}
 # Substitute in `src/scss/base/_root.scss` the string `@use 'design-tokens-italia/` with `@use '../../../node_modules/design-tokens-italia/` to ensure that the design tokens are correctly imported from the node_modules folder. This is necessary because the `_root.scss` file is located in the `src/scss/base/` directory, and we need to go up three levels to reach the `node_modules` folder.
 with open(os.path.join(SCSS_BASE_PATH, 'base', '_root.scss'), 'r') as f:
     root_scss_content = f.read()
+
+# Sass drops `//` comments on compile, so collect the descriptions from the source first.
+# The first declaration wins: responsive overrides inside @media keep the base description.
+root_descriptions = {}
+for line in root_scss_content.splitlines():
+    m = re.match(r'\s*--#\{\$prefix\}([a-z0-9-]+):[^;]*;\s*//\s*(.+)', line)
+    if m:
+        root_descriptions.setdefault(m.group(1), m.group(2).strip())
+
 root_scss_content = root_scss_content.replace("@use 'design-tokens-italia/", "@use '../../../node_modules/design-tokens-italia/")
 with open(os.path.join(SCSS_BASE_PATH, 'base', '_root.scss'), 'w') as f:
     f.write(root_scss_content)
@@ -27,11 +36,21 @@ with open(os.path.join(SCSS_BASE_PATH, 'base', '_root.scss'), 'w') as f:
 ROOT_COMPILATION_CMD = "node -e \"const sass = require('sass');const result = sass.compile('src/scss/base/_root.scss');console.log(result.css);\""
 
 result = subprocess.run(ROOT_COMPILATION_CMD, shell=True, stdout=subprocess.PIPE)
-result.stdout
+
+
+# Re-attach the source descriptions to the compiled declarations
+def annotate(line):
+    m = re.match(r'(\s*--bsi-?([a-z0-9-]+):[^;]*;)\s*$', line)
+    if m and m.group(2) in root_descriptions:
+        return f"{m.group(1)} // {root_descriptions[m.group(2)]}"
+    return line
+
+
+compiled_root = '\n'.join(annotate(l) for l in result.stdout.decode('utf-8').splitlines())
 
 # Write the compiled CSS to /src/scss/components/_root.scss file
 with open(os.path.join(SCSS_BASE_PATH, 'components', '_root.scss'), 'w') as broot_file:
-    broot_file.write("// Properties\n\n" + result.stdout.decode('utf-8').replace('--bsi', '--#{$prefix}') + "\n\n// Styles\n")
+    broot_file.write("// Properties\n\n" + compiled_root.replace('--bsi-', '--#{$prefix}') + "\n\n// Styles\n")
 
 
 # Revert the changes made to `src/scss/base/_root.scss` to restore the original import statement for design tokens
@@ -67,10 +86,10 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
                                 if selector.startswith(":root"):
                                     selector = selector.replace(":root", file.replace(".scss", "").replace("_", ""))
                         else:
-                            vars.append(re.findall(r'\s+(--#{\$prefix}[a-z0-9-]+):\s(.*);(\s\/\/.*)?', line))
+                            vars.append(re.findall(r'\s+(--#{\$prefix}[a-z0-9-]+):\s([^;]*);(\s\/\/.*)?', line))
             if selector and vars:
                 vars = (functools.reduce(operator.iconcat, vars, []))
-                print (f"📤 Extracting variables for `.{selector}` selector from {css_file_to_inspect}.scss file")
+                print (f"📤 Extracting variables for `.{selector}` selector from {css_file_to_inspect} file")
                 mapped_vars[selector] = []
                 # Map variables with prefix (e.g. dropdown, form ecc..)
                 for pkt in vars:
@@ -86,7 +105,7 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
                         mapped_vars[selector].append({
                             'variable-name': var,
                             'value': pkt[1].replace("--#{$prefix}", "--bsi-"),
-                            'description': pkt[2].replace('//', '').strip().capitalize(),
+                            'description': (lambda d: d[:1].upper() + d[1:])(pkt[2].replace('//', '').strip()),
                             'other_values': [],
                             'files': [css_file_to_inspect_name]
                         })
@@ -105,7 +124,7 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
                     if '// Styles' in line:
                         inspect_other_values = True
                     if inspect_other_values:
-                        for new_var in re.findall(r'\s+(--#{\$prefix}[a-z0-9-]+):\s(.*);(\s\/\/.*)?', line):
+                        for new_var in re.findall(r'\s+(--#{\$prefix}[a-z0-9-]+):\s([^;]*);(\s\/\/.*)?', line):
                             name, value, description = new_var
                             name = name.replace("--#{$prefix}", "--bsi-")
                             value = value.replace("--#{$prefix}", "--bsi-")
