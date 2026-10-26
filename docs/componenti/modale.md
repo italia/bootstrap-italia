@@ -302,8 +302,8 @@ Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficie
                     <p>Breve messaggio di conferma inserito nella modale</p>
                   </div>
                   <div class="modal-footer">
-                    <button class="btn btn-primary btn-sm" type="button">Azione 1</button>
-                    <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-dismiss="modal">Azione 2</button>
+                    <button class="btn btn-primary btn-xs" type="button">Azione 1</button>
+                    <button class="btn btn-outline-secondary btn-xs" type="button" data-bs-dismiss="modal">Azione 2</button>
                   </div>
               </div>
             </div>

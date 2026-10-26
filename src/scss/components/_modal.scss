@@ -95,6 +95,10 @@
   flex: 1 1 auto;
   padding: var(--#{$prefix}modal-padding);
   color: var(--#{$prefix}color-text-base);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Actual modal
@@ -128,8 +132,12 @@
   flex-shrink: 0;
   align-items: center;
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
-  padding: var(--#{$prefix}modal-padding) var(--#{$prefix}modal-padding) 0;
+  padding: var(--#{$prefix}modal-padding) var(--#{$prefix}modal-padding) calc(var(--#{$prefix}modal-padding) - var(--#{$prefix}spacing-xxs));
   border-bottom: var(--#{$prefix}modal-header-border-width) solid var(--#{$prefix}modal-header-border-color);
+}
+
+.modal-header + .modal-body {
+  padding-top: var(--#{$prefix}spacing-xxs);
 }
 
 // Modal footer
@@ -147,6 +155,7 @@
   @include border-bottom-radius(var(--#{$prefix}modal-inner-border-radius));
 
   &.modal-footer-shadow {
+    padding-top: calc(var(--#{$prefix}modal-padding) - var(--#{$prefix}spacing-xxs));
     box-shadow: 0 15px 25px 5px rgb(0, 0, 0, 0.3);
   }
 }
@@ -271,13 +280,14 @@
         .modal-header {
           --#{$prefix}modal-header-border-color: var(--#{$prefix}color-border-subtle);
           --#{$prefix}modal-header-border-width: 1px;
-          padding-bottom: var(--#{$prefix}modal-padding);
         }
+
         .modal-body {
+          padding-top: var(--#{$prefix}modal-padding);
+
           .link-list-wrapper {
             .link-list {
               margin-bottom: 0;
-              padding-bottom: var(--#{$prefix}modal-padding);
             }
           }
         }
@@ -291,11 +301,9 @@
       margin-right: auto;
       margin-left: auto;
 
-      .modal-body {
-        p {
-          font-size: var(--#{$prefix}caption-font-size);
-          line-height: var(--#{$prefix}caption-leading);
-        }
+      // Confirmation text stays at 16px from sm up, without the default body font-size stepup to 18px
+      .modal-body p {
+        --#{$prefix}body-font-size: 1rem;
       }
       .modal-footer {
         justify-content: flex-start;
@@ -326,16 +334,14 @@
 
         .modal-header {
           flex-shrink: 0;
-          padding-bottom: var(--#{$prefix}modal-padding);
         }
 
         .modal-body {
-          padding-top: 0;
           overflow-y: auto;
         }
 
         .modal-footer {
-          padding-top: var(--#{$prefix}modal-padding);
+          padding-top: calc(var(--#{$prefix}modal-padding) - var(--#{$prefix}spacing-xxs));
           flex-shrink: 0;
         }
       }
