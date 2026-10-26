@@ -218,9 +218,6 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
   </table>
 </div>
 
-{% endif %}
-
-
 <!-- Text Colors -->
 
 <h3>Text colors</h3>
@@ -249,9 +246,6 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
     </tbody>
   </table>
 </div>
-
-{% endif %}
-
 
 <!-- Border Colors -->
 
@@ -282,8 +276,6 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
   </table>
 </div>
 
-{% endif %}
-
 <!-- Background Colors -->
 
 <h3>Background colors</h3>
@@ -313,9 +305,6 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
   </table>
 </div>
 
-{% endif %}
-
-
 <!-- Status Colors -->
 
 <h3>Status colors</h3>
@@ -344,8 +333,6 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
     </tbody>
   </table>
 </div>
-
-{% endif %}
 
 <!-- Icon Colors -->
 
@@ -377,9 +364,6 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
     </tbody>
   </table>
 </div>
-
-{% endif %}
-
 
 <!-- Transitions -->
 
