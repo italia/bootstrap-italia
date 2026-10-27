@@ -3939,7 +3939,7 @@
             "variable-name": "--bsi-navbar-close-button-text-color"
         },
         {
-            "description": "Controls the z-index for the collapsable navbar overlay. default matching the modal's.",
+            "description": "Controls the z-index for the collapsable navbar overlay. Default matching the modal's.",
             "files": [
                 "_navbar.scss"
             ],
@@ -4653,6 +4653,2441 @@
             "variable-name": "--bsi-rating-text"
         }
     ],
+    "root": [
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 96%)",
+            "variable-name": "--bsi-gray-100"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 90%)",
+            "variable-name": "--bsi-gray-200"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 83%)",
+            "variable-name": "--bsi-gray-300"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 64%)",
+            "variable-name": "--bsi-gray-400"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 45%)",
+            "variable-name": "--bsi-gray-500"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 32%)",
+            "variable-name": "--bsi-gray-600"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 25%)",
+            "variable-name": "--bsi-gray-700"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 15%)",
+            "variable-name": "--bsi-gray-800"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 10%)",
+            "variable-name": "--bsi-gray-900"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(210, 100%, 40%)",
+            "variable-name": "--bsi-primary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(210, 17%, 44%)",
+            "variable-name": "--bsi-secondary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(160, 100%, 25%)",
+            "variable-name": "--bsi-success"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(210, 17%, 44%)",
+            "variable-name": "--bsi-info"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(36, 100%, 30%)",
+            "variable-name": "--bsi-warning"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(350, 60%, 50%)",
+            "variable-name": "--bsi-danger"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(255, 32.2033898305%, 92.625%)",
+            "variable-name": "--bsi-light"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(210, 54%, 20%)",
+            "variable-name": "--bsi-dark"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 0%)",
+            "variable-name": "--bsi-black"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 100%)",
+            "variable-name": "--bsi-white"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 96%)",
+            "variable-name": "--bsi-100"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 90%)",
+            "variable-name": "--bsi-200"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 83%)",
+            "variable-name": "--bsi-300"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 64%)",
+            "variable-name": "--bsi-400"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 45%)",
+            "variable-name": "--bsi-500"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 32%)",
+            "variable-name": "--bsi-600"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 25%)",
+            "variable-name": "--bsi-700"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 15%)",
+            "variable-name": "--bsi-800"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 10%)",
+            "variable-name": "--bsi-900"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "0, 102, 204",
+            "variable-name": "--bsi-primary-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "93.126, 112.2, 131.274",
+            "variable-name": "--bsi-secondary-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "0, 127.5, 85",
+            "variable-name": "--bsi-success-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "93.126, 112.2, 131.274",
+            "variable-name": "--bsi-info-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "153, 91.8, 0",
+            "variable-name": "--bsi-warning-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "204, 51, 76.5",
+            "variable-name": "--bsi-danger-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "233.165625, 230.1375, 242.25",
+            "variable-name": "--bsi-light-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "23.46, 51, 78.54",
+            "variable-name": "--bsi-dark-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "0, 0, 0",
+            "variable-name": "--bsi-black-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "255, 255, 255",
+            "variable-name": "--bsi-white-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "244.8, 244.8, 244.8",
+            "variable-name": "--bsi-100-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "229.5, 229.5, 229.5",
+            "variable-name": "--bsi-200-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "211.65, 211.65, 211.65",
+            "variable-name": "--bsi-300-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "163.2, 163.2, 163.2",
+            "variable-name": "--bsi-400-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "114.75, 114.75, 114.75",
+            "variable-name": "--bsi-500-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "81.6, 81.6, 81.6",
+            "variable-name": "--bsi-600-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "63.75, 63.75, 63.75",
+            "variable-name": "--bsi-700-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "38.25, 38.25, 38.25",
+            "variable-name": "--bsi-800-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "25.5, 25.5, 25.5",
+            "variable-name": "--bsi-900-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))",
+            "variable-name": "--bsi-gradient"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "rgba(0, 0, 0, 0.175)",
+            "variable-name": "--bsi-border-color-translucent"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "4px",
+            "variable-name": "--bsi-border-radius"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "2px",
+            "variable-name": "--bsi-border-radius-sm"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "8px",
+            "variable-name": "--bsi-border-radius-lg"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1rem",
+            "variable-name": "--bsi-border-radius-xl"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "2rem",
+            "variable-name": "--bsi-border-radius-2xl"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "50rem",
+            "variable-name": "--bsi-border-radius-pill"
+        },
+        {
+            "description": "Base theme color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#0066cc",
+            "variable-name": "--bsi-theme-primary"
+        },
+        {
+            "description": "Light theme color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#bfdfff",
+            "variable-name": "--bsi-theme-primary-light"
+        },
+        {
+            "description": "Very light theme color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#f2f7fc",
+            "variable-name": "--bsi-theme-primary-lighter"
+        },
+        {
+            "description": "Less saturated theme color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d99",
+            "variable-name": "--bsi-theme-primary-subtle"
+        },
+        {
+            "description": "Much less saturated theme color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004080",
+            "variable-name": "--bsi-theme-primary-muted"
+        },
+        {
+            "description": "Dark theme color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#003366",
+            "variable-name": "--bsi-theme-primary-deep"
+        },
+        {
+            "description": "Default theme color (e.g. header slim background)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d99",
+            "variable-name": "--bsi-color-blue-30"
+        },
+        {
+            "description": "Neutral color (e.g. chip label text, disabled state)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#455b71",
+            "variable-name": "--bsi-color-slate-36"
+        },
+        {
+            "description": "Neutral color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#768594",
+            "variable-name": "--bsi-color-slate-52"
+        },
+        {
+            "description": "Neutral color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#929da9",
+            "variable-name": "--bsi-color-slate-62"
+        },
+        {
+            "description": "Neutral color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#d9dadb",
+            "variable-name": "--bsi-color-slate-85"
+        },
+        {
+            "description": "3-extra-large value of the spacing scale (96px / 6rem)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "96px",
+            "variable-name": "--bsi-spacing-3xl"
+        },
+        {
+            "description": "Extra-extra-large value of the spacing scale (48px / 3rem)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "48px",
+            "variable-name": "--bsi-spacing-xxl"
+        },
+        {
+            "description": "Extra-large value of the spacing scale (40px / 2.5rem)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "40px",
+            "variable-name": "--bsi-spacing-xl"
+        },
+        {
+            "description": "Large value of the spacing scale (32px / 2rem)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "32px",
+            "variable-name": "--bsi-spacing-l"
+        },
+        {
+            "description": "Medium value of the spacing scale (24px / 1.5rem)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "24px",
+            "variable-name": "--bsi-spacing-m"
+        },
+        {
+            "description": "Small value of the spacing scale (16px / 1rem)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "16px",
+            "variable-name": "--bsi-spacing-s"
+        },
+        {
+            "description": "14x the baseline size (56px / 3.5rem)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "56px",
+            "variable-name": "--bsi-spacing-14x"
+        },
+        {
+            "description": "Extra-small value of the spacing scale (12px / 0.75rem)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "12px",
+            "variable-name": "--bsi-spacing-xs"
+        },
+        {
+            "description": "Extra-extra-small value of the spacing scale (8px / 0.5rem)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "8px",
+            "variable-name": "--bsi-spacing-xxs"
+        },
+        {
+            "description": "3-extra-small value of the spacing scale (4px / 0.25rem)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "4px",
+            "variable-name": "--bsi-spacing-3xs"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "16px",
+            "variable-name": "--bsi-heading-spacing"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "24px",
+            "variable-name": "--bsi-paragraph-spacing"
+        },
+        {
+            "description": "Monospace font family",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "Roboto Mono",
+            "variable-name": "--bsi-font-mono"
+        },
+        {
+            "description": "Serif font family",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "Lora",
+            "variable-name": "--bsi-font-serif"
+        },
+        {
+            "description": "Sans-serif font family",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "'Titillium Web', 'Titillium Sans Pro', Titillium Web",
+            "variable-name": "--bsi-font-sans"
+        },
+        {
+            "description": "Font weight",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "700",
+            "variable-name": "--bsi-font-weight-strong"
+        },
+        {
+            "description": "Font weight",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "600",
+            "variable-name": "--bsi-font-weight-solid"
+        },
+        {
+            "description": "Font weight",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "400",
+            "variable-name": "--bsi-font-weight-base"
+        },
+        {
+            "description": "Font weight",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "300",
+            "variable-name": "--bsi-font-weight-thin"
+        },
+        {
+            "description": "Type scale size",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "56px",
+            "variable-name": "--bsi-font-size-11"
+        },
+        {
+            "description": "Type scale size",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "48px",
+            "variable-name": "--bsi-font-size-10"
+        },
+        {
+            "description": "Type scale size",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "40px",
+            "variable-name": "--bsi-font-size-9"
+        },
+        {
+            "description": "Type scale size",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "32px",
+            "variable-name": "--bsi-font-size-8"
+        },
+        {
+            "description": "Type scale size",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "28px",
+            "variable-name": "--bsi-font-size-7"
+        },
+        {
+            "description": "Type scale size",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "24px",
+            "variable-name": "--bsi-font-size-6"
+        },
+        {
+            "description": "Type scale size",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "20px",
+            "variable-name": "--bsi-font-size-5"
+        },
+        {
+            "description": "Type scale size",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "18px",
+            "variable-name": "--bsi-font-size-4"
+        },
+        {
+            "description": "Type scale size",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "16px",
+            "variable-name": "--bsi-font-size-3"
+        },
+        {
+            "description": "Type scale size",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "14px",
+            "variable-name": "--bsi-font-size-2"
+        },
+        {
+            "description": "Type scale size",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "12px",
+            "variable-name": "--bsi-font-size-1"
+        },
+        {
+            "description": "Line height",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.5",
+            "variable-name": "--bsi-font-leading-5"
+        },
+        {
+            "description": "Line height",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.4",
+            "variable-name": "--bsi-font-leading-4"
+        },
+        {
+            "description": "Line height",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.3",
+            "variable-name": "--bsi-font-leading-3"
+        },
+        {
+            "description": "Line height",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.2",
+            "variable-name": "--bsi-font-leading-2"
+        },
+        {
+            "description": "Line height",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.1",
+            "variable-name": "--bsi-font-leading-1"
+        },
+        {
+            "description": "Letter spacing",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "0px",
+            "variable-name": "--bsi-font-tracking-normal"
+        },
+        {
+            "description": "Letter spacing",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "-2px",
+            "variable-name": "--bsi-font-tracking-tight"
+        },
+        {
+            "description": "Letter spacing",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "-1.3px",
+            "variable-name": "--bsi-font-tracking-narrow"
+        },
+        {
+            "description": "Letter spacing",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "-1px",
+            "variable-name": "--bsi-font-tracking-short"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "56px"
+            ],
+            "value": "48px",
+            "variable-name": "--bsi-display-font-size"
+        },
+        {
+            "description": "Default font size for heading 6",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "18px"
+            ],
+            "value": "16px",
+            "variable-name": "--bsi-heading-6-font-size"
+        },
+        {
+            "description": "Default font size for heading 5",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "24px"
+            ],
+            "value": "20px",
+            "variable-name": "--bsi-heading-5-font-size"
+        },
+        {
+            "description": "Default font size for heading 4",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "28px"
+            ],
+            "value": "24px",
+            "variable-name": "--bsi-heading-4-font-size"
+        },
+        {
+            "description": "Default font size for heading 3",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "32px"
+            ],
+            "value": "28px",
+            "variable-name": "--bsi-heading-3-font-size"
+        },
+        {
+            "description": "Default font size for heading 2",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "40px"
+            ],
+            "value": "32px",
+            "variable-name": "--bsi-heading-2-font-size"
+        },
+        {
+            "description": "Default font size for heading 1",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "48px"
+            ],
+            "value": "40px",
+            "variable-name": "--bsi-heading-1-font-size"
+        },
+        {
+            "description": "Default font weight for headings",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "700",
+            "variable-name": "--bsi-heading-font-weight"
+        },
+        {
+            "description": "Alternative font weight for secondary headings",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "600",
+            "variable-name": "--bsi-heading-font-weight-weak"
+        },
+        {
+            "description": "Default line height for headings",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.2",
+            "variable-name": "--bsi-heading-leading"
+        },
+        {
+            "description": "Default font size for body text",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "18px"
+            ],
+            "value": "16px",
+            "variable-name": "--bsi-body-font-size"
+        },
+        {
+            "description": "Default line height for body text",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.5",
+            "variable-name": "--bsi-body-leading"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "400",
+            "variable-name": "--bsi-body-font-weight"
+        },
+        {
+            "description": "Default font size for lead text",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "24px"
+            ],
+            "value": "20px",
+            "variable-name": "--bsi-lead-font-size"
+        },
+        {
+            "description": "Default line height for lead text",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.3",
+            "variable-name": "--bsi-lead-leading"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "400",
+            "variable-name": "--bsi-lead-font-weight"
+        },
+        {
+            "description": "Default font size for captions",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "14px",
+            "variable-name": "--bsi-caption-font-size"
+        },
+        {
+            "description": "Default line height for captions",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.3",
+            "variable-name": "--bsi-caption-leading"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "400",
+            "variable-name": "--bsi-caption-font-weight-regular"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "600",
+            "variable-name": "--bsi-caption-font-weight-semibold"
+        },
+        {
+            "description": "Default font size for medium labels",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "16px",
+            "variable-name": "--bsi-label-font-size"
+        },
+        {
+            "description": "Default font size for small labels",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "14px",
+            "variable-name": "--bsi-label-font-size-s"
+        },
+        {
+            "description": "Default font size for extra-small labels",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "12px",
+            "variable-name": "--bsi-label-font-size-xs"
+        },
+        {
+            "description": "Default font size for large labels",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "18px",
+            "variable-name": "--bsi-label-font-size-l"
+        },
+        {
+            "description": "Default line height for labels",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.1",
+            "variable-name": "--bsi-label-leading"
+        },
+        {
+            "description": "Extra-large icon size",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "64px",
+            "variable-name": "--bsi-icon-size-xl"
+        },
+        {
+            "description": "Large icon size",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "48px",
+            "variable-name": "--bsi-icon-size-l"
+        },
+        {
+            "description": "Medium icon size",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "32px",
+            "variable-name": "--bsi-icon-size-m"
+        },
+        {
+            "description": "Small icon size",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "24px",
+            "variable-name": "--bsi-icon-size-s"
+        },
+        {
+            "description": "Extra-small icon size",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "16px",
+            "variable-name": "--bsi-icon-size-xs"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1px",
+            "variable-name": "--bsi-border-width"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "solid",
+            "variable-name": "--bsi-border-style"
+        },
+        {
+            "description": "Separator border, delimits page sections, components or single elements",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#c5c7c9",
+            "variable-name": "--bsi-border-color"
+        },
+        {
+            "description": "Broad border width",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "8px",
+            "variable-name": "--bsi-border-broad"
+        },
+        {
+            "description": "Thick border width",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "4px",
+            "variable-name": "--bsi-border-thick"
+        },
+        {
+            "description": "Double border width",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "2px",
+            "variable-name": "--bsi-border-double"
+        },
+        {
+            "description": "Base border width",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1px",
+            "variable-name": "--bsi-border-base"
+        },
+        {
+            "description": "Border radius",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "40px",
+            "variable-name": "--bsi-radius-rounded"
+        },
+        {
+            "description": "Border radius",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "80px",
+            "variable-name": "--bsi-radius-circle"
+        },
+        {
+            "description": "Border radius",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "4px",
+            "variable-name": "--bsi-radius-smooth"
+        },
+        {
+            "description": "100% of the containing element",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "100%",
+            "variable-name": "--bsi-sizing-full"
+        },
+        {
+            "description": "Three quarters (75%) of the containing element",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "75%",
+            "variable-name": "--bsi-sizing-two-thirds"
+        },
+        {
+            "description": "Half of the containing element",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "50%",
+            "variable-name": "--bsi-sizing-half"
+        },
+        {
+            "description": "A quarter of the containing element",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "25%",
+            "variable-name": "--bsi-sizing-quarter"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "0 16px 48px 0 rgba(0, 0, 0, 0.15)",
+            "variable-name": "--bsi-elevation-high"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "0 8px 16px 0 rgba(0, 0, 0, 0.1)",
+            "variable-name": "--bsi-elevation-medium"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "0 4px 4px 0 rgba(0, 0, 0, 0.05)",
+            "variable-name": "--bsi-elevation-low"
+        },
+        {
+            "description": "Accent text, alternative to primary for interactive elements on contrasting backgrounds",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#089994",
+            "variable-name": "--bsi-color-text-accent"
+        },
+        {
+            "description": "Inverse text for contrasting backgrounds (primary, secondary, emphasis)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#ffffff",
+            "variable-name": "--bsi-color-text-inverse"
+        },
+        {
+            "description": "Interactive problem/error text in active and pressed state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#661a26",
+            "variable-name": "--bsi-color-text-danger-active"
+        },
+        {
+            "description": "Interactive problem/error text in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#992639",
+            "variable-name": "--bsi-color-text-danger-hover"
+        },
+        {
+            "description": "Text color for a problem or error, can also be interactive (link, button)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#cc334d",
+            "variable-name": "--bsi-color-text-danger"
+        },
+        {
+            "description": "Interactive warning text in active and pressed state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#663d00",
+            "variable-name": "--bsi-color-text-warning-active"
+        },
+        {
+            "description": "Interactive warning text in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#804d00",
+            "variable-name": "--bsi-color-text-warning-hover"
+        },
+        {
+            "description": "Warning text, can also be interactive (button, link)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#995c00",
+            "variable-name": "--bsi-color-text-warning"
+        },
+        {
+            "description": "Interactive success text in active and pressed state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d33",
+            "variable-name": "--bsi-color-text-success-active"
+        },
+        {
+            "description": "Interactive success text in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#006644",
+            "variable-name": "--bsi-color-text-success-hover"
+        },
+        {
+            "description": "Success text, can also be interactive (button, link)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#008055",
+            "variable-name": "--bsi-color-text-success"
+        },
+        {
+            "description": "Disabled text",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#5c6f82",
+            "variable-name": "--bsi-color-text-disabled"
+        },
+        {
+            "description": "Supporting text for very short content",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#5c6f82",
+            "variable-name": "--bsi-color-text-muted"
+        },
+        {
+            "description": "Alternative body text, detail content, secondary button text",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#2f475e",
+            "variable-name": "--bsi-color-text-secondary"
+        },
+        {
+            "description": "Primary text, used for links",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#0066cc",
+            "variable-name": "--bsi-color-text-primary"
+        },
+        {
+            "description": "Base body text",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#1a1a1a",
+            "variable-name": "--bsi-color-text-base"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#b32d43",
+            "variable-name": "--bsi-color-code"
+        },
+        {
+            "description": "Base link color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#0066cc",
+            "variable-name": "--bsi-color-link"
+        },
+        {
+            "description": "Link color in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d99",
+            "variable-name": "--bsi-color-link-hover"
+        },
+        {
+            "description": "Link color in active state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#003366",
+            "variable-name": "--bsi-color-link-active"
+        },
+        {
+            "description": "Secondary link color, always requires underline",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#2f475e",
+            "variable-name": "--bsi-color-link-secondary"
+        },
+        {
+            "description": "Secondary link color in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#17324d",
+            "variable-name": "--bsi-color-link-secondary-hover"
+        },
+        {
+            "description": "Secondary link color in active and pressed state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#17324d",
+            "variable-name": "--bsi-color-link-secondary-active"
+        },
+        {
+            "description": "Inverse link color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#ffffff",
+            "variable-name": "--bsi-color-link-inverse"
+        },
+        {
+            "description": "Disabled link color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#929da9",
+            "variable-name": "--bsi-color-link-disabled"
+        },
+        {
+            "description": "Accent link color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#089994",
+            "variable-name": "--bsi-color-link-accent"
+        },
+        {
+            "description": "Accent link color in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#077f7b",
+            "variable-name": "--bsi-color-link-accent-hover"
+        },
+        {
+            "description": "Danger/error border in active and pressed state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#661a26",
+            "variable-name": "--bsi-color-border-danger-active"
+        },
+        {
+            "description": "Danger/error border in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#992639",
+            "variable-name": "--bsi-color-border-danger-hover"
+        },
+        {
+            "description": "Danger/error border, used for interactive or static elements (alerts, notifications, etc.)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#cc334d",
+            "variable-name": "--bsi-color-border-danger"
+        },
+        {
+            "description": "Warning border in active and pressed state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#663d00",
+            "variable-name": "--bsi-color-border-warning-active"
+        },
+        {
+            "description": "Warning border in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#804d00",
+            "variable-name": "--bsi-color-border-warning-hover"
+        },
+        {
+            "description": "Warning border, used for interactive or static elements (alerts, notifications, etc.)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#995c00",
+            "variable-name": "--bsi-color-border-warning"
+        },
+        {
+            "description": "Success border in active and pressed state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d33",
+            "variable-name": "--bsi-color-border-success-active"
+        },
+        {
+            "description": "Success border in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#006644",
+            "variable-name": "--bsi-color-border-success-hover"
+        },
+        {
+            "description": "Success border, used for interactive or static elements (alerts, notifications, etc.)",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#008055",
+            "variable-name": "--bsi-color-border-success"
+        },
+        {
+            "description": "Separator border, delimits page sections, components or single elements",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#c5c7c9",
+            "variable-name": "--bsi-color-border-subtle"
+        },
+        {
+            "description": "Border for disabled interactive elements",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#d9dadb",
+            "variable-name": "--bsi-color-border-disabled"
+        },
+        {
+            "description": "Inverse border, used on contrasting primary, secondary or emphasis backgrounds",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#ffffff",
+            "variable-name": "--bsi-color-border-inverse"
+        },
+        {
+            "description": "Secondary border in active and pressed state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#17324d",
+            "variable-name": "--bsi-color-border-secondary-active"
+        },
+        {
+            "description": "Secondary border in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#2f475e",
+            "variable-name": "--bsi-color-border-secondary-hover"
+        },
+        {
+            "description": "Secondary border, used for clickable interactive elements",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#5c6f82",
+            "variable-name": "--bsi-color-border-secondary"
+        },
+        {
+            "description": "Primary border in active and pressed state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#003366",
+            "variable-name": "--bsi-color-border-primary-active"
+        },
+        {
+            "description": "Primary border in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d99",
+            "variable-name": "--bsi-color-border-primary-hover"
+        },
+        {
+            "description": "Primary border, used for clickable interactive elements",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#0066cc",
+            "variable-name": "--bsi-color-border-primary"
+        },
+        {
+            "description": "Focus state highlight color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#1a1a1a",
+            "variable-name": "--bsi-color-outline-focus"
+        },
+        {
+            "description": "Primary background, used for interactive elements (buttons, links) and elements carrying the visual identity",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#0066cc",
+            "variable-name": "--bsi-color-background-primary"
+        },
+        {
+            "description": "Low-contrast primary background, defines a section (or part of it) within the page",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#f2f7fc",
+            "variable-name": "--bsi-color-background-primary-lighter"
+        },
+        {
+            "description": "Light-contrast background, alternative to the primary color for interactive elements",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#bfdfff",
+            "variable-name": "--bsi-color-background-primary-light"
+        },
+        {
+            "description": "Background used on page sections",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#003366",
+            "variable-name": "--bsi-color-background-primary-deep"
+        },
+        {
+            "description": "Background used on page sections",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d99",
+            "variable-name": "--bsi-color-background-primary-muted"
+        },
+        {
+            "description": "Background for primary interactive components in active and pressed state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#003366",
+            "variable-name": "--bsi-color-background-primary-active"
+        },
+        {
+            "description": "Background for primary interactive components in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d99",
+            "variable-name": "--bsi-color-background-primary-hover"
+        },
+        {
+            "description": "Danger/error background for interactive elements in active and pressed state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#661a26",
+            "variable-name": "--bsi-color-background-danger-active"
+        },
+        {
+            "description": "Danger/error background for interactive elements in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#992639",
+            "variable-name": "--bsi-color-background-danger-hover"
+        },
+        {
+            "description": "Danger/error background for sections and components with medium/long content; text can use any variant except inverse",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#fbeff1",
+            "variable-name": "--bsi-color-background-danger-light"
+        },
+        {
+            "description": "Danger/error background for interactive elements or components; text must be inverse",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#cc334d",
+            "variable-name": "--bsi-color-background-danger"
+        },
+        {
+            "description": "Warning background for interactive elements in active and pressed state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#663d00",
+            "variable-name": "--bsi-color-background-warning-active"
+        },
+        {
+            "description": "Warning background for interactive elements in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#804d00",
+            "variable-name": "--bsi-color-background-warning-hover"
+        },
+        {
+            "description": "Warning background for sections and components with medium/long content; text can use any variant except inverse",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#f6e4c8",
+            "variable-name": "--bsi-color-background-warning-light"
+        },
+        {
+            "description": "Warning background for interactive elements or components; text must be inverse",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#995c00",
+            "variable-name": "--bsi-color-background-warning"
+        },
+        {
+            "description": "Success background for interactive elements in active and pressed state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d33",
+            "variable-name": "--bsi-color-background-success-active"
+        },
+        {
+            "description": "Success background for interactive elements in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#006644",
+            "variable-name": "--bsi-color-background-success-hover"
+        },
+        {
+            "description": "Success background for sections and components with medium/long content; text can use any variant except inverse",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#c8f6e7",
+            "variable-name": "--bsi-color-background-success-light"
+        },
+        {
+            "description": "Success background for interactive elements or components; text must be inverse",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#008055",
+            "variable-name": "--bsi-color-background-success"
+        },
+        {
+            "description": "Emphasis background, used to highlight specific page sections",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#17324d",
+            "variable-name": "--bsi-color-background-emphasis"
+        },
+        {
+            "description": "Light background, used to define page sections",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#d4d4d4",
+            "variable-name": "--bsi-color-background-subtle"
+        },
+        {
+            "description": "Background for disabled/inactive interactive elements",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#d9dadb",
+            "variable-name": "--bsi-color-background-disabled"
+        },
+        {
+            "description": "Inverse background, used together with a primary, secondary or neutral page/section background",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#ffffff",
+            "variable-name": "--bsi-color-background-inverse"
+        },
+        {
+            "description": "TODO: replace with semantic token",
+            "files": [
+                "_header.scss",
+                "_root.scss"
+            ],
+            "other_values": [
+                "var(--bsi-header-center-text-color)"
+            ],
+            "value": "#ebeced",
+            "variable-name": "--bsi-color-background-inverse-hover"
+        },
+        {
+            "description": "Very low-contrast background, defines page sections or text paragraphs",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#f5f5f5",
+            "variable-name": "--bsi-color-background-muted"
+        },
+        {
+            "description": "Accent background for interactive elements in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#077f7b",
+            "variable-name": "--bsi-color-background-accent-hover"
+        },
+        {
+            "description": "Accent background for interactive elements",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#089994",
+            "variable-name": "--bsi-color-background-accent"
+        },
+        {
+            "description": "Very light secondary background",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#d9dadb",
+            "variable-name": "--bsi-color-background-secondary-lighter"
+        },
+        {
+            "description": "Light secondary background",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#a3adb7",
+            "variable-name": "--bsi-color-background-secondary-light"
+        },
+        {
+            "description": "Background for secondary interactive elements in active and pressed state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#17324d",
+            "variable-name": "--bsi-color-background-secondary-active"
+        },
+        {
+            "description": "Background for secondary interactive elements in hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#2f475e",
+            "variable-name": "--bsi-color-background-secondary-hover"
+        },
+        {
+            "description": "Alternative background, used for secondary interactive elements or page sections",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#5c6f82",
+            "variable-name": "--bsi-color-background-secondary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#17324d",
+            "variable-name": "--bsi-color-background-secondary-deep"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsla(0, 0%, 0%, 0.5)",
+            "variable-name": "--bsi-overlay-background-light"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsla(210, 100%, 40%, 0.85)",
+            "variable-name": "--bsi-overlay-background-primary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsla(210, 54%, 20%, 0.85)",
+            "variable-name": "--bsi-overlay-background-primary-muted"
+        },
+        {
+            "description": "TODO: replace with semantic token",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#a3f5f2",
+            "variable-name": "--bsi-highlight-background"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#ebeced",
+            "variable-name": "--bsi-code-background"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#6ee7bf",
+            "variable-name": "--bsi-ins-background"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#e08593",
+            "variable-name": "--bsi-del-background"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#ffffff",
+            "variable-name": "--bsi-page-background"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#cc334d",
+            "variable-name": "--bsi-color-status-danger"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#992639",
+            "variable-name": "--bsi-color-status-danger-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#661a26",
+            "variable-name": "--bsi-color-status-danger-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#008055",
+            "variable-name": "--bsi-color-status-success"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#006644",
+            "variable-name": "--bsi-color-status-success-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d33",
+            "variable-name": "--bsi-color-status-success-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#995c00",
+            "variable-name": "--bsi-color-status-warning"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#804d00",
+            "variable-name": "--bsi-color-status-warning-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#663d00",
+            "variable-name": "--bsi-color-status-warning-active"
+        },
+        {
+            "description": "Supporting icon color for failed actions, active state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#661a26",
+            "variable-name": "--bsi-icon-danger-active"
+        },
+        {
+            "description": "Supporting icon color for failed actions, hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#992639",
+            "variable-name": "--bsi-icon-danger-hover"
+        },
+        {
+            "description": "Supporting icon color for failed actions",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#cc334d",
+            "variable-name": "--bsi-icon-danger"
+        },
+        {
+            "description": "Supporting icon color for messages that require attention, active state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#663d00",
+            "variable-name": "--bsi-icon-warning-active"
+        },
+        {
+            "description": "Supporting icon color for messages that require attention, hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#804d00",
+            "variable-name": "--bsi-icon-warning-hover"
+        },
+        {
+            "description": "Supporting icon color for messages that require attention",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#995c00",
+            "variable-name": "--bsi-icon-warning"
+        },
+        {
+            "description": "Supporting icon color for successful actions, active state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d33",
+            "variable-name": "--bsi-icon-success-active"
+        },
+        {
+            "description": "Supporting icon color for successful actions, hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#006644",
+            "variable-name": "--bsi-icon-success-hover"
+        },
+        {
+            "description": "Supporting icon color for successful actions",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#008055",
+            "variable-name": "--bsi-icon-success"
+        },
+        {
+            "description": "Supporting icon color, active state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#17324d",
+            "variable-name": "--bsi-icon-secondary-active"
+        },
+        {
+            "description": "Inverse icon color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#ffffff",
+            "variable-name": "--bsi-icon-inverse"
+        },
+        {
+            "description": "Supporting icon color, hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#2f475e",
+            "variable-name": "--bsi-icon-secondary-hover"
+        },
+        {
+            "description": "Supporting icon color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#5c6f82",
+            "variable-name": "--bsi-icon-secondary"
+        },
+        {
+            "description": "Link icon color, active state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#003366",
+            "variable-name": "--bsi-icon-primary-active"
+        },
+        {
+            "description": "Link icon color, hover state",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d99",
+            "variable-name": "--bsi-icon-primary-hover"
+        },
+        {
+            "description": "Link icon color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#0066cc",
+            "variable-name": "--bsi-icon-primary"
+        },
+        {
+            "description": "Base icon color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#1a1a1a",
+            "variable-name": "--bsi-icon-default"
+        },
+        {
+            "description": "Disabled icon color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#929da9",
+            "variable-name": "--bsi-icon-disabled"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "12px",
+            "variable-name": "--bsi-icon-spacing"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "0.2s",
+            "variable-name": "--bsi-transition-instant"
+        }
+    ],
     "section": [
         {
             "description": "Controls the section background color.",
@@ -4677,7 +7112,7 @@
             "variable-name": "--bsi-section-image-overlay"
         },
         {
-            "description": "Controls the horizontal padding for the section, overridable per variant. default 0.",
+            "description": "Controls the horizontal padding for the section, overridable per variant. Default 0.",
             "files": [
                 "_sections.scss"
             ],
@@ -5465,7 +7900,7 @@
             "variable-name": "--bsi-toolbar-vertical-item-margin-x"
         },
         {
-            "description": "Controls the vertical margin between items in the vertical toolbar variant. defaults to 0: spacing is currently handled by toolbar-item-gap.",
+            "description": "Controls the vertical margin between items in the vertical toolbar variant. Defaults to 0: spacing is currently handled by toolbar-item-gap.",
             "files": [
                 "_toolbar.scss"
             ],
