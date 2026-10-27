@@ -23,7 +23,7 @@ Quando si personalizza una variabile CSS, è inoltre importante distinguere se l
 
 Una **variabile statica ha un valore fisso**, mentre il valore di una **variabile dinamica cambia in base a condizioni specifiche**, come breakpoint o classi CSS.
 
-### Variabili Dinamiche
+## Variabili Dinamiche
 
 Le variabili dinamiche sono proprietà definite una sola volta ma il valore ad esse associato può cambiare.
 
@@ -32,7 +32,7 @@ Le variabili dinamiche cambiano valore in base a due condizioni principali:
 - un **breakpoint** per il responsive design
 - un **selettore** (tag o classe)
 
-#### Variabile dinamica per breakpoint
+### Variabile dinamica per breakpoint
 
 Ad esempio, la dimensione responsive dei titoli da `h1` a `h6` è gestita esclusivamenteall'interno del file `_root.scss`, cambiando il valore a partire da un breakpoint specifico:
 
@@ -73,7 +73,7 @@ h2,
 }
 ```
 
-#### Variabile dinamica per selettore
+### Variabile dinamica per selettore
 
 Nel caso di cambiamenti che dipendono dall'uso di un selettore (tag o classe) specifico, la variabile cambia valore ad essa assoacito. Ad esempio, lo sfondo di un pulsante con classe `.btn` è trasparente di default, mentre nella variante `.btn-primary` mostra il colore primario:
 
