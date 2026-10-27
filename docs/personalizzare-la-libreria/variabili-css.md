@@ -15,60 +15,22 @@ Questo approccio **sostituisce il sistema precedente basato su variabili Sass**,
 
 Tutte le variabili CSS di Bootstrap Italia usano il prefisso `bsi-`.
 
-## Variabili globali
- 
-Le variabili globali sono definite nel file `_root.scss` e possono essere usate in qualsiasi punto del codice CSS della libreria, seguendo il principio del *cascading*. Il file `_root.scss` è incluso in `bootstrap-italia.scss` e viene importato tramite la direttiva `@forward`:
+## Tipologie di variabili
 
-```scss
-// bootstrap-italia.scss
-@forward 'base/root';
-```
+Le variabili presenti in Bootstrap Italia possono essere **globali** oppure **specifiche per componente**.
 
-{% include properties_root.md properties=site.data.cprops.root selector=":root" %}
-
-## Variabili di componente
-
-Le variabili CSS dei componenti sono definite all'inizio del relativo codice SCSS nel file `src/scss/components/nome-componente.scss`.
-
-Esempio delle variabili CSS del componente alert:
-
-```scss
-// Component: alert
-//
-// Description: Component styles for alert
-
-.alert {
-  --#{$prefix}alert-background-color: var(--#{$prefix}color-background-inverse); // Controls the background color for the alert, using color tokens.
-  --#{$prefix}alert-border-color: var(--#{$prefix}color-border-secondary); // Controls the external border color for the alert, using color tokens.
-  --#{$prefix}alert-border-size: 0.5rem; // Controls the border size for the alert.
-  --#{$prefix}alert-heading-color: var(--#{$prefix}color-text-base); // Controls the heading color for the alert, using color tokens.
-  --#{$prefix}alert-icon-spacing: var(--#{$prefix}icon-spacing); // Controls the icon spacing for the alert, using spacing tokens.
-  --#{$prefix}alert-spacing-inset: var(--#{$prefix}spacing-s); // Controls the inset spacing for the alert, using spacing tokens.
-  --#{$prefix}alert-spacing-inset-extra: var(--#{$prefix}spacing-xxl); // Controls the extra inset spacing for the alert, using spacing tokens.
-  --#{$prefix}alert-spacing-outside: var(--#{$prefix}spacing-m); // Controls the outside spacing for the alert, using spacing tokens.
-  --#{$prefix}alert-text-color: var(--#{$prefix}color-text-base); // Controls the text color for the alert, using color tokens.
-}
-```
-Nel caso di componenti con varianti, le variabili sono gestite secondo una logica dinamica. 
-
-Le variabili CSS di ciascun componente sono documentate in una tabella **Properties** nella relativa pagina di documentazione.
-
-## Gestire i cambiamenti
-
-Quando si personalizza una variabile CSS, è importante distinguere se la variabile è **dinamica** o **statica**.
+Quando si personalizza una variabile CSS, è inoltre importante distinguere se la variabile è **dinamica** o **statica**.
 
 Una **variabile statica ha un valore fisso**, mentre il valore di una **variabile dinamica cambia in base a condizioni specifiche**, come breakpoint o classi CSS.
 
-Bootstrap Italia 3 segue la logica per cui una proprietà viene definita una volta sola, mentre il valore ad essa associato può cambiare. È il caso delle variabili dinamiche.
-
-
 ### Variabili Dinamiche
 
+Le variabili dinamiche sono proprietà definite una sola volta ma il valore ad esse associato può cambiare.
+
 Le variabili dinamiche cambiano valore in base a due condizioni principali:
+
 - un **breakpoint** per il responsive design
 - un **selettore** (tag o classe)
-
-
 
 #### Variabile dinamica per breakpoint
 
@@ -127,3 +89,41 @@ Nel caso di cambiamenti che dipendono dall'uso di un selettore (tag o classe) sp
 ```
 
 Le variabili definite al principio del file SCSS di un componente possono essere ridefinite all'interno dello stesso. Prima di modificarne il valore, verifica se la variabile è statica o dinamica cercando i riferimenti nel codice.
+
+## Variabili di componente
+
+Le variabili CSS dei componenti sono definite all'inizio del relativo codice SCSS nel file `src/scss/components/nome-componente.scss`.
+
+Esempio delle variabili CSS del componente alert:
+
+```scss
+// Component: alert
+//
+// Description: Component styles for alert
+
+.alert {
+  --#{$prefix}alert-background-color: var(--#{$prefix}color-background-inverse); // Controls the background color for the alert, using color tokens.
+  --#{$prefix}alert-border-color: var(--#{$prefix}color-border-secondary); // Controls the external border color for the alert, using color tokens.
+  --#{$prefix}alert-border-size: 0.5rem; // Controls the border size for the alert.
+  --#{$prefix}alert-heading-color: var(--#{$prefix}color-text-base); // Controls the heading color for the alert, using color tokens.
+  --#{$prefix}alert-icon-spacing: var(--#{$prefix}icon-spacing); // Controls the icon spacing for the alert, using spacing tokens.
+  --#{$prefix}alert-spacing-inset: var(--#{$prefix}spacing-s); // Controls the inset spacing for the alert, using spacing tokens.
+  --#{$prefix}alert-spacing-inset-extra: var(--#{$prefix}spacing-xxl); // Controls the extra inset spacing for the alert, using spacing tokens.
+  --#{$prefix}alert-spacing-outside: var(--#{$prefix}spacing-m); // Controls the outside spacing for the alert, using spacing tokens.
+  --#{$prefix}alert-text-color: var(--#{$prefix}color-text-base); // Controls the text color for the alert, using color tokens.
+}
+```
+Nel caso di componenti con varianti, le variabili sono gestite secondo una logica dinamica. 
+
+Le variabili CSS di ciascun componente sono documentate in una tabella **Properties** nella relativa pagina di documentazione.
+
+## Variabili globali
+ 
+Le variabili globali sono definite nel file `_root.scss` e possono essere usate in qualsiasi punto del codice CSS della libreria, seguendo il principio del *cascading*. Il file `_root.scss` è incluso in `bootstrap-italia.scss` e viene importato tramite la direttiva `@forward`:
+
+```scss
+// bootstrap-italia.scss
+@forward 'base/root';
+```
+
+{% include properties_root.md properties=site.data.cprops.root selector=":root" %}
