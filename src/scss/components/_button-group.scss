@@ -61,6 +61,10 @@
     margin-left: -$btn-border-width;
   }
 
+  > :not(.btn-check:first-child) + .btn[class*='btn-outline-'] {
+    margin-left: calc(var(--#{$prefix}btn-outline-border-size) * -1);
+  }
+
   // Reset rounded corners
   > .btn:not(:last-child):not(.dropdown-toggle),
   > .btn.dropdown-toggle-split:first-child,
@@ -147,6 +151,10 @@
   > .btn:not(:first-child),
   > .btn-group:not(:first-child) {
     margin-top: -$btn-border-width;
+  }
+
+  > :not(.btn-check:first-child) + .btn[class*='btn-outline-'] {
+    margin-top: calc(var(--#{$prefix}btn-outline-border-size) * -1);
   }
 
   // Reset rounded corners
