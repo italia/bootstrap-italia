@@ -115,7 +115,7 @@ input {
 }
 
 select {
-  background-image: var(--#{$prefix}form-select-indicator);
+  background-image: var(--#{$prefix}form-select-indicator, #{escape-svg($form-select-indicator)});
   background-repeat: no-repeat;
   background-position: right var(--#{$prefix}form-control-spacing) center;
   background-size: 16px 12px;
