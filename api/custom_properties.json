@@ -3232,10 +3232,12 @@
             "description": "Controls the line height of the list items, using text tokens",
             "files": [
                 "_dropdown.scss",
+                "_footer.scss",
                 "_linklist.scss"
             ],
             "other_values": [
-                "1.5"
+                "1.5",
+                "var(--bsi-body-leading)"
             ],
             "value": "var(--bsi-label-leading)",
             "variable-name": "--bsi-linklist-item-line-height"
@@ -3243,9 +3245,11 @@
         {
             "description": "Controls the vertical spacing of the list items, using spacing tokens",
             "files": [
+                "_footer.scss",
                 "_linklist.scss"
             ],
             "other_values": [
+                "calc(var(--bsi-spacing-xs) / 2)",
                 "var(--bsi-spacing-s)"
             ],
             "value": "var(--bsi-spacing-xxs)",
@@ -5706,10 +5710,12 @@
         {
             "description": "Default font size for body text",
             "files": [
+                "_modal.scss",
                 "_root.scss"
             ],
             "other_values": [
-                "18px"
+                "18px",
+                "1rem"
             ],
             "value": "16px",
             "variable-name": "--bsi-body-font-size"
