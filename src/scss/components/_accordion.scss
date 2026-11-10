@@ -8,6 +8,9 @@
 
 // Chevron shape, used as a mask: the color comes from currentColor.
 $_accordion-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12,10.3l4.8,4.8c0.3,0.3,0.8,0.3,1.1,0c0.3-0.3,0.3-0.8,0-1c0,0,0,0,0,0l-4.8-4.8c-0.6-0.6-1.5-0.6-2.1,0L6.2,14c-0.3,0.3-0.3,0.8,0,1c0,0,0,0,0,0c0.3,0.3,0.8,0.3,1.1,0L12,10.3z'/%3E%3C/svg%3E");
+// it-plus / it-minus from the BSI icon set, used as masks for the left-icon variant.
+$_accordion-plus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20,12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20V12.5z'/%3E%3C/svg%3E");
+$_accordion-minus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20,12.5H4v-1h16V12.5z'/%3E%3C/svg%3E");
 
 //
 // Description: Styles for the Accordion component.
@@ -179,22 +182,31 @@ $_accordion-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/200
           content: none;
         }
 
+        // Sign drawn as a mask (it-minus / it-plus) so it follows the
+        // button text color and is not hit by the hover underline.
         &:before {
-          content: '-';
-          width: 1.5rem;
+          content: '';
+          flex-shrink: 0;
+          width: var(--#{$prefix}accordion-btn-icon-width);
+          height: var(--#{$prefix}accordion-btn-icon-width);
           margin: 0 var(--#{$prefix}spacing-s) 0 0;
           float: left;
-          overflow: hidden;
-          font-family: var(--#{$prefix}font-serif);
-          font-size: var(--#{$prefix}heading-5-font-size);
-          font-weight: 300;
-          line-height: var(--#{$prefix}--#{$prefix}accordion-btn-line-height);
+          background-color: currentColor;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+          -webkit-mask-size: contain;
+          mask-size: contain;
+          -webkit-mask-position: center;
+          mask-position: center;
+          -webkit-mask-image: $_accordion-minus;
+          mask-image: $_accordion-minus;
           transform: none;
         }
 
         &[aria-expanded='false'] {
           &:before {
-            content: '+';
+            -webkit-mask-image: $_accordion-plus;
+            mask-image: $_accordion-plus;
           }
         }
       }
