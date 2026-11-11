@@ -676,28 +676,28 @@ $utilities: map.merge(
       property: border-top-left-radius border-top-right-radius,
       class: rounded-top,
       values: (
-        null: var(--#{$prefix}border-radius),
+        null: var(--#{$prefix}radius-smooth),
       ),
     ),
     'rounded-end': (
       property: border-top-right-radius border-bottom-right-radius,
       class: rounded-end,
       values: (
-        null: var(--#{$prefix}border-radius),
+        null: var(--#{$prefix}radius-smooth),
       ),
     ),
     'rounded-bottom': (
       property: border-bottom-right-radius border-bottom-left-radius,
       class: rounded-bottom,
       values: (
-        null: var(--#{$prefix}border-radius),
+        null: var(--#{$prefix}radius-smooth),
       ),
     ),
     'rounded-start': (
       property: border-bottom-left-radius border-top-left-radius,
       class: rounded-start,
       values: (
-        null: var(--#{$prefix}border-radius),
+        null: var(--#{$prefix}radius-smooth),
       ),
     ),
     // scss-docs-end utils-border-radius
