@@ -485,3 +485,12 @@
     transform: scaleY(-1);
   }
 }
+
+// Toggle with icon (.btn-icon is inline-flex): the empty caret pseudo-elements
+// would become flex items and add an extra gap after the icon
+.btn-icon.dropdown-toggle {
+  &::before,
+  &::after {
+    display: none;
+  }
+}

@@ -38,7 +38,7 @@ Il design di default dei dropdown richiede l'applicazione della classe `.btn-dro
 {% capture example %}
 
 <div class="dropdown text-center">
-  <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-dropdown btn-icon dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
     <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
   </button>
@@ -62,7 +62,7 @@ Ovviamente sono disponibili [tutte le varianti]({{ site.baseurl }}/docs/componen
 {% capture example %}
 
 <div class="btn-group">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-primary btn-icon dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
     <svg class="icon-expand icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
   </button>
@@ -77,7 +77,7 @@ Ovviamente sono disponibili [tutte le varianti]({{ site.baseurl }}/docs/componen
   </div>
 </div>
 <div class="btn-group">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary btn-icon dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
     <svg class="icon-expand icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
   </button>
@@ -92,7 +92,7 @@ Ovviamente sono disponibili [tutte le varianti]({{ site.baseurl }}/docs/componen
   </div>
 </div>
 <div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-danger btn-icon dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
     <svg class="icon-expand icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
   </button>
@@ -116,7 +116,7 @@ Lo stesso vale per gli elementi `<a>`:
 {% capture example %}
 
 <div class="dropdown text-center">
-  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <a class="btn btn-dropdown btn-icon dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
     <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
   </a>
@@ -140,7 +140,7 @@ Per aprire le voci di menu verso l'alto aggiungere la classe `.dropup` all'eleme
 {% capture example %}
 
 <div class="dropdown dropup text-center">
-  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropup" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <a class="btn btn-dropdown btn-icon dropdown-toggle" href="#" role="button" id="dropdownMenuDropup" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropup
     <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
   </a>
@@ -164,7 +164,7 @@ Per aprire le voci di menu verso destra aggiungere la classe `.dropend` all'elem
 {% capture example %}
 
 <div class="dropdown dropend text-center">
-  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropright" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <a class="btn btn-dropdown btn-icon dropdown-toggle" href="#" role="button" id="dropdownMenuDropright" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropend
     <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
   </a>
@@ -188,7 +188,7 @@ Per aprire le voci di menu verso sinistra aggiungere la classe `.dropstart` all'
 {% capture example %}
 
 <div class="dropdown dropstart text-center">
-  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropleft" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <a class="btn btn-dropdown btn-icon dropdown-toggle" href="#" role="button" id="dropdownMenuDropleft" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
     Apri dropstart
   </a>
@@ -567,4 +567,6 @@ Le opzioni possono essere passate tramite gli attributi data o tramite JavaScrip
 - Per quanto riguarda le icone le classi che ne controllano il colore potrebbero aver cambiato nome, ad esempio `.icon-white` diventa `.icon-inverse`.
 - Aggiunta classe `.dropdown-item` alla voce attiva nell'esempio di menu voci attive ed a tutti agli elementi dei menu dropdown laddove mancava.
 - Corretto markup dell'intestazione nel Menu con intestazioni e separatori, `<div>` diventa `<h4>`. Sarà da far attenzione alla corretta gerarchia in pagina di questa intestazione scegliendone il livello a seconda del contesto. 
+- Aggiunta la classe `.btn-icon` al pulsante di apertura con icona (`.dropdown-toggle`), per allineare icona e testo e avere la stessa altezza degli altri pulsanti con icona.
+- La variante `.btn-dropdown` non passa più a 18px da desktop: usa la dimensione del testo dei pulsanti.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
