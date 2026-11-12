@@ -75,7 +75,7 @@ h2,
 
 ### Variabile dinamica per selettore
 
-Nel caso di cambiamenti che dipendono dall'uso di un selettore (tag o classe) specifico, la variabile cambia valore ad essa associato. Ad esempio, lo sfondo di un pulsante con classe `.btn` è trasparente di default, mentre nella variante `.btn-primary` mostra il colore primario:
+Nel caso di cambiamenti che dipendono dall'uso di un selettore (tag o classe) specifico, la variabile cambia il valore ad essa associato. Ad esempio, lo sfondo di un pulsante con classe `.btn` è trasparente di default, mentre nella variante `.btn-primary` mostra il colore primario:
 
 ```scss
 /* _buttons.scss */
