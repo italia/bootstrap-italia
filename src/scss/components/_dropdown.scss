@@ -353,6 +353,30 @@
       text-decoration: none;
     }
   }
+
+  // Illustrative icon on the left (.left-icon + .icon.left)
+  // or on the right edge (.right-icon + .icon.right)
+  &.left-icon,
+  &.right-icon {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      flex-shrink: 0;
+    }
+  }
+
+  &.left-icon .icon.left {
+    margin-right: var(--#{$prefix}icon-spacing);
+  }
+
+  &.right-icon {
+    justify-content: space-between;
+
+    .icon.right {
+      margin-left: var(--#{$prefix}icon-spacing);
+    }
+  }
 }
 
 // Dropdown section headers
