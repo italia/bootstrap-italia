@@ -344,8 +344,16 @@ input::-webkit-datetime-edit {
     }
 
     // Checkbox shape
+    // The control is drawn by the label's pseudo-elements and anchored to the
+    // top of the label, so it does not follow the line height. The second
+    // declaration keeps it centred on the first line when the leading grows
+    // (user text-spacing styles, a customized label-leading): max() makes it a
+    // no-op at the default leading, and browsers without the lh unit drop the
+    // declaration and keep the plain value above. Written inline rather than in
+    // a custom property, where an unsupported unit would make top itself unset.
     + label::after {
       top: 0;
+      top: max(0px, calc((1lh - 20px) / 2));
       width: 20px;
       height: 20px;
       border-radius: var(--#{$prefix}form-checkbox-border-radius);
@@ -354,6 +362,7 @@ input::-webkit-datetime-edit {
     // Checked state
     &:checked + label::before {
       top: 3px;
+      top: calc(3px + max(0px, (1lh - 20px) / 2));
       left: 3px;
       width: 6px;
       height: 12px;
@@ -381,6 +390,7 @@ input::-webkit-datetime-edit {
 
     &:not(:checked) + label::before {
       top: 10px;
+      top: calc(10px + max(0px, (1lh - 20px) / 2));
       left: 6px;
       width: 0;
       height: 0;
@@ -419,6 +429,8 @@ input::-webkit-datetime-edit {
       &::before {
         position: absolute;
         top: 0;
+        // Same offset as the checkbox shape above, see the comment there.
+        top: max(0px, calc((1lh - 20px) / 2));
         left: 0;
         z-index: 0;
         content: '';
@@ -435,6 +447,7 @@ input::-webkit-datetime-edit {
       // fractional positions.
       &::after {
         top: 4px;
+        top: calc(4px + max(0px, (1lh - 20px) / 2));
         left: 4px;
         width: 12px;
         height: 12px;
@@ -546,6 +559,7 @@ input::-webkit-datetime-edit {
 
   input.semi-checked:not(:checked) + label::before {
     top: 12px;
+    top: calc(12px + max(0px, (1lh - 20px) / 2));
     left: 4px;
     width: 12px;
     height: 2px;
