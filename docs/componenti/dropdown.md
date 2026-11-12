@@ -568,5 +568,4 @@ Le opzioni possono essere passate tramite gli attributi data o tramite JavaScrip
 - Aggiunta classe `.dropdown-item` alla voce attiva nell'esempio di menu voci attive ed a tutti agli elementi dei menu dropdown laddove mancava.
 - Corretto markup dell'intestazione nel Menu con intestazioni e separatori, `<div>` diventa `<h4>`. Sarà da far attenzione alla corretta gerarchia in pagina di questa intestazione scegliendone il livello a seconda del contesto. 
 - Aggiunta la classe `.btn-icon` al pulsante di apertura con icona (`.dropdown-toggle`), per allineare icona e testo e avere la stessa altezza degli altri pulsanti con icona.
-- La variante `.btn-dropdown` non passa più a 18px da desktop: usa la dimensione del testo dei pulsanti.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
