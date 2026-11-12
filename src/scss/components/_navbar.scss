@@ -453,7 +453,7 @@
         &.dropdown-toggle {
           svg {
             margin-top: 2px;
-            margin-left: var(--#{$prefix}spacing-3xs);
+            margin-left: var(--#{$prefix}spacing-xxs);
             fill: currentColor;
             transition: all var(--#{$prefix}transition-instant);
           }

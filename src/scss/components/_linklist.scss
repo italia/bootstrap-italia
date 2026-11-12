@@ -150,7 +150,7 @@
       .icon {
         left: 0;
         flex-shrink: 0;
-        margin-right: var(--#{$prefix}spacing-xxs);
+        margin-right: var(--#{$prefix}icon-spacing);
       }
 
       p {
@@ -199,7 +199,7 @@
       flex: 1;
 
       .list-item-title {
-        margin-right: var(--#{$prefix}spacing-xxs);
+        margin-right: var(--#{$prefix}icon-spacing);
       }
     }
 
