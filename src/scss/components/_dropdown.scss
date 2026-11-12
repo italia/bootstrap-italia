@@ -41,8 +41,8 @@
   --#{$prefix}dropdown-link-color: var(--#{$prefix}color-text-primary); // Controls the link color in dropdown items, using color tokens.
   --#{$prefix}dropdown-min-width: 10rem; // Controls the minimum width of the dropdown menu.
   --#{$prefix}dropdown-notch-base-size: 1.125rem; // Controls the size of the notch element.
-  --#{$prefix}dropdown-notch-position-x: 20px; // Controls the x position of the notch element.
-  --#{$prefix}dropdown-notch-position-y: -8px; // Controls the y position of the notch element.
+  --#{$prefix}dropdown-notch-inset: 20px; // Controls the notch position along the edge it sits on.
+  --#{$prefix}dropdown-notch-offset: -8px; // Controls how far the notch sticks out of the panel edge.
   --#{$prefix}dropdown-padding-x: 0; // Controls the dropdown menu padding left and right.
   --#{$prefix}dropdown-padding-y: var(--#{$prefix}spacing-xxs); // Controls the dropdown menu padding top and bottom, using spacing tokens.
   --#{$prefix}dropdown-spacer: 0.125rem; // Controls the space between dropdown toggle and menu.
@@ -71,8 +71,11 @@
 
 // Dropdown menu
 .dropdown-menu {
-  --#{$prefix}dropdown-notch-offset: calc(
-    var(--#{$prefix}dropdown-notch-position-y) - var(--#{$prefix}dropdown-border-width) - (var(--#{$prefix}dropdown-notch-base-size) - 1.125rem) / 2
+  // Internal: the notch's final distance from the panel edge, with the border
+  // and any non-default notch size already compensated. Not part of the public
+  // Properties block above.
+  --#{$prefix}dropdown-notch-edge-position: calc(
+    var(--#{$prefix}dropdown-notch-offset) - var(--#{$prefix}dropdown-border-width) - (var(--#{$prefix}dropdown-notch-base-size) - 1.125rem) / 2
   );
   position: absolute;
   z-index: var(--#{$prefix}dropdown-zindex);
@@ -133,9 +136,9 @@
   // notch
   &:before {
     position: absolute;
-    top: var(--#{$prefix}dropdown-notch-offset);
+    top: var(--#{$prefix}dropdown-notch-edge-position);
     content: '';
-    left: var(--#{$prefix}dropdown-notch-position-x);
+    left: var(--#{$prefix}dropdown-notch-inset);
     width: var(--#{$prefix}dropdown-notch-base-size);
     height: var(--#{$prefix}dropdown-notch-base-size);
     border-radius: var(--#{$prefix}dropdown-border-radius);
@@ -151,7 +154,7 @@
     //notch
     &:before {
       top: auto;
-      bottom: var(--#{$prefix}dropdown-notch-offset);
+      bottom: var(--#{$prefix}dropdown-notch-edge-position);
       border-top: 0;
       border-left: 0;
       border-bottom: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
@@ -162,7 +165,7 @@
   // Bottom end position
   &[data-popper-placement='bottom-end'] {
     &:before {
-      right: calc(var(--#{$prefix}dropdown-notch-position-x) / 2);
+      right: calc(var(--#{$prefix}dropdown-notch-inset) / 2);
       left: auto;
     }
   }
@@ -220,8 +223,8 @@
     &[data-popper-placement='left-start'] {
       animation: dropdownFadeInTop forwards var(--#{$prefix}dropdown-animation-speed);
       &:before {
-        top: var(--bsi-dropdown-notch-position-x);
-        right: var(--#{$prefix}dropdown-notch-offset);
+        top: var(--#{$prefix}dropdown-notch-inset);
+        right: var(--#{$prefix}dropdown-notch-edge-position);
         left: auto;
         border-top: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
         border-right: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
@@ -233,8 +236,8 @@
     &[data-popper-placement='right-start'] {
       animation: dropdownFadeInTop forwards var(--#{$prefix}dropdown-animation-speed);
       &:before {
-        top: var(--bsi-dropdown-notch-position-x);
-        left: var(--#{$prefix}dropdown-notch-offset);
+        top: var(--#{$prefix}dropdown-notch-inset);
+        left: var(--#{$prefix}dropdown-notch-edge-position);
         border-bottom: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
         border-left: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
         border-top: 0;
