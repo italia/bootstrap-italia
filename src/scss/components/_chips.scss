@@ -6,9 +6,10 @@
   background: $chips-background;
   border: 1px solid $chips-border;
   border-radius: $v-gap * 1.5;
-  height: $v-gap * 3;
+  min-height: $v-gap * 3;
   min-width: 100px;
-  padding: 0 calc($v-gap / 2) 2px $v-gap;
+  max-width: 100%;
+  padding: 0 calc($v-gap / 2) 0 $v-gap;
   transition: all 0.05s;
   margin-top: $v-gap * 0.5;
   margin-bottom: $v-gap;
@@ -18,11 +19,9 @@
   //label
   .chip-label {
     font-size: $chips-label-font-size;
-    height: $v-gap * 2;
     font-weight: 600;
     color: $chips-label-color;
     margin-bottom: 0;
-    transform: translateY(-2px);
     transition: color 0.05s;
     text-decoration: none;
     &:hover {
@@ -31,10 +30,15 @@
   }
   //close button
   button {
+    // centre the icon at any text size (with vertical-align it followed the text and dropped)
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
     background: transparent;
     border: none;
-    margin-left: auto;
+    // as tall as the chip: overlap the 1px borders instead of pushing the min-height
+    margin: -1px 0 -1px auto;
     width: 24px;
     height: 24px;
     position: relative;
@@ -64,15 +68,13 @@
 
   //large version-------------------------------
   &.chip-lg {
-    height: $v-gap * 4;
+    min-height: $v-gap * 4;
     min-width: 120px;
     border-radius: $v-gap * 2;
-    padding: 2px calc($v-gap / 2) 0 $v-gap * 2;
+    padding: 0 calc($v-gap / 2) 0 $v-gap * 2;
     //label
     .chip-label {
       font-size: $chips-label-font-size-l;
-      height: 12px;
-      transform: translateY(-8px);
     }
     //close button
     button {
