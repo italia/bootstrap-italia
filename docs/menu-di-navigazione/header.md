@@ -1420,6 +1420,7 @@ const headerSticky = new HeaderSticky(headerStickyElement)
 - Cambiata la dimensione del pulsante Accedi: cambiato classe da `.btn-sm` a `.btn-sx`.
 - Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi.
 - È stato rimossa la classe `.shadow-lg` sull'elemento `.dropdown-menu` in tutte le varianti. L'ombra è controllata dalle property "elevation".  
+- Rimossa la classe `.navbar-dark`, ereditata dal tema scuro di Bootstrap: la navbar usa i colori inversi per impostazione predefinita.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}

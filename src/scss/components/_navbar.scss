@@ -18,6 +18,7 @@
 .navbar {
   --#{$prefix}navbar-background: var(--#{$prefix}color-background-primary); // Controls the navbar background, using color tokens.
   --#{$prefix}navbar-brand-color: var(--#{$prefix}color-text-inverse); // Controls the navbar brand color, using color tokens.
+  --#{$prefix}navbar-brand-hover-color: var(--#{$prefix}color-text-inverse); // Controls the navbar brand color on hover and focus, using color tokens.
   --#{$prefix}navbar-brand-font-size: var(--#{$prefix}label-font-size); // Controls the navbar brand font size, using size tokens.
   --#{$prefix}navbar-brand-margin-end: var(--#{$prefix}spacing-s); // Controls the navbar brand margin end.
   --#{$prefix}navbar-brand-padding-y: var(--#{$prefix}spacing-xxs); // Controls the navbar brand padding y.
@@ -616,17 +617,6 @@
 }
 
 // scss-docs-end navbar-expand-loop
-
-// Navbar themes
-//
-// Styles for switching between navbars with light or dark background.
-
-.navbar-dark {
-  --#{$prefix}navbar-brand-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}navbar-brand-hover-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
-  --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)};
-}
 
 // Nav secondary
 //
