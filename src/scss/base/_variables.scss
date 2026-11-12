@@ -1558,10 +1558,6 @@ $navigation-light-text-color: $primary !default;
 $navigation-light-separator-color: $neutral-1-a2 !default;
 $navigation-light-megamenu-separator-color: $gray-border !default; // UI kit
 
-//inline
-$inline-menu-line-width: 2px;
-$inline-menu-linklist-v-padding: 0.59em;
-
 // Megamenu
 $megamenu-padding-top-desktop: $v-gap * 4;
 $megamenu-column-gap: $v-gap * 3;
@@ -1797,28 +1793,6 @@ $dp-month-size: 0.875rem;
 $dp-month-l-spacing: 0.1px;
 $dp-grid-size: 0.75rem;
 $dp-current-size: $v-gap * 4;
-
-// hero
-$hero-bg-color: $primary !default;
-$hero-height-desk: 400px;
-$hero-height-mob: 300px;
-$hero-height-sm-desk: 300px;
-$hero-height-sm-tab: 300px;
-$hero-height-sm-mob: 300px;
-$hero-text-padding: $v-gap * 3;
-$hero-text-color: $white !default;
-$hero-cat-size: 1rem;
-$hero-heading-size: 2.5rem;
-$hero-heding-size-desk: 3rem;
-$hero-p-size: 1rem;
-$hero-cat-spacing: $card-category-l-spacing !default;
-$hero-text-padding-desk: 120px;
-$hero-dark-bg: rgba($neutral-1-a10, 0.8) !default; // Missing in the UI kit
-$hero-primary-bg: rgba($primary, 0.8) !default;
-$hero-negative-margin: 2rem;
-$hero-negative-margin-desk: 3rem;
-$hero-negative-bottom-padding: 48px;
-$hero-negative-bottom-padding-mob: 96px;
 
 // Carousel
 $crs-margin-bottom: $v-gap * 3;

@@ -159,8 +159,8 @@ Usa le utility `align-items` col contenitore flexbox per cambiare l'allineamento
     <div class="p-2 bd-highlight">Elemento flex</div>
     <div class="p-2 bd-highlight">Elemento flex</div>
   </div>
-</div>
 {% endcapture %}{% include example.html content=example %}
+</div>
 
 Sono previste anche seguenti le varianti responsive per `align-items`:
 
@@ -204,8 +204,8 @@ Usa le utility `align-self` con i singoli elementi flex per cambiarne l'allineam
     <div class="align-self-stretch p-2 bd-highlight">Elemento flex allineato</div>
     <div class="p-2 bd-highlight">Elemento flex</div>
   </div>
-</div>
 {% endcapture %}{% include example.html content=example %}
+</div>
 
 
 Sono previste anche seguenti le varianti responsive per `align-self`:
