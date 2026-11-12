@@ -34,7 +34,7 @@ Le variabili dinamiche cambiano valore in base a due condizioni principali:
 
 ### Variabile dinamica per breakpoint
 
-Ad esempio, la dimensione responsive dei titoli da `h1` a `h6` è gestita esclusivamenteall'interno del file `_root.scss`, cambiando il valore a partire da un breakpoint specifico:
+Ad esempio, la dimensione responsive dei titoli da `h1` a `h6` è gestita esclusivamente all'interno del file `_root.scss`, cambiando il valore a partire da un breakpoint specifico:
 
 ```scss
 
@@ -75,7 +75,7 @@ h2,
 
 ### Variabile dinamica per selettore
 
-Nel caso di cambiamenti che dipendono dall'uso di un selettore (tag o classe) specifico, la variabile cambia valore ad essa assoacito. Ad esempio, lo sfondo di un pulsante con classe `.btn` è trasparente di default, mentre nella variante `.btn-primary` mostra il colore primario:
+Nel caso di cambiamenti che dipendono dall'uso di un selettore (tag o classe) specifico, la variabile cambia valore ad essa associato. Ad esempio, lo sfondo di un pulsante con classe `.btn` è trasparente di default, mentre nella variante `.btn-primary` mostra il colore primario:
 
 ```scss
 /* _buttons.scss */
@@ -84,7 +84,7 @@ Nel caso di cambiamenti che dipendono dall'uso di un selettore (tag o classe) sp
 }
 
 .btn-primary {
-  --#{$prefix}btn-background: var(--#{$prefix}color-background-secondary);;
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-secondary);
 }
 ```
 
