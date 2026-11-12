@@ -51,6 +51,7 @@
 - Usa un `<div>` con la sola classe `.it-card-actions` a seguire il corpo della card per ospitare link correlati e/o secondari.
 - È stata rimossa la classe `.chips-list` dall'elemento `<ul>` con classe `.it-card-chips` che ospita una lista di più argomenti.
 - La doppia classe `.card-profile` è stata sostituita da `.card-profile-content` per le card di tipo profilo e luogo.
+- Per le liste di card `.it-card-list` o di card collegate `list-group`, è consigliabile inserire nell'elemento `<ul>` l'attributo `role="list"` per ripristinare la semantica lista su Safari e VoiceOver (macOS/iOS).
 - Rimosso il componente card legacy (classi `.card`, deprecate) e la relativa documentazione `card-old`; migra alle classi `.it-card` documentate in questa pagina.
 
 
@@ -100,6 +101,7 @@
 
 - Nel caso di input con icona o pulsanti, l'elemento `label` è stato spostato fuori dal contenitore `.input-group` per leggibilità del markup.
 - Nel paragrafo dimensioni sono stati integrati gli esempi con icone, pulsanti di invio e istruzioni specifiche.
+- Nei due esempi grafici di liste di ricerca è stato aggiunto l'attributo `role="list"` sull'elemento `<ul>` per ripristinarne la semantica lista su Safari e VoiceOver (macOS/iOS). 
 
 
 ### Generale
@@ -120,9 +122,9 @@ La validazione con JustValidate, e le classi che applicano gli stili di validazi
 ### Liste
 
 - Negli esempi di varianti lista con avatar è stata rimossa la classe `.size-lg` dai `<div>` con classe `.avatar`. 
-- Nelle liste con immagini sono state aggiunge le classi per controllare la dimensione dell'immagine sui `<div>` con classe `.it-thumb`: `.ratio` e `.ratio-16x9` con istruzioni su come cambiare quest'ultima con le classi specifiche per cambiare le proporzioni.
+- Nelle liste con immagini sono state aggiunte le classi per controllare la dimensione dell'immagine sui `<div>` con classe `.it-thumb`: `.ratio` e `.ratio-16x9` con istruzioni su come cambiare quest'ultima con le classi specifiche per cambiare le proporzioni.
 - Nelle liste con azioni e freccia è definita esplicitamente la dimensione e il colore delle icone freccia aggiungendo le classi `.icon-primary` e `.icon-sm` rispettivamente dove necessario.
-- Nelle liste multilinea è stata rimosso elemento `<li>` e il tag `<span>` con classe `.divider`, il bordo è ora gestito con stili CSS
+- Nelle liste multilinea è stato rimosso l'elemento `<li>` e il tag `<span>` con classe `.divider`, il bordo è ora gestito con stili CSS
 
 
 ### Megamenu
@@ -193,10 +195,12 @@ La variabile per il controllo della proporzione custom è ora `--bsi-aspect-rati
 
 ### Sidebar
 
-- Rimossi elementi `<span>` con classe `list-item-title-icon-wrapper`.
+- Ogni lista di link della sidebar (`.link-list-wrapper`) è ora un elemento `<nav>` con un nome accessibile dedicato, al posto di un `<div>`.
+- Il titolo della sidebar (`<h3>`) non è più un elemento `<li>` della lista di link: negli esempi è posto all'inizio del contenitore `.sidebar-wrapper`. A seconda del contesto può essere posizionato diversamente, vedi la nota di accessibilità.
 - Nella variante con una lista di link primaria annidata è stata rimossa la classe `.large` dagli elementi `<a>` con classi `.list-item .medium`. 
 - Nelle varianti scure la classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
-- Rimossa le classi `.right-icon` e `.right` dai link list item.
+- Nella variante con icona sono stati rimossi gli elementi `<span>` con classe `list-item-title-icon-wrapper`: icona e testo sono figli diretti del link.
+- Rimosse le classi `.right-icon` e `.right` dai link list item.
 
 
 ### Steppers
@@ -205,6 +209,12 @@ La variabile per il controllo della proporzione custom è ora `--bsi-aspect-rati
 - Aggiunta la classe `.btn-icon` ai pulsanti "Indietro" e "Avanti".
 - Il pulsante "Avanti" è sempre un `.btn-primary`.
 - Modificata la posizione del pulsante "Salva", ora posizionato in un righe a sé stante.
+- Per le liste dello stepper, è consigliabile inserire l'attributo `role="list"` sull'elemento `<ul>` per ripristinare la semantica lista su Safari e VoiceOver (macOS/iOS).
+
+
+### Thumbnav
+
+- Per le liste di thumbnail, è consigliabile inserire l'attributo `role="list"` sull'elemento `<ul>` per ripristinare la semantica lista su Safari e VoiceOver (macOS/iOS). 
 
 
 ### Toolbar
@@ -226,7 +236,8 @@ La variabile per il controllo della proporzione custom è ora `--bsi-aspect-rati
 
 ### Upload
 
-- Nella variante Avatar - Dimensione Piccola, l'icona presente su mobile ha la classe `.icon-xs` al posto di `.icon-sm`.  
+- Per le liste `.upload-file-list`, anche nella variante con immagini (`.upload-file-list-image`), e `.upload-pictures-wall`, è consigliabile inserire l'attributo `role="list"` sull'elemento `<ul>` per ripristinare la semantica lista su Safari e VoiceOver (macOS/iOS).
+- Nella variante Avatar - Dimensione Piccola, l'icona presente su mobile ha la classe `.icon-xs` al posto di `.icon-sm`.
 
 
 ## 2.16.0

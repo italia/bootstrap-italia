@@ -1,3 +1,19 @@
+# [3.0.0-beta.8](https://github.com/italia/bootstrap-italia/compare/v3.0.0-beta.7...v3.0.0-beta.8) (2026-11-05)
+
+
+### Bug Fixes
+
+* **a11y:** restore list semantics in Safari/VoiceOver with targeted role="list" ([dc9ae7a](https://github.com/italia/bootstrap-italia/commit/dc9ae7ac306319bbcb4236fb82c64f2999a3a284)), closes [#1692](https://github.com/italia/bootstrap-italia/issues/1692) [#1755](https://github.com/italia/bootstrap-italia/issues/1755)
+* **accept-overlay:** restore body font-family/font-size lost in tokens migration ([#1950](https://github.com/italia/bootstrap-italia/issues/1950)) ([5af9af1](https://github.com/italia/bootstrap-italia/commit/5af9af19f9839ed98e6fe1719850d309302b945f))
+* **buttons:** restore .btn-check pattern (backwards compatibily) ([#1956](https://github.com/italia/bootstrap-italia/issues/1956)) ([4a50d0a](https://github.com/italia/bootstrap-italia/commit/4a50d0a5ae869594631b19236db141b0a1e38cba)), closes [#1921](https://github.com/italia/bootstrap-italia/issues/1921)
+* **footer:** enlarge click and focus area of list items and section title links ([4ebd303](https://github.com/italia/bootstrap-italia/commit/4ebd30364566dab30408c7bb60e8b1df1474b0a7)), closes [#1916](https://github.com/italia/bootstrap-italia/issues/1916)
+* **forms:** keep the radio dot centered at fractional positions ([b5778d2](https://github.com/italia/bootstrap-italia/commit/b5778d237bc576c873ee4489e3f3774558c79c87))
+* **forms:** restore .was-validated selectors for form controls and selects ([fbcffc6](https://github.com/italia/bootstrap-italia/commit/fbcffc6b28db2e71ef9e517d3b302317a5c4f8db)), closes [#1987](https://github.com/italia/bootstrap-italia/issues/1987)
+* **header:** use semantic token for header-slim-background ([3bc5c50](https://github.com/italia/bootstrap-italia/commit/3bc5c503b1013a31eddf68ab7e2099ea10c7e18a))
+* **modal:** align footer spacing with scrolling content to UI Kit Italia ([e9c4f56](https://github.com/italia/bootstrap-italia/commit/e9c4f56a27125b326e69dc9f0d3469958536a3f5))
+
+
+
 # [3.0.0-beta.7](https://github.com/italia/bootstrap-italia/compare/v3.0.0-beta.6...v3.0.0-beta.7) (2026-09-22)
 
 

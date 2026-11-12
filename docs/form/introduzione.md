@@ -440,6 +440,50 @@ Di seguito un esempio di form validato con Just Validate.
 
 {% endcapture %}{% include example.html content=example %}
 
+### Validazione nativa del browser
+
+Senza JustValidate si può usare la validazione del browser, con gli attributi HTML come `required`, `type="email"` o `min`. Il form ha l'attributo `novalidate`, per non mostrare i messaggi del browser, e all'invio riceve la classe `was-validated`: da quel momento i campi `.form-control` e le `select` prendono bordo e icona secondo le pseudo-classi `:valid` e `:invalid`. Checkbox, radio e toggle non sono coperti.
+
+{% comment %}Example name: Con validazione nativa {% endcomment %}
+{% capture example %}
+
+<form id="nativeValidationForm" novalidate>
+  <div class="row mt-4">
+    <div class="form-group col-md-6">
+      <label for="nativeValidationName">Nome</label>
+      <input type="text" class="form-control" id="nativeValidationName" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="nativeValidationEmail">Email</label>
+      <input type="email" class="form-control" id="nativeValidationEmail" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="select-wrapper">
+        <label for="nativeValidationRegion">Regione</label>
+        <select id="nativeValidationRegion" required>
+          <option value="">Scegli una regione</option>
+          <option>Campania</option>
+          <option>Lazio</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Invia</button>
+</form>
+
+<script>
+  document.getElementById('nativeValidationForm').addEventListener('submit', (event) => {
+    if (!event.target.checkValidity()) {
+      event.preventDefault()
+    }
+    event.target.classList.add('was-validated')
+  })
+</script>
+
+{% endcapture %}{% include example.html content=example %}
+
 ##### Continua la lettura
 
 I singoli campi di tipo _input_, _checkbox_, _radio_, _toggle_, ecc. sono trattati in pagine separate della documentazione, continua a leggere alla pagina dedicata ai [campi di input]({{ site.baseurl }}/docs/form/input/).

@@ -429,6 +429,17 @@ input::-webkit-datetime-edit {
         border-radius: var(--#{$prefix}radius-rounded);
         transition: all var(--#{$prefix}transition-instant) ease-out;
       }
+
+      // Inner dot: 12x12 centered in the 20x20 circle, as in UI Kit Italia.
+      // No transform at rest, so it rounds like the outer border at
+      // fractional positions.
+      &::after {
+        top: 4px;
+        left: 4px;
+        width: 12px;
+        height: 12px;
+        border-width: 0;
+      }
     }
 
     &:not(:checked) + label {
@@ -449,7 +460,7 @@ input::-webkit-datetime-edit {
         z-index: 0;
         border-color: var(--#{$prefix}form-checked-color);
         background-color: var(--#{$prefix}form-checked-color);
-        transform: scale(0.64);
+        transform: none;
       }
 
       &::before {
@@ -521,6 +532,10 @@ input::-webkit-datetime-edit {
 
     input[type='radio']:checked + label::before {
       right: 0;
+    }
+
+    input[type='radio'] + label::after {
+      right: 4px;
     }
 
     input.semi-checked:not(:checked) + label::before {
