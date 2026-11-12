@@ -9,7 +9,7 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
 
 <!-- Tipografia statiche -->
 
-<h3>Tipografia</h3>
+<h3 id="tipografia">Tipografia</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -38,7 +38,7 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
 
 <!-- Tipografia dinamiche -->
 
-<h3>Tipografia dinamiche</h3>
+<h3 id="tipografia-dinamiche">Tipografia dinamiche</h3>
 
 Nella colonna `"Valore predefinito"` è possibile trovare, oltre al valore di base, un'indicazione delle eventuali varianti responsive/tema/stato della property stessa:
 fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio dei valori e del contesto di applicazione.
@@ -72,7 +72,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 
 <!-- Icone -->
 
-<h3>Icons</h3>
+<h3 id="icons">Icons</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -101,7 +101,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 
 <!-- Border -->
 
-<h3>Border</h3>
+<h3 id="border">Border</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -133,7 +133,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 
 <!-- Sizing -->
 
-<h3>Sizing</h3>
+<h3 id="sizing">Sizing</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -162,7 +162,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 
 <!-- Shadow -->
 
-<h3>Shadow</h3>
+<h3 id="shadow">Shadow</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -191,7 +191,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 
 <!-- Spacing -->
 
-<h3>Spacing</h3>
+<h3 id="spacing">Spacing</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -220,7 +220,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 
 <!-- Text Colors -->
 
-<h3>Text colors</h3>
+<h3 id="text-colors">Text colors</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -249,7 +249,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 
 <!-- Border Colors -->
 
-<h3>Border colors</h3>
+<h3 id="border-colors">Border colors</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -278,7 +278,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 
 <!-- Background Colors -->
 
-<h3>Background colors</h3>
+<h3 id="background-colors">Background colors</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -307,7 +307,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 
 <!-- Status Colors -->
 
-<h3>Status colors</h3>
+<h3 id="status-colors">Status colors</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -336,7 +336,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 
 <!-- Icon Colors -->
 
-<h3>Icon colors</h3>
+<h3 id="icon-colors">Icon colors</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -367,7 +367,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 
 <!-- Transitions -->
 
-<h3>Transitions</h3>
+<h3 id="transitions">Transitions</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
