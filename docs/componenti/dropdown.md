@@ -32,7 +32,7 @@ Altresì è da notare che, su **Safari e VoiceOver (macOS/iOS)**, se il componen
 ## Dropdown button
 
 Ogni singolo `.btn` può essere trasformato in un pulsante per l'apertura di dropdown con del semplice markdown HTML.
-Il design di default dei dropdown richiede l'applicazione della classe `.btn-dropdown`. I link o le voci all'interno del dropdown devono essere contenute in un elemento `.link-list`.
+Il design di default dei dropdown richiede l'applicazione della classe `.btn-dropdown`. I link o le voci all'interno del dropdown devono essere contenute in un elemento `.link-list`. Nelle liste di link il testo della voce va racchiuso in uno `<span>`, sia nei link (`<a class="list-item">`) sia nei pulsanti (`<button type="button" class="list-item">`): colore, hover e sottolineatura sono applicati a quell'elemento. Fanno eccezione le liste dell'header slim e del footer, che hanno stili propri.
 
 {% comment %}Example name: Base, con pulsante{% endcomment %}
 {% capture example %}
