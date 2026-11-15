@@ -354,32 +354,38 @@
   }
 }
 
+.bg-dark .btn-link,
+.btn-link.btn-inverse {
+  color: $white;
+}
+
+.bg-dark .btn-primary,
+.btn-primary.btn-inverse {
+  @include button-variant(
+    $white,
+    $primary,
+    $color: $primary,
+    $hover-color: $primary,
+    $hover-background: shade-color($white, 15%),
+    $active-color: $primary,
+    $active-background: shade-color($white, 20%)
+  );
+  &.disabled,
+  &:disabled {
+    color: shade-color($primary, 10%);
+  }
+}
+
+.bg-dark .btn-outline-primary,
+.btn-outline-primary.btn-inverse {
+  @include button-outline-variant($white);
+  box-shadow: inset 0 0 0 2px $white;
+  &:hover {
+    box-shadow: inset 0 0 0 2px color-hover($white);
+  }
+}
+
 .bg-dark {
-  .btn-link {
-    color: $white;
-  }
-  .btn-primary {
-    @include button-variant(
-      $white,
-      $primary,
-      $color: $primary,
-      $hover-color: $primary,
-      $hover-background: shade-color($white, 15%),
-      $active-color: $primary,
-      $active-background: shade-color($white, 20%)
-    );
-    &.disabled,
-    &:disabled {
-      color: shade-color($primary, 10%);
-    }
-  }
-  .btn-outline-primary {
-    @include button-outline-variant($white);
-    box-shadow: inset 0 0 0 2px $white;
-    &:hover {
-      box-shadow: inset 0 0 0 2px color-hover($white);
-    }
-  }
   .btn-secondary {
     @include button-variant(
       $secondary,
