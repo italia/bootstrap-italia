@@ -277,7 +277,7 @@ La funzionalità di changer permette di scegliere da un dropdown la quantità di
     10/pagina
     <svg class="icon icon-primary icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
     </button>
-    <div class="dropdown-menu" aria-labelledby="pagerChanger">
+    <div class="dropdown-menu" role="group" aria-labelledby="pagerChanger">
       <div class="link-list-wrapper">
         <ul class="link-list">
            <li><a class="dropdown-item list-item active" href="#" aria-current="page"><span>10/pagina</span></a></li>
