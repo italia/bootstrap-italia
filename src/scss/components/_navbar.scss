@@ -339,7 +339,6 @@
 
     // Brand band, always the first element of the panel
     .it-brand-wrapper.it-brand-mobile {
-      --#{$prefix}header-brand-spacing: 0;
       --#{$prefix}header-brand-color: var(--#{$prefix}navbar-brand-mobile-color);
       --#{$prefix}header-brand-icon-color: var(--#{$prefix}navbar-brand-mobile-color);
       padding: var(--#{$prefix}spacing-m) var(--#{$prefix}navbar-link-padding-x);
