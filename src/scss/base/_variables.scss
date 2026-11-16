@@ -1052,7 +1052,6 @@ $zindex-modal-backdrop: 1050 !default;
 $zindex-modal: 1055 !default;
 $zindex-popover: 1070 !default;
 $zindex-tooltip: 1080 !default;
-$zindex-toast: 1090 !default;
 // scss-docs-end zindex-stack
 
 // Link and button colors
@@ -1927,26 +1926,6 @@ $popover-arrow-height: 0.5rem !default;
 $popover-arrow-color: $popover-bg !default;
 $popover-arrow-outer-color: var(--#{$prefix}border-color-translucent) !default;
 // fusv-enable
-
-// Toasts
-
-// scss-docs-start toast-variables
-$toast-max-width: 350px !default;
-$toast-padding-x: 0.75rem !default;
-$toast-padding-y: 0.5rem !default;
-$toast-font-size: 0.875rem !default;
-$toast-color: null !default;
-$toast-background-color: rgba($white, 0.85) !default;
-$toast-border-width: $border-width !default;
-$toast-border-color: var(--#{$prefix}border-color-translucent) !default;
-$toast-border-radius: $border-radius !default;
-$toast-box-shadow: $box-shadow !default;
-$toast-spacing: $container-padding-x !default;
-
-$toast-header-color: $gray-600 !default;
-$toast-header-background-color: rgba($white, 0.85) !default;
-$toast-header-border-color: rgba($black, 0.05) !default;
-// scss-docs-end toast-variables
 
 // Badges
 

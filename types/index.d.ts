@@ -30,7 +30,6 @@ import { ScrollSpy } from './plugins/scrollspy'
 import { SelectAutocomplete } from './plugins/select-autocomplete'
 import { Sticky } from './plugins/sticky'
 import { Tab } from './plugins/tab'
-import { Toast } from './plugins/toast'
 import { Tooltip } from './plugins/tooltip'
 import { TrackFocus } from './plugins/track-focus'
 import { Transfer } from './plugins/transfer'
@@ -73,7 +72,6 @@ export {
   SelectAutocomplete,
   Sticky,
   Tab,
-  Toast,
   Tooltip,
   TrackFocus,
   Transfer,

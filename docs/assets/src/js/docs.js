@@ -9,14 +9,6 @@
     return [].slice.call(list)
   }
 
-  makeArray(document.querySelectorAll('.toast')).forEach(function (toastNode) {
-    var toast = new bootstrap.Toast(toastNode, {
-      autohide: false,
-    })
-
-    toast.show()
-  })
-
   // Tooltip and popover demos
   makeArray(document.querySelectorAll('.tooltip-demo')).forEach(function (tooltip) {
     new bootstrap.Tooltip(tooltip, {
