@@ -49,6 +49,9 @@ select {
   background-color: var(--#{$prefix}form-control-background-color);
   color: var(--#{$prefix}form-control-text-color);
   font-size: var(--#{$prefix}form-control-font-size);
+  // An explicit line-height keeps the content below min-height, so the
+  // field height comes from the token and not from the font metrics.
+  line-height: var(--#{$prefix}font-leading-2);
 
   &.disabled,
   &:disabled {
@@ -59,6 +62,16 @@ select {
     color: var(--#{$prefix}color-text-disabled);
   }
 }
+
+// Single-line fields: a small vertical padding leaves room for the line box
+// even where the browser does not let line-height go below the font's normal
+// value (Firefox), so min-height sets the height and the field still grows
+// with text-only zoom. Textarea keeps the full form-control-spacing.
+input,
+select {
+  padding-block: var(--#{$prefix}spacing-3xs);
+}
+
 /* stylelint-disable-next-line no-duplicate-selectors */
 input,
 textarea {

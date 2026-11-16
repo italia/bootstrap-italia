@@ -49,6 +49,9 @@
 // Form control sizing
 //
 
+// Small keeps the default height (UI Kit Italia has no smaller field):
+// it only reduces font size and horizontal spacing. For a lower field,
+// redeclare --#{$prefix}form-control-height here, as .form-control-lg does.
 .form-control-sm {
   --#{$prefix}form-control-spacing: var(--#{$prefix}spacing-xxs) var(--#{$prefix}spacing-3xs);
   --#{$prefix}form-control-font-size: var(--#{$prefix}label-font-size);
@@ -62,6 +65,11 @@
 
 .form-control-lg {
   --#{$prefix}form-control-font-size: var(--#{$prefix}lead-font-size);
+
+  &,
+  & + .password-icon {
+    --#{$prefix}form-control-height: 3rem;
+  }
 
   &::file-selector-button {
     padding: $input-padding-y-lg $input-padding-x-lg;

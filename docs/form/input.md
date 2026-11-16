@@ -438,7 +438,7 @@ const inputPsw = new InputPassword(inputPswElement, options);
 ## Dimensioni
 La input di base ha una dimensione media che non necessita alcuna classe aggiuntiva.
 
-Per modificare questa dimensione, è possibile utilizzare le classi `.form-control-lg` o `.form-control-sm` applicandole sull'elemento `<input>`.
+Per modificare questa dimensione, è possibile utilizzare le classi `.form-control-lg` o `.form-control-sm` applicandole sull'elemento `<input>`. La variante grande è alta 48px. La variante piccola riduce la grandezza del carattere e la spaziatura, l'altezza resta quella di base (40px); per un campo più basso si può ridichiarare `--bsi-form-control-height` sulla classe `.form-control-sm`.
 
 {% comment %}Example name: Varianti di dimensione {% endcomment %}
 {% capture example %}
@@ -779,6 +779,7 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
 - Nei due esempi grafici di liste di ricerca è stato aggiunto l'attributo `role="list"` sull'elemento `<ul>` per ripristinarne la semantica lista su Safari e VoiceOver (macOS/iOS). 
 - L'esempio di varianti di dimensione, che mostrava degli input ma stava nel paragrafo Area di testo, è stato spostato nel paragrafo Dimensioni. Su `textarea` le classi `.form-control-sm` e `.form-control-lg` cambiano la grandezza del carattere e la spaziatura interna, l'altezza minima è quella di `--bsi-form-control-height` per tutte le dimensioni. Il bordo segue `--bsi-form-control-border-color`, quindi in readonly è uguale a quello degli input.
 - Rimossa la classe `.form-control-color` per `<input type="color">`, ereditata da Bootstrap e mai documentata.
+- I campi, comprese le select e i gruppi con icone o pulsanti, sono alti quanto `--bsi-form-control-height`: 40px nelle dimensioni base e piccola, 48px nella grande, come in UI Kit Italia, con qualsiasi font. In precedenza l'altezza dipendeva dalle metriche del font, ad esempio circa 45px e 54px con Titillium Web. La spaziatura verticale dei campi a una riga è fissa (`--bsi-spacing-3xs`) e non segue più `--bsi-form-control-spacing`, che resta per la spaziatura orizzontale e per le aree di testo: per cambiare l'altezza dei campi si usa `--bsi-form-control-height`.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
