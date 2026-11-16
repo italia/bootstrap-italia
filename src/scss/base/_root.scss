@@ -80,12 +80,13 @@
   --#{$prefix}theme-primary-deep: #{tokens.$it-theme-italia-deep}; // Dark theme color
 
   // Colors
-  --#{$prefix}color-blue-30: #{tokens.$it-color-blue-30}; // Default theme color (e.g. header slim background)
   --#{$prefix}color-slate-36: #{tokens.$it-color-slate-36}; // Neutral color (e.g. chip label text, disabled state)
   --#{$prefix}color-slate-52: #{tokens.$it-color-slate-52}; // Neutral color
   --#{$prefix}color-slate-62: #{tokens.$it-color-slate-62}; // Neutral color
   --#{$prefix}color-slate-85: #{tokens.$it-color-slate-85}; // Neutral color
-  // ... ? do we nneed to add more colors here or can we just reference the tokens directly in the components?
+  // Only the palette colors that components read directly. For the other
+  // Design Tokens Italia colors, install design-tokens-italia and use its
+  // CSS custom properties (--it-color-*).
 
   // Spacing
   --#{$prefix}spacing-3xl: #{tokens.$it-spacing-3xl}; // 3-extra-large value of the spacing scale (96px / 6rem)
