@@ -55,12 +55,6 @@
 .form-control-sm {
   --#{$prefix}form-control-spacing: var(--#{$prefix}spacing-xxs) var(--#{$prefix}spacing-3xs);
   --#{$prefix}form-control-font-size: var(--#{$prefix}label-font-size);
-
-  &::file-selector-button {
-    padding: $input-padding-y-sm $input-padding-x-sm;
-    margin: (-$input-padding-y-sm) (-$input-padding-x-sm);
-    margin-inline-end: $input-padding-x-sm;
-  }
 }
 
 .form-control-lg {
@@ -69,11 +63,5 @@
   &,
   & + .password-icon {
     --#{$prefix}form-control-height: 3rem;
-  }
-
-  &::file-selector-button {
-    padding: $input-padding-y-lg $input-padding-x-lg;
-    margin: (-$input-padding-y-lg) (-$input-padding-x-lg);
-    margin-inline-end: $input-padding-x-lg;
   }
 }

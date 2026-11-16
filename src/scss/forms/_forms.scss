@@ -85,29 +85,26 @@ textarea {
 }
 
 input {
-  // File input buttons theming //TODO: CHECK
+  // File input button: plain text inside the field, as it already looked
+  // (white on white, no divider), without the Bootstrap negative margins.
   &::file-selector-button {
-    margin: (-$input-padding-y) (-$input-padding-x);
-    padding: $input-padding-y $input-padding-x;
-    border-width: 0;
-    border-style: solid;
+    margin: 0;
+    padding: 0;
+    // Gap from the file name as padding, not margin: Safari ignores margins
+    // on this pseudo-element. The background is transparent, so it looks the same.
+    padding-inline-end: var(--#{$prefix}spacing-m);
+    border: 0;
     border-radius: 0; // stylelint-disable-line property-disallowed-list
-    border-color: inherit;
-    color: $form-file-button-color;
+    color: var(--#{$prefix}color-text-base);
+    background-color: transparent;
     pointer-events: none;
-    margin-inline-end: $input-padding-x;
-    border-inline-end-width: $input-border-width;
-    @include gradient-bg($form-file-button-bg);
-    @include transition($btn-transition);
-  }
-
-  //TODO: CHECK
-  &:hover:not(:disabled):not([readonly])::file-selector-button {
-    background-color: $form-file-button-hover-bg;
   }
 
   &[type='file'] {
     overflow: hidden; // prevent pseudo element button overlap
+    // Unlike text fields, the browser does not center a file input's content
+    // in a taller box: the vertical padding centers the line in the field.
+    padding-block: max(0px, calc((var(--#{$prefix}form-control-height) - 1lh - 2px) / 2));
 
     &:not(:disabled):not([readonly]) {
       cursor: pointer;
