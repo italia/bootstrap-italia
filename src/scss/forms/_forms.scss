@@ -1,4 +1,3 @@
-@use 'sass:math';
 @use '../base/config' as *;
 @use '../base/functions' as *;
 @use '../base/variables' as *;
@@ -111,15 +110,13 @@ input {
     }
   }
 
-  // Add some height to date inputs on iOS
+  // Empty date inputs on iOS collapse, and their value is centered: give the
+  // value box one line, center it in the field and align it to the start.
   // https://github.com/twbs/bootstrap/issues/23307
   &::-webkit-date-and-time-value {
-    // Multiply line-height by 1em if it has no unit
-    @if math.unit($input-line-height) == '' {
-      height: $input-line-height * 1em;
-    } @else {
-      height: $input-line-height;
-    }
+    height: 1lh;
+    padding-block: max(0px, calc((var(--#{$prefix}form-control-height) - 2px - 2 * var(--#{$prefix}spacing-3xs) - 1lh) / 2));
+    text-align: start;
   }
 }
 
