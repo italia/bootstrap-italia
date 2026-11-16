@@ -5208,15 +5208,6 @@
             "variable-name": "--bsi-theme-primary-deep"
         },
         {
-            "description": "Default theme color (e.g. header slim background)",
-            "files": [
-                "_root.scss"
-            ],
-            "other_values": [],
-            "value": "#004d99",
-            "variable-name": "--bsi-color-blue-30"
-        },
-        {
             "description": "Neutral color (e.g. chip label text, disabled state)",
             "files": [
                 "_root.scss"
