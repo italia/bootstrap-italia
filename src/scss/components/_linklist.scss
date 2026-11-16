@@ -146,7 +146,9 @@
     }
 
     // Icon left inside list item
-    &.icon-left {
+    // .left-icon: v2 name, kept as an alias of .icon-left
+    &.icon-left,
+    &.left-icon {
       .icon {
         left: 0;
         flex-shrink: 0;
