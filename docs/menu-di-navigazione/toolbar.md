@@ -956,4 +956,5 @@ sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti
 - L'icona del dropdown è ora gestita con il tag `<svg>`
 - Il contenuto di ogni voce è racchiuso in un contenitore dedicato nel caso di versione con dropdown.
 - Modificata la gestione dell'ombreggiatura, altezza e posizione della toolbar.
+- Aggiunto `role="group"` al contenitore `.dropdown-menu` dei dropdown, che ha già `aria-labelledby` riferito al pulsante di apertura. Corretto l'`id` duplicato del quinto pulsante del primo esempio, ora `dropdownMenuButton5`.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}

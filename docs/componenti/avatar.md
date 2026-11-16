@@ -707,6 +707,7 @@ Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può 
 - Nelle varianti avatar con testo i colori di fondo possono essere solo `.avatar-primary` e `.avatar-secondary`. Sono state rimosse le classi `.avatar-green`, `.avatar-orange` e `.avatar-red`.
 - Corretta l'icona nella variante Avatar con icona (`sprites.svg#it-user`).
 - Rimossi dagli esempi liste i colori di sfondo custom, ad esempio `.complementary-3-bg`.
+- Aggiunto `role="group"` al contenitore `.dropdown-menu` del dropdown, che ha già `aria-labelledby` riferito al pulsante di apertura.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}

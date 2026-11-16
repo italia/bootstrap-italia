@@ -21,6 +21,8 @@ Lo standard [WAI ARIA](https://www.w3.org/TR/wai-aria/) definisce un widget con 
 
 I dropdown del framework Bootstrap sono progettati per essere invece generici e applicabili a una varietà di situazioni e strutture di markup. Per questo motivo, Bootstrap Italia non si aspetta (né aggiunge automaticamente) alcuno degli attributi ARIA e di ruolo richiesti. Gli autori dovranno integrare nel proprio markup gli eventuali attributi specifici e, nel caso di sviluppo di soluzioni che non ricadano nello standard ARIA, porre particolare attenzione a verifiche di accessibilità e test con utenti.
 
+Negli esempi il contenitore `.dropdown-menu` ha `role="group"` e `aria-labelledby` riferito all'`id` del pulsante di apertura: così, entrando nella lista, i lettori di schermo annunciano il nome del dropdown. Per lo standard WAI-ARIA `aria-labelledby` non è valido su un elemento senza ruolo, per questo va usato insieme a `role="group"`.
+
 Tuttavia, Bootstrap comprende di base il supporto per la maggior parte delle interazioni standard del menu della tastiera, come la possibilità di spostarsi tra i singoli elementi `.list-item` usando i tasti freccia, e chiude il menu con il tasto ESC.
 
 Si ricorda che link di navigazione semanticamente sono tag `<a>`, mentre link che attivano azioni in pagina sono tag `<button>`, seppur questi ultimi è possibile implementarli in casi molto particolari come tag `<a>` con proprietà `role="button"`.
@@ -568,4 +570,5 @@ Le opzioni possono essere passate tramite gli attributi data o tramite JavaScrip
 - Aggiunta classe `.dropdown-item` alla voce attiva nell'esempio di menu voci attive ed a tutti agli elementi dei menu dropdown laddove mancava.
 - Corretto markup dell'intestazione nel Menu con intestazioni e separatori, `<div>` diventa `<h4>`. Sarà da far attenzione alla corretta gerarchia in pagina di questa intestazione scegliendone il livello a seconda del contesto. 
 - Aggiunta la classe `.btn-icon` al pulsante di apertura con icona (`.dropdown-toggle`), per allineare icona e testo e avere la stessa altezza degli altri pulsanti con icona.
+- Aggiunto `role="group"` al contenitore `.dropdown-menu` degli esempi, insieme ad `aria-labelledby` riferito al pulsante di apertura. Nelle varianti di colore sono stati aggiunti anche l'`id` al pulsante e `aria-labelledby` al menu.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
