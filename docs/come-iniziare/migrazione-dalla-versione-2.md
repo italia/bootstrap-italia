@@ -70,6 +70,10 @@ Alcuni esempi:
   - Versione 2: `$box-shadow`, `$box-shadow-sm`, `$box-shadow-lg`
   - Versione 3: `--bsi-elevation-*` (low, medium, high)
 
+- **Altezza dei campi dei form**
+  - Versione 2: `$input-height`
+  - Versione 3: `--bsi-form-control-height`
+
 Le CSS custom properties di ogni componente sono documentate nella tabella Properties delle relative schede di dettaglio. 
 
 ### Convenzioni di naming

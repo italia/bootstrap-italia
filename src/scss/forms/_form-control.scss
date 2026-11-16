@@ -76,7 +76,7 @@
 
 textarea {
   &.form-control {
-    min-height: $input-height;
+    min-height: var(--#{$prefix}form-control-height);
     border: 1px solid $input-border;
   }
 
@@ -92,7 +92,7 @@ textarea {
 
 .form-control-color {
   width: $form-color-width;
-  height: $input-height;
+  height: var(--#{$prefix}form-control-height);
   padding: $input-padding-y;
 
   &:not(:disabled):not([readonly]) {
