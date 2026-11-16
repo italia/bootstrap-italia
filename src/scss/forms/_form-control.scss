@@ -70,26 +70,6 @@
   }
 }
 
-// Make sure textareas don't shrink too much when resized
-// https://github.com/twbs/bootstrap/pull/29124
-// stylelint-disable selector-no-qualifying-type
-
-textarea {
-  &.form-control {
-    min-height: var(--#{$prefix}form-control-height);
-    border: 1px solid $input-border;
-  }
-
-  &.form-control-sm {
-    min-height: $input-height-sm;
-  }
-
-  &.form-control-lg {
-    min-height: $input-height-lg;
-  }
-}
-// stylelint-enable selector-no-qualifying-type
-
 .form-control-color {
   width: $form-color-width;
   height: var(--#{$prefix}form-control-height);
