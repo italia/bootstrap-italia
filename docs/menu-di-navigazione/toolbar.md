@@ -518,7 +518,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
           <div class="d-flex align-items-center">
             <div>
               <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
@@ -529,7 +529,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
             </svg>
           </div>
         </button>
-        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton5-med">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton5">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
