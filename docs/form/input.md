@@ -778,6 +778,7 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
 - Nel paragrafo dimensioni sono stati integrati gli esempi con icone, pulsanti di invio e istruzioni specifiche.
 - Nei due esempi grafici di liste di ricerca è stato aggiunto l'attributo `role="list"` sull'elemento `<ul>` per ripristinarne la semantica lista su Safari e VoiceOver (macOS/iOS). 
 - L'esempio di varianti di dimensione, che mostrava degli input ma stava nel paragrafo Area di testo, è stato spostato nel paragrafo Dimensioni. Su `textarea` le classi `.form-control-sm` e `.form-control-lg` cambiano la grandezza del carattere e la spaziatura interna, l'altezza minima è quella di `--bsi-form-control-height` per tutte le dimensioni. Il bordo segue `--bsi-form-control-border-color`, quindi in readonly è uguale a quello degli input.
+- Rimossa la classe `.form-control-color` per `<input type="color">`, ereditata da Bootstrap e mai documentata.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}

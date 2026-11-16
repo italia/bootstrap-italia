@@ -69,29 +69,3 @@
     margin-inline-end: $input-padding-x-lg;
   }
 }
-
-.form-control-color {
-  width: $form-color-width;
-  height: var(--#{$prefix}form-control-height);
-  padding: $input-padding-y;
-
-  &:not(:disabled):not([readonly]) {
-    cursor: pointer;
-  }
-
-  &::-moz-color-swatch {
-    border: 0 !important; // stylelint-disable-line declaration-no-important
-    @include border-radius($input-border-radius);
-  }
-
-  &::-webkit-color-swatch {
-    @include border-radius($input-border-radius);
-  }
-
-  &.form-control-sm {
-    height: $input-height-sm;
-  }
-  &.form-control-lg {
-    height: $input-height-lg;
-  }
-}
