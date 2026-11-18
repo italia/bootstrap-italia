@@ -617,11 +617,6 @@ $sub-sup-font-size: 0.75em !default;
 // Links
 $link-decoration: underline;
 
-// Focus
-$focus-outline-color-in: $white !default;
-$focus-outline-color-out: $black !default;
-$focus-outline-color: $focus-outline-color-out !default; // xxx retro-compatibility, ex $orange
-
 //skiplinks
 $skiplinks-color: $primary !default;
 $skiplinks-bg: $color-background-primary-lighter !default;

@@ -70,6 +70,11 @@ Alcuni esempi:
   - Versione 2: `$box-shadow`, `$box-shadow-sm`, `$box-shadow-lg`
   - Versione 3: `--bsi-elevation-*` (low, medium, high)
 
+- **Anello di focus**
+  - Versione 2: `$focus-outline-color-in`, `$focus-outline-color-out`, `$focus-outline-color`
+  - Versione 3: `--bsi-focus-inner-color` e `--bsi-focus-outer-color` per i colori, `--bsi-focus-inner-width` e `--bsi-focus-outer-width` per gli spessori dei due anelli. `--bsi-color-outline-focus` è deprecata: usa `--bsi-focus-outer-color`.
+  - Se personalizzi i colori, mantieni tra i due anelli un contrasto di almeno 9:1: così almeno uno dei due resta visibile su qualunque sfondo ([tecnica WCAG C40](https://www.w3.org/WAI/WCAG22/Techniques/css/C40)).
+
 Le CSS custom properties di ogni componente sono documentate nella tabella Properties delle relative schede di dettaglio. 
 
 ### Convenzioni di naming
