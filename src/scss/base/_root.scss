@@ -250,7 +250,15 @@
   --#{$prefix}color-border-primary-active: #{tokens.$it-color-border-primary-active}; // Primary border in active and pressed state
   --#{$prefix}color-border-primary-hover: #{tokens.$it-color-border-primary-hover}; // Primary border in hover state
   --#{$prefix}color-border-primary: #{tokens.$it-color-border-primary}; // Primary border, used for clickable interactive elements
-  --#{$prefix}color-outline-focus: #{tokens.$it-color-outline-focus}; // Focus state highlight color
+  --#{$prefix}color-outline-focus: #{tokens.$it-color-outline-focus}; // Focus state highlight color. Deprecated: use --#{$prefix}focus-outer-color
+
+  // Focus ring: two concentric rings around the focused element.
+  // Defaults reproduce the current rendering until Design Tokens Italia
+  // publishes focus.inner.* and focus.outer.*; then read the tokens here.
+  --#{$prefix}focus-inner-color: var(--#{$prefix}color-border-inverse); // Inner ring color
+  --#{$prefix}focus-inner-width: #{tokens.$it-border-double}; // Inner ring width
+  --#{$prefix}focus-outer-color: var(--#{$prefix}color-outline-focus); // Outer ring color
+  --#{$prefix}focus-outer-width: 3px; // Outer ring width
 
   // Background colors
   --#{$prefix}color-background-primary: #{tokens.$it-color-background-primary}; // Primary background, used for interactive elements (buttons, links) and elements carrying the visual identity
