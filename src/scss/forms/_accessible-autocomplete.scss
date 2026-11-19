@@ -157,10 +157,6 @@
       &:hover {
         background-color: var(--#{$prefix}color-background-primary-lighter);
       }
-
-      &:focus {
-        border: 2px solid var(--#{$prefix}color-outline-focus);
-      }
     }
   }
 }
