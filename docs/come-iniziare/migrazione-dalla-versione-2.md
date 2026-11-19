@@ -70,6 +70,10 @@ Alcuni esempi:
   - Versione 2: `$box-shadow`, `$box-shadow-sm`, `$box-shadow-lg`
   - Versione 3: `--bsi-elevation-*` (low, medium, high)
 
+- **Raggi dei bordi**
+  - Versione 2: `$border-radius-*`, `--bs-border-radius`, `--bs-border-radius-sm`, `-lg`, `-xl`, `-2xl`, `-pill`
+  - Versione 3: `--bsi-radius-smooth` (4px), `--bsi-radius-rounded`, `--bsi-radius-circle`. La scala `--bsi-border-radius-*` di Bootstrap non è più esposta: `--bsi-border-radius` diventa `--bsi-radius-smooth`, le altre non hanno un equivalente diretto.
+
 - **Altezza dei campi dei form**
   - Versione 2: `$input-height`
   - Versione 3: `--bsi-form-control-height`

@@ -119,7 +119,7 @@
     left: 50%;
     right: auto;
     transform: translateX(-50%);
-    border-radius: $border-radius $border-radius 0 0;
+    border-radius: var(--#{$prefix}radius-smooth) var(--#{$prefix}radius-smooth) 0 0;
     p {
       width: 66%;
     }
