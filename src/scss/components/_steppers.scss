@@ -28,7 +28,7 @@
   --#{$prefix}stepper-icon-confirmed: var(--#{$prefix}icon-success); // Controls the stepper icon confirmed, using icon tokens.
   --#{$prefix}stepper-index-font-size: var(--#{$prefix}label-font-size-s); // Controls the stepper index font size, using typography tokens.
   --#{$prefix}stepper-item-background: var(--#{$prefix}stepper-background); // Controls the stepper item background.
-  --#{$prefix}stepper-item-border-color-active: var(--#{$prefix}color-border-primary); // Controls the stepper item border color active, using color tokens.
+  --#{$prefix}stepper-item-active-border-color: var(--#{$prefix}color-border-primary); // Controls the active stepper item border color, using color tokens.
   --#{$prefix}stepper-item-text-color: var(--#{$prefix}color-text-muted); // Controls the stepper item text color, using color tokens.
   --#{$prefix}stepper-nav-height: 64px; // Controls the stepper nav height.
   --#{$prefix}stepper-number-border-color: var(--#{$prefix}color-border-subtle); // Controls the stepper number border color, using color tokens.
@@ -193,7 +193,7 @@
         --#{$prefix}stepper-number-background: var(--#{$prefix}color-background-primary);
 
         @include media-breakpoint-up(lg) {
-          border-bottom: var(--#{$prefix}stepper-active-indicator-height) solid var(--#{$prefix}stepper-item-border-color-active);
+          border-bottom: var(--#{$prefix}stepper-active-indicator-height) solid var(--#{$prefix}stepper-item-active-border-color);
         }
       }
 
@@ -290,7 +290,7 @@
   --#{$prefix}stepper-icon-color: var(--#{$prefix}color-slate-62);
   --#{$prefix}stepper-icon-confirmed: var(--#{$prefix}icon-inverse);
   --#{$prefix}stepper-item-text-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}stepper-item-border-color-active: var(--#{$prefix}color-border-inverse);
+  --#{$prefix}stepper-item-active-border-color: var(--#{$prefix}color-border-inverse);
   --#{$prefix}stepper-number-border-color: var(--#{$prefix}color-slate-52);
   --#{$prefix}stepper-number-color: var(--#{$prefix}color-slate-62);
 
