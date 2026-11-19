@@ -53,7 +53,7 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
           <!-- megamenu 1 -->
           <li class="nav-item dropdown megamenu">
             <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 active" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-completo-A1" data-focus-mouse="false">
-                <span>Megamenu 1 (attivo)</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+                <span>Megamenu 1 (attivo)</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
             </button>
             <div class="dropdown-menu" role="region" aria-labelledby="megamenu-completo-A1">
               <div class="megamenu-content">
@@ -138,7 +138,7 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
           <!-- megamenu 2 -->
           <li class="nav-item dropdown megamenu">
             <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-completo-A2" data-focus-mouse="false">
-                <span>Megamenu 2</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+                <span>Megamenu 2</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
             </button>
             <div class="dropdown-menu" role="region" aria-labelledby="megamenu-completo-A2">
               <div class="megamenu-content">
@@ -250,7 +250,7 @@ Variante base che può contenere liste di link organizzate in tre colonne ed eve
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-D" data-focus-mouse="false">
-              <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+              <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu" role="region" aria-labelledby="megamenu-base-D">
             <div class="megamenu-content">
@@ -364,7 +364,7 @@ Come nella variante completa è possibile aggiungere un link "Esplora la sezione
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-E" data-focus-mouse="false">
-              <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+              <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu" role="region" aria-labelledby="megamenu-base-E">
             <div class="megamenu-content">
@@ -483,7 +483,7 @@ Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-F" data-focus-mouse="false">
-              <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+              <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu" role="region" aria-labelledby="megamenu-base-F">
             <div class="megamenu-content">
@@ -621,7 +621,7 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-G" data-focus-mouse="false">
-              <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+              <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu" role="region" aria-labelledby="megamenu-base-G">
             <div class="megamenu-content">
@@ -745,7 +745,7 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-H" data-focus-mouse="false">
-              <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+              <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu" role="region" aria-labelledby="megamenu-base-H">
             <div class="megamenu-content">
@@ -842,6 +842,7 @@ sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti
 - Il contenuto del megamenu ora ha classe `.megamenu-content` invece di `.megamenu`, e non ha più le classi `.pb-5 .pt-3 .py-lg-0`.
 - Nella parte descrittiva del megamenu contenuta nell'elemento `.description-content`, la classe `.ps-4` è stata sostituita da `.px-4` per garantire un padding coerente anche su mobile.
 - Nella variante con Call to action in basso: rimossa la classe `.justify-content-around` sul contenitore e aggiunta la classe `.flex-grow-1` agli elementi `<a>` con classe `.it-footer-link`.
+- Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu: la distanza tra testo e icona (8px) è gestita dal CSS e `.ms-1`, con `!important`, la riporterebbe a 4px.
 - È stato rimossa la classe `.shadow-lg` sull'elemento `.dropdown-menu` in tutte le varianti. L'ombra è controllata dalle property "elevation".  
   {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
