@@ -37,7 +37,7 @@
     var(--#{$prefix}tab-close-btn-color) 90%,
     black 10%
   ); // Controls the tab close btn color on hover, using color tokens.
-  --#{$prefix}tab-close-btn-color-disabled: var(--#{$prefix}color-text-disabled); // Controls the tab close btn color disabled, using color tokens.
+  --#{$prefix}tab-close-btn-disabled-color: var(--#{$prefix}color-text-disabled); // Controls the tab close btn color when disabled, using color tokens.
 }
 
 // Styles
@@ -323,7 +323,7 @@
         fill: var(--#{$prefix}icon-secondary);
       }
       &.disabled {
-        color: var(--#{$prefix}tab-close-btn-color-disabled);
+        color: var(--#{$prefix}tab-close-btn-disabled-color);
         cursor: pointer;
         .icon {
           fill: var(--#{$prefix}icon-disabled);
