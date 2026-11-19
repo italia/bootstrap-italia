@@ -65,7 +65,7 @@
     text-decoration: none;
 
     &.active span,
-    &:hover:not(.disable) span {
+    &:hover:not(.disabled) span {
       text-decoration: underline;
     }
 
