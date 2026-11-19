@@ -117,6 +117,34 @@ Nel caso di componenti con varianti, le variabili sono gestite secondo una logic
 
 Le variabili CSS di ciascun componente sono documentate in una tabella **Properties** nella relativa pagina di documentazione.
 
+### Variabili di stato
+
+Gli stati di un componente (hover, active, focus, disabled, checked…) seguono due regole, una per il nome e una per il valore.
+
+**Nome.** Le variabili di componente mettono lo stato prima della proprietà, nell'ordine di Bootstrap: `<componente>-<stato>-<proprietà>`, ad esempio `--bsi-list-group-action-hover-bg` o `--bsi-bottom-nav-link-active-color`. Le variabili globali di `_root.scss`, allineate a Design Tokens Italia, mettono invece lo stato in fondo, ad esempio `--bsi-color-background-primary-hover`.
+
+**Valore.** Quando il valore di uno stato è personalizzabile, è una variabile nel blocco Properties del componente, con un token come valore predefinito. La regola dello stato non applica direttamente quel valore: ridichiara la variabile dinamica che il componente legge già.
+
+```scss
+/* _bottomnav.scss */
+.bottom-nav {
+  --#{$prefix}bottom-nav-link-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}bottom-nav-link-active-color: var(--#{$prefix}color-text-primary);
+}
+
+.bottom-nav a {
+  --#{$prefix}bottom-nav-current-link-color: var(--#{$prefix}bottom-nav-link-color);
+
+  color: var(--#{$prefix}bottom-nav-current-link-color);
+
+  &.active {
+    --#{$prefix}bottom-nav-current-link-color: var(--#{$prefix}bottom-nav-link-active-color);
+  }
+}
+```
+
+Per cambiare il colore della voce attiva basta quindi ridefinire `--bsi-bottom-nav-link-active-color`, senza riscrivere il selettore `.active`.
+
 ## Variabili globali
  
 Le variabili globali sono definite nel file `_root.scss` e possono essere usate in qualsiasi punto del codice CSS della libreria, seguendo il principio del *cascading*. Il file `_root.scss` è incluso in `bootstrap-italia.scss` e viene importato tramite la direttiva `@forward`:
