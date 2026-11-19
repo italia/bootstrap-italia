@@ -843,7 +843,7 @@
             ],
             "other_values": [],
             "value": "var(--bsi-color-text-primary)",
-            "variable-name": "--bsi-bottom-nav-link-color-active"
+            "variable-name": "--bsi-bottom-nav-link-active-color"
         },
         {
             "description": "",
@@ -861,7 +861,7 @@
             ],
             "other_values": [],
             "value": "var(--bsi-icon-primary)",
-            "variable-name": "--bsi-bottom-nav-icon-color-active"
+            "variable-name": "--bsi-bottom-nav-icon-active-color"
         },
         {
             "description": "",
@@ -1493,14 +1493,13 @@
                 "var(--bsi-color-border-danger-hover)",
                 "var(--bsi-color-border-primary)",
                 "var(--bsi-color-border-primary-hover)",
-                "var(--bsi-color-border-secondary)",
                 "var(--bsi-color-border-secondary-hover)",
                 "var(--bsi-color-border-success)",
                 "var(--bsi-color-border-success-hover)",
                 "var(--bsi-color-border-warning)",
                 "var(--bsi-color-border-warning-hover)"
             ],
-            "value": "var(--bsi-color-border-subtle)",
+            "value": "var(--bsi-color-border-secondary)",
             "variable-name": "--bsi-chip-border-color"
         },
         {
@@ -1531,13 +1530,13 @@
             "variable-name": "--bsi-chip-icon-color"
         },
         {
-            "description": "Controls the link hover color for the chip, using color tokens.",
+            "description": "Controls the text color of a chip link on hover, using color tokens.",
             "files": [
                 "_chips.scss"
             ],
             "other_values": [],
             "value": "var(--bsi-color-text-inverse)",
-            "variable-name": "--bsi-chip-link-hover"
+            "variable-name": "--bsi-chip-link-hover-text-color"
         },
         {
             "description": "Controls the horizontal padding for the chip, using spacing tokens.",
@@ -1565,7 +1564,7 @@
                 "_chips.scss"
             ],
             "other_values": [
-                "var(--bsi-chip-link-hover)",
+                "var(--bsi-chip-link-hover-text-color)",
                 "var(--bsi-color-text-danger)",
                 "var(--bsi-color-text-primary)",
                 "var(--bsi-color-text-success)",
@@ -1909,25 +1908,22 @@
             "variable-name": "--bsi-dropdown-notch-base-size"
         },
         {
-            "description": "Controls the x position of the notch element.",
+            "description": "Controls the notch position along the edge it sits on.",
             "files": [
                 "_dropdown.scss"
             ],
             "other_values": [],
             "value": "20px",
-            "variable-name": "--bsi-dropdown-notch-position-x"
+            "variable-name": "--bsi-dropdown-notch-inset"
         },
         {
-            "description": "Controls the y position of the notch element.",
+            "description": "Controls how far the notch sticks out of the panel edge.",
             "files": [
-                "_dropdown.scss",
-                "_navbar.scss"
+                "_dropdown.scss"
             ],
-            "other_values": [
-                "-10px"
-            ],
+            "other_values": [],
             "value": "-8px",
-            "variable-name": "--bsi-dropdown-notch-position-y"
+            "variable-name": "--bsi-dropdown-notch-offset"
         },
         {
             "description": "Controls the dropdown menu padding left and right.",
@@ -1957,7 +1953,8 @@
             "description": "Controls the space between dropdown toggle and menu.",
             "files": [
                 "_dropdown.scss",
-                "_megamenu.scss"
+                "_megamenu.scss",
+                "_navbar.scss"
             ],
             "other_values": [
                 "0"
@@ -3857,13 +3854,13 @@
             "variable-name": "--bsi-tab-close-btn-color"
         },
         {
-            "description": "Controls the tab close btn color disabled, using color tokens.",
+            "description": "Controls the tab close btn color when disabled, using color tokens.",
             "files": [
                 "_tab.scss"
             ],
             "other_values": [],
             "value": "var(--bsi-color-text-disabled)",
-            "variable-name": "--bsi-tab-close-btn-color-disabled"
+            "variable-name": "--bsi-tab-close-btn-disabled-color"
         }
     ],
     "navbar": [
@@ -3887,6 +3884,15 @@
             "other_values": [],
             "value": "var(--bsi-color-text-inverse)",
             "variable-name": "--bsi-navbar-brand-color"
+        },
+        {
+            "description": "Controls the navbar brand color on hover and focus, using color tokens.",
+            "files": [
+                "_navbar.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-color-text-inverse)",
+            "variable-name": "--bsi-navbar-brand-hover-color"
         },
         {
             "description": "Controls the navbar brand font size, using size tokens.",
@@ -5098,60 +5104,6 @@
             "other_values": [],
             "value": "rgba(0, 0, 0, 0.175)",
             "variable-name": "--bsi-border-color-translucent"
-        },
-        {
-            "description": "",
-            "files": [
-                "_root.scss"
-            ],
-            "other_values": [],
-            "value": "4px",
-            "variable-name": "--bsi-border-radius"
-        },
-        {
-            "description": "",
-            "files": [
-                "_root.scss"
-            ],
-            "other_values": [],
-            "value": "2px",
-            "variable-name": "--bsi-border-radius-sm"
-        },
-        {
-            "description": "",
-            "files": [
-                "_root.scss"
-            ],
-            "other_values": [],
-            "value": "8px",
-            "variable-name": "--bsi-border-radius-lg"
-        },
-        {
-            "description": "",
-            "files": [
-                "_root.scss"
-            ],
-            "other_values": [],
-            "value": "1rem",
-            "variable-name": "--bsi-border-radius-xl"
-        },
-        {
-            "description": "",
-            "files": [
-                "_root.scss"
-            ],
-            "other_values": [],
-            "value": "2rem",
-            "variable-name": "--bsi-border-radius-2xl"
-        },
-        {
-            "description": "",
-            "files": [
-                "_root.scss"
-            ],
-            "other_values": [],
-            "value": "50rem",
-            "variable-name": "--bsi-border-radius-pill"
         },
         {
             "description": "Base theme color",
@@ -6443,13 +6395,49 @@
             "variable-name": "--bsi-color-border-primary"
         },
         {
-            "description": "Focus state highlight color",
+            "description": "Focus state highlight color. Deprecated: use --#{$prefix}focus-outer-color",
             "files": [
                 "_root.scss"
             ],
             "other_values": [],
             "value": "#1a1a1a",
             "variable-name": "--bsi-color-outline-focus"
+        },
+        {
+            "description": "Inner ring color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-color-border-inverse)",
+            "variable-name": "--bsi-focus-inner-color"
+        },
+        {
+            "description": "Inner ring width",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "2px",
+            "variable-name": "--bsi-focus-inner-width"
+        },
+        {
+            "description": "Outer ring color",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-color-outline-focus)",
+            "variable-name": "--bsi-focus-outer-color"
+        },
+        {
+            "description": "Outer ring width",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "3px",
+            "variable-name": "--bsi-focus-outer-width"
         },
         {
             "description": "Primary background, used for interactive elements (buttons, links) and elements carrying the visual identity",
@@ -7385,7 +7373,7 @@
             "variable-name": "--bsi-stepper-item-background"
         },
         {
-            "description": "Controls the stepper item border color active, using color tokens.",
+            "description": "Controls the active stepper item border color, using color tokens.",
             "files": [
                 "_steppers.scss"
             ],
@@ -7393,7 +7381,7 @@
                 "var(--bsi-color-border-inverse)"
             ],
             "value": "var(--bsi-color-border-primary)",
-            "variable-name": "--bsi-stepper-item-border-color-active"
+            "variable-name": "--bsi-stepper-item-active-border-color"
         },
         {
             "description": "Controls the stepper item text color, using color tokens.",
@@ -7693,7 +7681,7 @@
             ],
             "other_values": [],
             "value": "1s",
-            "variable-name": "--bsi-thumb-nav-transition-duration-hover"
+            "variable-name": "--bsi-thumb-nav-hover-transition-duration"
         },
         {
             "description": "Controls the easing curve used by thumb-nav transitions.",
@@ -7803,7 +7791,7 @@
             ],
             "other_values": [],
             "value": "28px",
-            "variable-name": "--bsi-toggle-knob-offset-checked"
+            "variable-name": "--bsi-toggle-knob-checked-offset"
         },
         {
             "description": "Controls the transition for the knob.",
