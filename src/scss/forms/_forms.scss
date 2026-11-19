@@ -60,6 +60,20 @@ fieldset {
     }
   }
 
+  // Floating label of a text field, moved above the field: a long label wraps onto several lines.
+  > label.active,
+  .input-group > label.active {
+    // Line height plus vertical padding make the same box as `line-height: $input-height - 1px`
+    // for a single line, but keep the wrapped lines close together.
+    // The line height is a length (not a number), so it transitions from the inactive one.
+    line-height: #{$line-height-base}em;
+    padding-top: calc((#{$input-height} - 1px - #{$line-height-base}em) * 0.5);
+    padding-bottom: calc((#{$input-height} - 1px - #{$line-height-base}em) * 0.5);
+    // Same position as `translateY(-85%)` for a single line, measured from the bottom edge:
+    // the last line stays right above the field and the other lines go upwards.
+    transform: translateY(calc(-100% + (#{$input-height} - 1px) * 0.15));
+  }
+
   input:is([type='radio']),
   input:is([type='checkbox']) {
     & + label.active {
