@@ -12,7 +12,7 @@ I Callout posso essere utilizzati per evidenziare alcune parti del testo che ric
 
 Il Callout basico è costituito da un contenitore `<section>` con classe `.callout`, un contenitore `<div>` con classe `.callout-inner` contenente a sua volta un titolo con classe `.callout-title`. A seguire il testo del contenuto principale del Callout incluso in uno o più tag `<p>`.
 
-Il contenitore `<section>` permette alle tecnologie assistive di riconoscere il Callout come sezione della pagina. Negli esempi abbiamo utilizzato l'elemento `h3` per il titolo del Callout: utilizza il livello `h` corretto a seconda della posizione del Callout nella struttura dei titoli della pagina.
+Il contenitore `<section>`, collegato al titolo tramite l'attributo `aria-labelledby` che ne richiama l'`id`, permette alle tecnologie assistive di riconoscere il Callout come sezione della pagina, annunciandone il titolo. Ogni Callout deve avere un `id` univoco nella pagina. Negli esempi abbiamo utilizzato l'elemento `h3` per il titolo del Callout: utilizza il livello `h` corretto a seconda della posizione del Callout nella struttura dei titoli della pagina.
 
 Al titolo può essere aggiunta un'icona a scelta fra quelle disponibili, avendo cura di nasconderla agli screen reader con la proprietà `aria-hidden="true"`.
 
@@ -25,9 +25,9 @@ Nel caso l'icona comunicasse visivamente contenuti non disponibili nel testo (ad
 
 {% comment %}Example name: Testo{% endcomment %}
 {% capture example %}
-<section class="callout">
+<section class="callout" aria-labelledby="callout-base">
   <div class="callout-inner">
-    <h3 class="callout-title no_toc">
+    <h3 class="callout-title no_toc" id="callout-base">
       <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>
       <span class="visually-hidden">Informazione:</span>
       <span class="text">Titolo callout</span>
@@ -46,9 +46,9 @@ Aggiungere la classe `.success` per indicare una procedura andata a buon fine.
 {% comment %}Example name: Successo{% endcomment %}
 {% capture example %}
 
-<section class="callout success">
+<section class="callout success" aria-labelledby="callout-success">
   <div class="callout-inner">
-    <h3 class="callout-title no_toc">
+    <h3 class="callout-title no_toc" id="callout-success">
       <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
       <span class="text">Titolo di conferma</span>    
     </h3>
@@ -64,9 +64,9 @@ Aggiungere la classe `.warning` per indicare una procedura o testo che richiede 
 {% comment %}Example name: Attenzione{% endcomment %}
 {% capture example %}
 
-<section class="callout warning">
+<section class="callout warning" aria-labelledby="callout-warning">
   <div class="callout-inner">
-    <h3 class="callout-title no_toc">
+    <h3 class="callout-title no_toc" id="callout-warning">
       <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-help-circle"></use></svg>
       <span class="text">Titolo di attenzione</span>
     </h3>
@@ -82,9 +82,9 @@ Aggiungere la classe `.danger` per indicare un errore o una procedura pericolosa
 {% comment %}Example name: Pericolo o errore{% endcomment %}
 {% capture example %}
 
-<section class="callout danger">
+<section class="callout danger" aria-labelledby="callout-danger">
   <div class="callout-inner">
-    <h3 class="callout-title no_toc">
+    <h3 class="callout-title no_toc" id="callout-danger">
       <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close-circle"></use></svg>
       <span class="text">Titolo di allerta</span>
     </h3>
@@ -100,9 +100,9 @@ Aggiungere la classe `.important` per attirare ulteriormente l'attenzione.
 {% comment %}Example name: Importante{% endcomment %}
 {% capture example %}
 
-<section class="callout important">
+<section class="callout important" aria-labelledby="callout-important">
   <div class="callout-inner">
-    <h3 class="callout-title no_toc">
+    <h3 class="callout-title no_toc" id="callout-important">
       <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>
       <span class="text">Importante</span>
     </h3>
@@ -118,9 +118,9 @@ Aggiungere la classe `.note` per caratterizzare il Callout come una nota.
 {% comment %}Example name: Nota{% endcomment %}
 {% capture example %}
 
-<section class="callout note">
+<section class="callout note" aria-labelledby="callout-note">
   <div class="callout-inner">
-    <h3 class="callout-title no_toc">
+    <h3 class="callout-title no_toc" id="callout-note">
       <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>
       <span class="text">Note a riguardo</span>
     </h3>
@@ -137,8 +137,8 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 
 {% comment %}Example name: Testo, in evidenza{% endcomment %}
 {% capture example %}
-<section class="callout callout-highlight">
-  <h3 class="callout-title no_toc">Titolo callout</h3>
+<section class="callout callout-highlight" aria-labelledby="callout-highlight-base">
+  <h3 class="callout-title no_toc" id="callout-highlight-base">Titolo callout</h3>
   <p class="callout-big-text">Maecenas at erat id sem interdum efficitur eu sed nunc. Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit.</p>
   <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius. Maecenas ullamcorper <a href="#">tincidunt nulla quis laoreet.</a></p>
 </section>
@@ -149,8 +149,8 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 {% comment %}Example name: Successo, in evidenza{% endcomment %}
 {% capture example %}
 
-<section class="callout callout-highlight success">
-  <h3 class="callout-title no_toc"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo di conferma</h3>
+<section class="callout callout-highlight success" aria-labelledby="callout-highlight-success">
+  <h3 class="callout-title no_toc" id="callout-highlight-success"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo di conferma</h3>
   <p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
   <p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </section>
@@ -161,8 +161,8 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 {% comment %}Example name: Attenzione, in evidenza{% endcomment %}
 {% capture example %}
 
-<section class="callout callout-highlight warning">
-  <h3 class="callout-title no_toc"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-help-circle"></use></svg>Titolo di attenzione</h3>
+<section class="callout callout-highlight warning" aria-labelledby="callout-highlight-warning">
+  <h3 class="callout-title no_toc" id="callout-highlight-warning"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-help-circle"></use></svg>Titolo di attenzione</h3>
   <p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
   <p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </section>
@@ -173,8 +173,8 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 {% comment %}Example name: Pericolo o errore, in evidenza{% endcomment %}
 {% capture example %}
 
-<section class="callout callout-highlight danger">
-  <h3 class="callout-title no_toc"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close-circle"></use></svg>Titolo di allerta</h3>
+<section class="callout callout-highlight danger" aria-labelledby="callout-highlight-danger">
+  <h3 class="callout-title no_toc" id="callout-highlight-danger"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close-circle"></use></svg>Titolo di allerta</h3>
   <p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
   <p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </section>
@@ -185,8 +185,8 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 {% comment %}Example name: Importante, in evidenza{% endcomment %}
 {% capture example %}
 
-<section class="callout callout-highlight important">
-  <h3 class="callout-title no_toc"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>Importante</h3>
+<section class="callout callout-highlight important" aria-labelledby="callout-highlight-important">
+  <h3 class="callout-title no_toc" id="callout-highlight-important"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>Importante</h3>
   <p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
   <p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </section>
@@ -197,8 +197,8 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 {% comment %}Example name: Nota, in evidenza{% endcomment %}
 {% capture example %}
 
-<section class="callout callout-highlight note">
-  <h3 class="callout-title no_toc"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>Note</h3>
+<section class="callout callout-highlight note" aria-labelledby="callout-highlight-note">
+  <h3 class="callout-title no_toc" id="callout-highlight-note"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>Note</h3>
   <p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
   <p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </section>
@@ -215,8 +215,8 @@ Il pulsante di controllo del Collapse può essere affiancato da un link per down
 {% comment %}Example name: Approfondimento{% endcomment %}
 {% capture example %}
 
-<section class="callout callout-more note">
-  <h3 class="callout-title no_toc"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-zoom-in"></use></svg><span>Approfondimento</span></h3>
+<section class="callout callout-more note" aria-labelledby="callout-more-esempio">
+  <h3 class="callout-title no_toc" id="callout-more-esempio"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-zoom-in"></use></svg><span>Approfondimento</span></h3>
   <p>Quisque suscipit interdum augue non volutpat. Cras tristique arcu tortor. Mauris eu magna nibh. Curabitur malesuada neque in lectus sagittis accumsan. In vitae justo eros. Maecenas pellentesque lacinia ipsum vitae rhoncus. Vestibulum pretium tempor turpis, nec gravida eros viverra in. Proin dictum nibh ut semper tristique.</p>
   <p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
   <p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
