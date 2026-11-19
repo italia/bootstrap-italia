@@ -1418,7 +1418,7 @@ const headerSticky = new HeaderSticky(headerStickyElement)
 - Rimossa la variante `theme-dark-mobile`: le voci del menu su mobile hanno sempre sfondo bianco e link nel colore primario.
 - I link accessori dello Slim Header non sono più raccolti in un menu a tendina che si apre dal nome dell'ente: su mobile confluiscono nel menu di navigazione insieme al logo e ai social. Negli esempi il pulsante `.it-opener` è stato rimosso e l'elenco è nascosto sotto il breakpoint `lg` con `.d-none.d-lg-flex`. Le regole di stile di `.it-opener` restano disponibili per retrocompatibilità ma sono da considerarsi deprecate.
 - Cambiata la dimensione del pulsante Accedi: cambiato classe da `.btn-sm` a `.btn-sx`.
-- Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi.
+- Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi: la distanza tra testo e icona (8px) è gestita dal CSS e `.ms-1`, con `!important`, la riporterebbe a 4px.
 - È stato rimossa la classe `.shadow-lg` sull'elemento `.dropdown-menu` in tutte le varianti. L'ombra è controllata dalle property "elevation".  
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 

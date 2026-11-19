@@ -146,11 +146,13 @@
     }
 
     // Icon left inside list item
-    &.icon-left {
+    // .left-icon: v2 name, kept as an alias of .icon-left
+    &.icon-left,
+    &.left-icon {
       .icon {
         left: 0;
         flex-shrink: 0;
-        margin-right: var(--#{$prefix}spacing-xxs);
+        margin-right: var(--#{$prefix}icon-spacing);
       }
 
       p {
@@ -199,7 +201,7 @@
       flex: 1;
 
       .list-item-title {
-        margin-right: var(--#{$prefix}spacing-xxs);
+        margin-right: var(--#{$prefix}icon-spacing);
       }
     }
 

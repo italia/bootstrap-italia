@@ -49,69 +49,19 @@
 // Form control sizing
 //
 
+// Small keeps the default height (UI Kit Italia has no smaller field):
+// it only reduces font size and horizontal spacing. For a lower field,
+// redeclare --#{$prefix}form-control-height here, as .form-control-lg does.
 .form-control-sm {
   --#{$prefix}form-control-spacing: var(--#{$prefix}spacing-xxs) var(--#{$prefix}spacing-3xs);
   --#{$prefix}form-control-font-size: var(--#{$prefix}label-font-size);
-
-  &::file-selector-button {
-    padding: $input-padding-y-sm $input-padding-x-sm;
-    margin: (-$input-padding-y-sm) (-$input-padding-x-sm);
-    margin-inline-end: $input-padding-x-sm;
-  }
 }
 
 .form-control-lg {
   --#{$prefix}form-control-font-size: var(--#{$prefix}lead-font-size);
 
-  &::file-selector-button {
-    padding: $input-padding-y-lg $input-padding-x-lg;
-    margin: (-$input-padding-y-lg) (-$input-padding-x-lg);
-    margin-inline-end: $input-padding-x-lg;
-  }
-}
-
-// Make sure textareas don't shrink too much when resized
-// https://github.com/twbs/bootstrap/pull/29124
-// stylelint-disable selector-no-qualifying-type
-
-textarea {
-  &.form-control {
-    min-height: $input-height;
-    border: 1px solid $input-border;
-  }
-
-  &.form-control-sm {
-    min-height: $input-height-sm;
-  }
-
-  &.form-control-lg {
-    min-height: $input-height-lg;
-  }
-}
-// stylelint-enable selector-no-qualifying-type
-
-.form-control-color {
-  width: $form-color-width;
-  height: $input-height;
-  padding: $input-padding-y;
-
-  &:not(:disabled):not([readonly]) {
-    cursor: pointer;
-  }
-
-  &::-moz-color-swatch {
-    border: 0 !important; // stylelint-disable-line declaration-no-important
-    @include border-radius($input-border-radius);
-  }
-
-  &::-webkit-color-swatch {
-    @include border-radius($input-border-radius);
-  }
-
-  &.form-control-sm {
-    height: $input-height-sm;
-  }
-  &.form-control-lg {
-    height: $input-height-lg;
+  &,
+  & + .password-icon {
+    --#{$prefix}form-control-height: 3rem;
   }
 }
