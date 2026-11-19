@@ -17,9 +17,9 @@
   --#{$prefix}bottom-nav-list-height: 64px;
   --#{$prefix}bottom-nav-item-margin: var(--#{$prefix}spacing-xxs);
   --#{$prefix}bottom-nav-link-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}bottom-nav-link-color-active: var(--#{$prefix}color-text-primary);
+  --#{$prefix}bottom-nav-link-active-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}bottom-nav-icon-color: var(--#{$prefix}icon-secondary);
-  --#{$prefix}bottom-nav-icon-color-active: var(--#{$prefix}icon-primary);
+  --#{$prefix}bottom-nav-icon-active-color: var(--#{$prefix}icon-primary);
   --#{$prefix}bottom-nav-icon-font-size: 1.35rem;
   --#{$prefix}bottom-nav-icon-height: var(--#{$prefix}spacing-l);
   --#{$prefix}bottom-nav-label-margin-top: 6px;
@@ -99,13 +99,13 @@
     }
 
     &.active {
-      --#{$prefix}bottom-nav-current-link-color: var(--#{$prefix}bottom-nav-link-color-active);
-      --#{$prefix}bottom-nav-current-icon-color: var(--#{$prefix}bottom-nav-icon-color-active);
+      --#{$prefix}bottom-nav-current-link-color: var(--#{$prefix}bottom-nav-link-active-color);
+      --#{$prefix}bottom-nav-current-icon-color: var(--#{$prefix}bottom-nav-icon-active-color);
     }
 
     &:hover {
-      --#{$prefix}bottom-nav-current-link-color: var(--#{$prefix}bottom-nav-link-color-active);
-      --#{$prefix}bottom-nav-current-icon-color: var(--#{$prefix}bottom-nav-icon-color-active);
+      --#{$prefix}bottom-nav-current-link-color: var(--#{$prefix}bottom-nav-link-active-color);
+      --#{$prefix}bottom-nav-current-icon-color: var(--#{$prefix}bottom-nav-icon-active-color);
       text-decoration: none;
     }
   }

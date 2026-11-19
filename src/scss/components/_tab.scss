@@ -32,11 +32,11 @@
   --#{$prefix}tab-add-btn-border: var(--#{$prefix}color-border-primary); // Controls the tab add btn border, using color tokens.
   --#{$prefix}tab-add-btn-color: var(--#{$prefix}color-background-primary); // Controls the tab add btn color, using color tokens.
   --#{$prefix}tab-close-btn-color: var(--#{$prefix}color-text-secondary); // Controls the tab close btn color, using color tokens.
-  --#{$prefix}tab-close-btn-color-hover: color-mix(
+  --#{$prefix}tab-close-btn-hover-color: color-mix(
     in srgb,
     var(--#{$prefix}tab-close-btn-color) 90%,
     black 10%
-  ); // Controls the tab close btn color hover, using color tokens.
+  ); // Controls the tab close btn color on hover, using color tokens.
   --#{$prefix}tab-close-btn-color-disabled: var(--#{$prefix}color-text-disabled); // Controls the tab close btn color disabled, using color tokens.
 }
 
@@ -330,9 +330,9 @@
         }
       }
       &:hover {
-        color: var(--#{$prefix}tab-close-btn-color-hover);
+        color: var(--#{$prefix}tab-close-btn-hover-color);
         .icon {
-          fill: var(--#{$prefix}tab-close-btn-color-hover);
+          fill: var(--#{$prefix}tab-close-btn-hover-color);
         }
       }
       .it-ico {
