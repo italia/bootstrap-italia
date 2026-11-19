@@ -74,12 +74,15 @@ select {
 /* stylelint-disable-next-line no-duplicate-selectors */
 input,
 textarea {
+  // Keep here, not in utilities/focus: Dev Kit Italia components load
+  // forms/forms inside their shadow DOM, where global focus styles do not
+  // reach; for some of them this is the only focus ring on native inputs.
   &:focus {
-    outline: 3px solid transparent;
+    outline: var(--#{$prefix}focus-outer-width) solid transparent;
     outline-offset: 3px;
     box-shadow:
-      0 0 0 2px var(--#{$prefix}color-border-inverse),
-      0 0 0 5px var(--#{$prefix}color-outline-focus) !important;
+      0 0 0 var(--#{$prefix}focus-inner-width) var(--#{$prefix}focus-inner-color),
+      0 0 0 calc(var(--#{$prefix}focus-inner-width) + var(--#{$prefix}focus-outer-width)) var(--#{$prefix}focus-outer-color) !important;
   }
 }
 

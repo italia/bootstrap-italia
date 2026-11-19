@@ -142,8 +142,12 @@
         --#{$prefix}tab-icon-color: var(--#{$prefix}icon-primary);
       }
     }
+    // Inset focus ring: an outer ring would be clipped by the tab list overflow
     &:focus:not([data-focus-mouse='true']) {
-      box-shadow: inset 0 0 0 2px var(--#{$prefix}color-outline-focus) !important;
+      box-shadow:
+        inset 0 0 0 var(--#{$prefix}focus-outer-width) var(--#{$prefix}focus-outer-color),
+        inset 0 0 0 calc(var(--#{$prefix}focus-inner-width) + var(--#{$prefix}focus-outer-width)) var(--#{$prefix}focus-inner-color) !important;
+      outline-offset: calc(var(--#{$prefix}focus-outer-width) * -1) !important;
     }
 
     // Icon styles inside tab nav link
@@ -220,6 +224,15 @@
     .nav-item.show .nav-link {
       opacity: 1;
       --#{$prefix}tab-border-color: var(--#{$prefix}color-border-inverse);
+    }
+
+    // Inverse focus ring on the dark background: same widths, colors swapped.
+    // Full opacity, as on hover, so the light ring is not dimmed.
+    .nav-link:focus:not([data-focus-mouse='true']) {
+      opacity: 1;
+      box-shadow:
+        inset 0 0 0 var(--#{$prefix}focus-outer-width) var(--#{$prefix}focus-inner-color),
+        inset 0 0 0 calc(var(--#{$prefix}focus-inner-width) + var(--#{$prefix}focus-outer-width)) var(--#{$prefix}focus-outer-color) !important;
     }
 
     &.nav-tabs-vertical {

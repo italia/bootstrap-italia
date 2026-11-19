@@ -70,6 +70,11 @@ Alcuni esempi:
   - Versione 2: `$box-shadow`, `$box-shadow-sm`, `$box-shadow-lg`
   - Versione 3: `--bsi-elevation-*` (low, medium, high)
 
+- **Anello di focus**
+  - Versione 2: `$focus-outline-color-in`, `$focus-outline-color-out`, `$focus-outline-color`
+  - Versione 3: `--bsi-focus-inner-color` e `--bsi-focus-outer-color` per i colori, `--bsi-focus-inner-width` e `--bsi-focus-outer-width` per gli spessori dei due anelli. `--bsi-color-outline-focus` è deprecata: usa `--bsi-focus-outer-color`.
+  - Se personalizzi i colori, mantieni tra i due anelli un contrasto di almeno 9:1: così almeno uno dei due resta visibile su qualunque sfondo ([tecnica WCAG C40](https://www.w3.org/WAI/WCAG22/Techniques/css/C40)).
+
 - **Raggi dei bordi**
   - Versione 2: `$border-radius-*`, `--bs-border-radius`, `--bs-border-radius-sm`, `-lg`, `-xl`, `-2xl`, `-pill`
   - Versione 3: `--bsi-radius-smooth` (4px), `--bsi-radius-rounded`, `--bsi-radius-circle`. La scala `--bsi-border-radius-*` di Bootstrap non è più esposta: `--bsi-border-radius` diventa `--bsi-radius-smooth`, le altre non hanno un equivalente diretto.
