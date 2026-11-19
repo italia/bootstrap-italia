@@ -273,7 +273,7 @@ La funzionalità di changer permette di scegliere da un dropdown la quantità di
     </li>
   </ul>
   <div class="dropdown">
-    <button class="btn btn-dropdown dropdown-toggle" type="button" id="pagerChanger" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Salta alla pagina">
+    <button class="btn btn-dropdown btn-icon dropdown-toggle" type="button" id="pagerChanger" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Salta alla pagina">
     10/pagina
     <svg class="icon icon-primary icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
     </button>
@@ -546,6 +546,7 @@ Con il posizionamento a destra
 {% capture callout %}
 - È stato corretto il colore delle icone chevron per gli elementi disabilitati sostituendo la classe `.icon-primary` con `.icon-disabled`.
 - È stato corretto l'esempio "Changer" aggiungendo la classe `.dropdown-item` che mancava sul primo elemento `.list-item`. 
+- Aggiunta la classe `.btn-icon` al pulsante di apertura del "Changer", per allineare icona e testo.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
