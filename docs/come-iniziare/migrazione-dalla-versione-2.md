@@ -100,6 +100,10 @@ Questa distinzione garantisce compatibilità con Bootstrap 5 ed evita conflitti 
   - Versione 2: `loadFonts('/fonts')`
   - Versione 3: `loadFonts('/fonts', { titillium: 'web' })` o `{ titillium: 'pro' }` per il secondo parametro. Retro-compatibile anche la versione senza il secondo parametro che carica "web" come predefinito. 
 
+### Plugin JavaScript rimossi
+
+- **Toast**: il plugin `Toast` non è più incluso né esportato (`bootstrap.Toast`, `import { Toast } from 'bootstrap-italia'`). Gli stili del componente erano già stati rimossi. Per i messaggi a comparsa usa il componente [Notification]({{ site.baseurl }}/docs/componenti/notification/).
+
 ## Breaking change componenti
 Il markup e i css di molti componenti sono cambiati. Consulta le schede di documentazione dettagliata di ogni componente e fai riferimento al paragrafo "Breaking changes" per approfondire i cambiamenti al markup.
 
