@@ -1,4 +1,3 @@
-@use 'sass:math';
 @use '../base/config' as *;
 @use '../base/functions' as *;
 @use '../base/variables' as *;
@@ -49,6 +48,9 @@ select {
   background-color: var(--#{$prefix}form-control-background-color);
   color: var(--#{$prefix}form-control-text-color);
   font-size: var(--#{$prefix}form-control-font-size);
+  // An explicit line-height keeps the content below min-height, so the
+  // field height comes from the token and not from the font metrics.
+  line-height: var(--#{$prefix}font-leading-2);
 
   &.disabled,
   &:disabled {
@@ -59,6 +61,16 @@ select {
     color: var(--#{$prefix}color-text-disabled);
   }
 }
+
+// Single-line fields: a small vertical padding leaves room for the line box
+// even where the browser does not let line-height go below the font's normal
+// value (Firefox), so min-height sets the height and the field still grows
+// with text-only zoom. Textarea keeps the full form-control-spacing.
+input,
+select {
+  padding-block: var(--#{$prefix}spacing-3xs);
+}
+
 /* stylelint-disable-next-line no-duplicate-selectors */
 input,
 textarea {
@@ -72,44 +84,39 @@ textarea {
 }
 
 input {
-  // File input buttons theming //TODO: CHECK
+  // File input button: plain text inside the field, as it already looked
+  // (white on white, no divider), without the Bootstrap negative margins.
   &::file-selector-button {
-    margin: (-$input-padding-y) (-$input-padding-x);
-    padding: $input-padding-y $input-padding-x;
-    border-width: 0;
-    border-style: solid;
+    margin: 0;
+    padding: 0;
+    // Gap from the file name as padding, not margin: Safari ignores margins
+    // on this pseudo-element. The background is transparent, so it looks the same.
+    padding-inline-end: var(--#{$prefix}spacing-m);
+    border: 0;
     border-radius: 0; // stylelint-disable-line property-disallowed-list
-    border-color: inherit;
-    color: $form-file-button-color;
+    color: var(--#{$prefix}color-text-base);
+    background-color: transparent;
     pointer-events: none;
-    margin-inline-end: $input-padding-x;
-    border-inline-end-width: $input-border-width;
-    @include gradient-bg($form-file-button-bg);
-    @include transition($btn-transition);
-  }
-
-  //TODO: CHECK
-  &:hover:not(:disabled):not([readonly])::file-selector-button {
-    background-color: $form-file-button-hover-bg;
   }
 
   &[type='file'] {
     overflow: hidden; // prevent pseudo element button overlap
+    // Unlike text fields, the browser does not center a file input's content
+    // in a taller box: the vertical padding centers the line in the field.
+    padding-block: max(0px, calc((var(--#{$prefix}form-control-height) - 1lh - 2px) / 2));
 
     &:not(:disabled):not([readonly]) {
       cursor: pointer;
     }
   }
 
-  // Add some height to date inputs on iOS
+  // Empty date inputs on iOS collapse, and their value is centered: give the
+  // value box one line, center it in the field and align it to the start.
   // https://github.com/twbs/bootstrap/issues/23307
   &::-webkit-date-and-time-value {
-    // Multiply line-height by 1em if it has no unit
-    @if math.unit($input-line-height) == '' {
-      height: $input-line-height * 1em;
-    } @else {
-      height: $input-line-height;
-    }
+    height: 1lh;
+    padding-block: max(0px, calc((var(--#{$prefix}form-control-height) - 2px - 2 * var(--#{$prefix}spacing-3xs) - 1lh) / 2));
+    text-align: start;
   }
 }
 

@@ -54,6 +54,9 @@
     right: 0;
     z-index: 10;
 
+    // Vertical padding set here, not inherited from .input-group-text:
+    // it keeps the two arrows close to the middle of the field.
+    padding-block: var(--#{$prefix}form-control-spacing);
     padding-right: var(--#{$prefix}form-control-spacing);
     border: none;
     background: transparent;
