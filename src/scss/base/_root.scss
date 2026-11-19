@@ -58,16 +58,9 @@
   //   --#{$prefix}body-text-align: #{$body-text-align};
   // }
   // --#{$prefix}body-bg: #{$body-bg};
-  // XXX TO DO double check: these are currently still needed (ex. Card border color)
-  // for mixins that reference them directly, or can they be replaced with the new
-  // tokens structure?
+  // Still read by modal, popover and toast borders (via _variables.scss).
+  // Border radii use the Design Tokens Italia scale (--#{$prefix}radius-*) below.
   --#{$prefix}border-color-translucent: #{$border-color-translucent};
-  --#{$prefix}border-radius: #{$border-radius};
-  --#{$prefix}border-radius-sm: #{$border-radius-sm};
-  --#{$prefix}border-radius-lg: #{$border-radius-lg};
-  --#{$prefix}border-radius-xl: #{$border-radius-xl};
-  --#{$prefix}border-radius-2xl: #{$border-radius-2xl};
-  --#{$prefix}border-radius-pill: #{$border-radius-pill};
 
   // ----------------------------------------------------------- //
 

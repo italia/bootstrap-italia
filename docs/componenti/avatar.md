@@ -360,7 +360,7 @@ Gruppo di avatar sovrapposti di dimensione piccola con classe `.size-sm`.
           <span class="visually-hidden">Visualizza altri 4 utenti</span>
           <span aria-hidden="true">+4</span>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuToggle1">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuToggle1">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li>
@@ -445,7 +445,7 @@ Gruppo di avatar sovrapposti di dimensione media con classe `.size-md`.
           <span class="visually-hidden">Visualizza altri 4 utenti</span>
           <span aria-hidden="true">+4</span>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuToggle2">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuToggle2">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li>
@@ -707,6 +707,7 @@ Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può 
 - Nelle varianti avatar con testo i colori di fondo possono essere solo `.avatar-primary` e `.avatar-secondary`. Sono state rimosse le classi `.avatar-green`, `.avatar-orange` e `.avatar-red`.
 - Corretta l'icona nella variante Avatar con icona (`sprites.svg#it-user`).
 - Rimossi dagli esempi liste i colori di sfondo custom, ad esempio `.complementary-3-bg`.
+- Aggiunto `role="group"` al contenitore `.dropdown-menu` del dropdown, che ha già `aria-labelledby` riferito al pulsante di apertura.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}

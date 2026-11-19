@@ -201,7 +201,7 @@
   @include box-shadow(var(--#{$prefix}popover-box-shadow));
 
   border: none;
-  border-radius: $border-radius;
+  border-radius: var(--#{$prefix}radius-smooth);
   box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.1);
 
   &.bs-popover-top {

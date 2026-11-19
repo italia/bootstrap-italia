@@ -26,7 +26,6 @@ import {
   Popover,
   ScrollSpy,
   Tab,
-  Toast,
   Tooltip,
   // Extra components
   Dimmer,
@@ -71,7 +70,6 @@ export default {
   Popover,
   ScrollSpy,
   Tab,
-  Toast,
   Tooltip,
   VideoPlayer,
   AcceptOverlay,

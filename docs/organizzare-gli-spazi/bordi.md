@@ -63,3 +63,9 @@ Classi per arrotondare facilmente gli angoli di un elemento.
   <img src="https://placehold.co/75x75/ebebeb/808080/?text=Immagine" class="rounded-0" alt="Esempio di immagine non arrotondata (sovrascrive l'eventuale arrotondamento applicato precedentemente)">
   <img src="https://placehold.co/150x75/ebebeb/808080/?text=Immagine" class="rounded-pill" alt="Esempio di immagine arrotondata a pillola">
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+Le custom properties `--bsi-border-radius`, `--bsi-border-radius-sm`, `-lg`, `-xl`, `-2xl` e `-pill` sono state rimosse: i raggi dei bordi usano i token `--bsi-radius-smooth`, `--bsi-radius-rounded` e `--bsi-radius-circle`. Al posto di `--bsi-border-radius` usa `--bsi-radius-smooth`. Le classi `.rounded-top`, `.rounded-end`, `.rounded-bottom` e `.rounded-start`, così come popover, cookiebar e transfer, leggono ora `--bsi-radius-smooth`.
+{% endcapture %}{% include callout-breaking.html version="3.0.0" content=callout type="danger" %}

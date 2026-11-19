@@ -432,7 +432,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
             </svg>
           </div>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
@@ -457,7 +457,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
             </svg>
           </div>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton2">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
@@ -481,7 +481,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
             </svg>
           </div>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton3">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
@@ -505,7 +505,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
             </svg>
           </div>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton4">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
@@ -518,7 +518,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
           <div class="d-flex align-items-center">
             <div>
               <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
@@ -529,7 +529,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
             </svg>
           </div>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5-med">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton5">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
@@ -566,7 +566,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
             </svg>
           </div>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-med">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton-med">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
@@ -592,7 +592,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
             </svg>
           </div>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2-med">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton2-med">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
@@ -616,7 +616,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
             </svg>
           </div>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3-med">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton3-med">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
@@ -640,7 +640,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
             </svg>
           </div>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4-med">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton4-med">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
@@ -664,7 +664,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
             </svg>
           </div>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5-med">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton5-med">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
@@ -702,7 +702,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
             </svg>
           </div>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-sml">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton-sml">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
@@ -728,7 +728,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
             </svg>
           </div>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2-sml">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton2-sml">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
@@ -752,7 +752,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
             </svg>
           </div>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3-sml">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton3-sml">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
@@ -776,7 +776,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
             </svg>
           </div>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4-sml">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton4-sml">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
@@ -800,7 +800,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
             </svg>
           </div>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5-sml">
+        <div class="dropdown-menu" role="group" aria-labelledby="dropdownMenuButton5-sml">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
@@ -956,4 +956,5 @@ sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti
 - L'icona del dropdown è ora gestita con il tag `<svg>`
 - Il contenuto di ogni voce è racchiuso in un contenitore dedicato nel caso di versione con dropdown.
 - Modificata la gestione dell'ombreggiatura, altezza e posizione della toolbar.
+- Aggiunto `role="group"` al contenitore `.dropdown-menu` dei dropdown, che ha già `aria-labelledby` riferito al pulsante di apertura. Corretto l'`id` duplicato del quinto pulsante del primo esempio, ora `dropdownMenuButton5`.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}

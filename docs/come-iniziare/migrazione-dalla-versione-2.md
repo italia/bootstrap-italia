@@ -75,6 +75,14 @@ Alcuni esempi:
   - Versione 3: `--bsi-focus-inner-color` e `--bsi-focus-outer-color` per i colori, `--bsi-focus-inner-width` e `--bsi-focus-outer-width` per gli spessori dei due anelli. `--bsi-color-outline-focus` è deprecata: usa `--bsi-focus-outer-color`.
   - Se personalizzi i colori, mantieni tra i due anelli un contrasto di almeno 9:1: così almeno uno dei due resta visibile su qualunque sfondo ([tecnica WCAG C40](https://www.w3.org/WAI/WCAG22/Techniques/css/C40)).
 
+- **Raggi dei bordi**
+  - Versione 2: `$border-radius-*`, `--bs-border-radius`, `--bs-border-radius-sm`, `-lg`, `-xl`, `-2xl`, `-pill`
+  - Versione 3: `--bsi-radius-smooth` (4px), `--bsi-radius-rounded`, `--bsi-radius-circle`. La scala `--bsi-border-radius-*` di Bootstrap non è più esposta: `--bsi-border-radius` diventa `--bsi-radius-smooth`, le altre non hanno un equivalente diretto.
+
+- **Altezza dei campi dei form**
+  - Versione 2: `$input-height`
+  - Versione 3: `--bsi-form-control-height`
+
 Le CSS custom properties di ogni componente sono documentate nella tabella Properties delle relative schede di dettaglio. 
 
 ### Convenzioni di naming
@@ -96,6 +104,10 @@ Questa distinzione garantisce compatibilità con Bootstrap 5 ed evita conflitti 
 - **API loadFonts()**
   - Versione 2: `loadFonts('/fonts')`
   - Versione 3: `loadFonts('/fonts', { titillium: 'web' })` o `{ titillium: 'pro' }` per il secondo parametro. Retro-compatibile anche la versione senza il secondo parametro che carica "web" come predefinito. 
+
+### Plugin JavaScript rimossi
+
+- **Toast**: il plugin `Toast` non è più incluso né esportato (`bootstrap.Toast`, `import { Toast } from 'bootstrap-italia'`). Gli stili del componente erano già stati rimossi. Per i messaggi a comparsa usa il componente [Notification]({{ site.baseurl }}/docs/componenti/notification/).
 
 ## Breaking change componenti
 Il markup e i css di molti componenti sono cambiati. Consulta le schede di documentazione dettagliata di ogni componente e fai riferimento al paragrafo "Breaking changes" per approfondire i cambiamenti al markup.

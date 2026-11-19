@@ -603,6 +603,8 @@ Le liste di link possono avere un'intestazione (con o senza link) e/o divisori p
 L'intestazione è costituita dall'elemento `.link-list-heading` che precede il tag `<ul>`.  
 Il divisore è costituito dal tag `<span>` con classe `.divider` e attributo `role="separator"`  all'interno del tag `<li>`.
 
+Il testo delle voci `.list-item` va racchiuso in uno `<span>`: colore, stato attivo, hover e disabilitato sono applicati a quell'elemento. Fanno eccezione le liste dell'header slim e del footer, che hanno stili propri.
+
 {% comment %}Example name: Per menu, con intestazione e divisore{% endcomment %}
 {% capture example %}
 <div class="link-list-wrapper">

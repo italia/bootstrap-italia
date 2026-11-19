@@ -5,7 +5,7 @@
 //mobile
 .it-transfer-wrapper {
   border: $transfer-border;
-  border-radius: $border-radius;
+  border-radius: var(--#{$prefix}radius-smooth);
 
   .transfer-scroll {
     height: $transfer-height;
