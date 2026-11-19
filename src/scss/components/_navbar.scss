@@ -203,6 +203,16 @@
     }
   }
 
+  // Simple dropdown in the navbar sits flush against it, like the megamenu
+  // panel, and its notch is offset so that it overlaps the toggle by the same
+  // amount as the megamenu's own notch. Scoped away from .megamenu, which
+  // positions its notch on the toggle and sets its own spacer.
+  .nav-item:not(.megamenu) > .dropdown-menu {
+    @include media-breakpoint-up(lg) {
+      --#{$prefix}dropdown-spacer: 0;
+    }
+  }
+
   // Custom notch for dropdown menu inside navbar
   // Border re-asserted explicitly (not inherited) so navbar/megamenu keeps
   // its border regardless of the generic default in _dropdown.scss.
@@ -212,7 +222,6 @@
 
     @include media-breakpoint-up(lg) {
       display: block;
-      --#{$prefix}dropdown-notch-position-y: -10px;
       --#{$prefix}dropdown-border-width: 1px;
       --#{$prefix}dropdown-border-color: var(--#{$prefix}color-border-subtle);
       border-top: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
