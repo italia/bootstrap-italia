@@ -14,7 +14,7 @@
 
 .chip {
   --#{$prefix}chip-background-color: var(--#{$prefix}color-background-muted); // Controls the background color for the chip, using color tokens.
-  --#{$prefix}chip-border-color: var(--#{$prefix}color-border-subtle); // Controls the border color for the chip, using color tokens.
+  --#{$prefix}chip-border-color: var(--#{$prefix}color-border-secondary); // Controls the border color for the chip, using color tokens.
   --#{$prefix}chip-border-radius: var(--#{$prefix}radius-rounded); // Controls the border radius for the chip, using radius tokens.
   --#{$prefix}chip-border-width: 1px; // Controls the border width for the chip.
   --#{$prefix}chip-icon-color: var(--#{$prefix}icon-secondary); // Controls the icon color for the chip, using icon tokens.
