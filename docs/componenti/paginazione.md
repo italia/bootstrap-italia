@@ -277,7 +277,7 @@ La funzionalità di changer permette di scegliere da un dropdown la quantità di
     10/pagina
     <svg class="icon icon-primary icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
     </button>
-    <div class="dropdown-menu" aria-labelledby="pagerChanger">
+    <div class="dropdown-menu" role="group" aria-labelledby="pagerChanger">
       <div class="link-list-wrapper">
         <ul class="link-list">
            <li><a class="dropdown-item list-item active" href="#" aria-current="page"><span>10/pagina</span></a></li>
@@ -547,6 +547,7 @@ Con il posizionamento a destra
 - È stato corretto il colore delle icone chevron per gli elementi disabilitati sostituendo la classe `.icon-primary` con `.icon-disabled`.
 - È stato corretto l'esempio "Changer" aggiungendo la classe `.dropdown-item` che mancava sul primo elemento `.list-item`. 
 - Aggiunta la classe `.btn-icon` al pulsante di apertura del "Changer", per allineare icona e testo.
+- Aggiunto `role="group"` al contenitore `.dropdown-menu` del dropdown, che ha già `aria-labelledby` riferito al pulsante di apertura.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
