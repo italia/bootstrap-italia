@@ -10,6 +10,22 @@
   outline-offset: 3px !important;
 }
 
+// Mixin: Focus ring drawn inside the element, where the outer ring would be clipped
+// (overflow containers, viewport edges, sticky headers). $inverse swaps the two colors,
+// for dark backgrounds
+@mixin focus-inset($inverse: false) {
+  $outer-color: var(--#{$prefix}focus-outer-color);
+  $inner-color: var(--#{$prefix}focus-inner-color);
+  @if $inverse {
+    $outer-color: var(--#{$prefix}focus-inner-color);
+    $inner-color: var(--#{$prefix}focus-outer-color);
+  }
+  box-shadow:
+    inset 0 0 0 var(--#{$prefix}focus-outer-width) $outer-color,
+    inset 0 0 0 calc(var(--#{$prefix}focus-inner-width) + var(--#{$prefix}focus-outer-width)) $inner-color !important;
+  outline-offset: calc(var(--#{$prefix}focus-outer-width) * -1) !important;
+}
+
 // Mixin: Remove focus styles for mouse interactions
 @mixin focusmouse {
   border-color: inherit !important;

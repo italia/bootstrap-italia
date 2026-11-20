@@ -141,25 +141,22 @@ p.it-card-text a {
 }
 
 .dropdown-menu .dropdown-item.list-item:focus:not([data-focus-mouse='true']) {
-  box-shadow:
-    inset 0 0 0 var(--#{$prefix}focus-outer-width) var(--#{$prefix}focus-outer-color),
-    inset 0 0 0 calc(var(--#{$prefix}focus-inner-width) + var(--#{$prefix}focus-outer-width)) var(--#{$prefix}focus-inner-color) !important;
-  outline-offset: calc(var(--#{$prefix}focus-outer-width) * -1) !important;
+  @include focus-inset;
 }
 
 // Dark dropdown: inverse inset ring, same widths with colors swapped
 .dropdown-menu.dark .dropdown-item.list-item:focus:not([data-focus-mouse='true']) {
-  box-shadow:
-    inset 0 0 0 var(--#{$prefix}focus-outer-width) var(--#{$prefix}focus-inner-color),
-    inset 0 0 0 calc(var(--#{$prefix}focus-inner-width) + var(--#{$prefix}focus-outer-width)) var(--#{$prefix}focus-outer-color) !important;
+  @include focus-inset($inverse: true);
 }
 
 @include media-breakpoint-down(lg) {
   .navbar-collapsable .navbar-nav li .nav-link:focus:not([data-focus-mouse='true']) {
-    box-shadow:
-      inset 0 0 0 var(--#{$prefix}focus-outer-width) var(--#{$prefix}focus-outer-color),
-      inset 0 0 0 calc(var(--#{$prefix}focus-inner-width) + var(--#{$prefix}focus-outer-width)) var(--#{$prefix}focus-inner-color) !important;
-    outline-offset: calc(var(--#{$prefix}focus-outer-width) * -1) !important;
+    @include focus-inset;
     border-left-color: var(--#{$prefix}navbar-link-border-color) !important;
   }
+}
+
+// Inset focus ring for any element whose outer ring would be clipped
+.focus-inset:focus:not([data-focus-mouse='true']) {
+  @include focus-inset;
 }

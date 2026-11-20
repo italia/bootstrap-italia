@@ -267,6 +267,18 @@ Si possono trovare dettagli aggiuntivi alla [pagina corrispondente](https://getb
 
 Infine, per _normalizzare_ alcuni comportamenti cross-browser, Bootstrap Italia eredita da Bootstrap il cosiddetto "[Reboot]({{ site.baseurl }}/docs/organizzare-i-contenuti/introduzione/#reboot)", una serie di regole CSS che correggono inconsistenze tra browsers e dispositivi.
 
+### Anello di focus interno
+
+L'anello di focus è disegnato fuori dall'elemento. Dove verrebbe tagliato, per esempio dentro un contenitore con `overflow: hidden`, sul bordo della finestra o sotto un header fisso, la classe `.focus-inset` lo disegna all'interno, con gli stessi colori e spessori (le custom property `--bsi-focus-*`). In Sass si ottiene lo stesso stile con il mixin `focus-inset`, che con `$inverse: true` scambia i due colori per i fondi scuri. Il mixin è già usato dalle voci dei menu a tendina, dalle schede e dai link della navbar su mobile.
+
+{% comment %}Example name: Anello di focus interno{% endcomment %}
+{% capture example %}
+<div class="overflow-hidden border rounded">
+  <a href="#" class="d-block p-3 border-bottom">Anello di focus esterno, tagliato dal contenitore</a>
+  <a href="#" class="d-block p-3 focus-inset">Anello di focus interno con <code>.focus-inset</code></a>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 ---
 
 ## Altri esempi
