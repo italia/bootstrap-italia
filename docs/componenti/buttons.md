@@ -119,6 +119,23 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Boot
 </div>{% endif %}{% endfor %}</div>
 {% endcapture %}{% include example.html content=example %}
 
+#### Variante inverse
+
+Per usare i pulsanti su uno sfondo scuro senza applicare la classe `.bg-dark` al contenitore, aggiungi la classe `.btn-inverse` direttamente al pulsante. La variante è disponibile per `.btn-primary`, `.btn-outline-primary` e `.btn-link`.
+
+{% comment %}Example name: Variante inverse{% endcomment %}
+{% capture example %}
+
+<div class="bg-primary py-1">
+<div class="btn-example">
+  <button type="button" class="btn btn-primary btn-inverse">Primary</button>
+  <button type="button" class="btn btn-outline-primary btn-inverse">Primary outline</button>
+  <button type="button" class="btn btn-link btn-inverse">Link</button>
+  <button type="button" class="btn btn-primary btn-inverse disabled">Primary disabled</button>
+</div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 {% include callout-warning-color-assistive-technologies.md %}
 
 #### Note sullo stato disabilitato
