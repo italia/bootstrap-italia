@@ -43,6 +43,8 @@ Per tradurre le label in altre lingue è sufficiente utilizzare l'attributo opzi
 
 `<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide data-splide='{"i18n":{"slideX":"Go to slide %s","pageX":"Go to page %s"}}'>`
 
+**Nota su axe-core**: alcuni strumenti di verifica automatica basati su axe-core (ad esempio axe DevTools o Lighthouse) possono segnalare `aria-allowed-role` su ogni elemento `li.splide__slide`. Si tratta di un falso positivo noto, tracciato nella [issue axe-core #4910](https://github.com/dequelabs/axe-core/issues/4910). I ruoli (`presentation` sulla lista, `tabpanel` o `group` sulle slide) vengono assegnati a runtime da Splide: non è necessario modificare il markup del Carousel per eliminare la segnalazione.
+
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ## Esempi di carousel con diversi contenuti
