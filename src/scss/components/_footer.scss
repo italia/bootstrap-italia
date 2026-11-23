@@ -137,9 +137,9 @@
     }
   }
 
-  // Override the utility '.border-white' opacity - /utilities/colors.scss
+  // Footer dividers: the '.border-white' utility at 30% opacity, as in UI Kit Italia
   .border-white {
-    --#{$prefix}border-opacity: 0.5;
+    --#{$prefix}border-opacity: 0.3;
   }
 }
 
