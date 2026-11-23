@@ -45,17 +45,19 @@ $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, '$key', 'bg') !defau
 // scss-docs-end utilities-bg-colors
 
 // scss-docs-start utilities-border-colors
-// Semantic border tokens have no RGB channels, so `.border-opacity-*` is applied
-// with color-mix(): at the default opacity (1) the color is unchanged.
-$utilities-border-colors: (
-  'primary': color-mix(in srgb, var(--#{$prefix}color-border-primary) calc(var(--#{$prefix}border-opacity) * 100%), transparent),
-  'secondary': color-mix(in srgb, var(--#{$prefix}color-border-secondary) calc(var(--#{$prefix}border-opacity) * 100%), transparent),
-  'success': color-mix(in srgb, var(--#{$prefix}color-border-success) calc(var(--#{$prefix}border-opacity) * 100%), transparent),
-  'warning': color-mix(in srgb, var(--#{$prefix}color-border-warning) calc(var(--#{$prefix}border-opacity) * 100%), transparent),
-  'danger': color-mix(in srgb, var(--#{$prefix}color-border-danger) calc(var(--#{$prefix}border-opacity) * 100%), transparent),
-  'inverse': color-mix(in srgb, var(--#{$prefix}color-border-inverse) calc(var(--#{$prefix}border-opacity) * 100%), transparent),
-  'white': color-mix(in srgb, var(--#{$prefix}color-border-inverse) calc(var(--#{$prefix}border-opacity) * 100%), transparent),
+// Border colors read the semantic tokens directly. The tokens have no RGB channels, so
+// rgba-css-var() can't apply `.border-opacity-*`: opacity-mix-css-var() does it with
+// color-mix(). The plain tokens are kept for the fallback in utilities/_api.scss.
+$utilities-border-tokens: (
+  'primary': var(--#{$prefix}color-border-primary),
+  'secondary': var(--#{$prefix}color-border-secondary),
+  'success': var(--#{$prefix}color-border-success),
+  'warning': var(--#{$prefix}color-border-warning),
+  'danger': var(--#{$prefix}color-border-danger),
+  'inverse': var(--#{$prefix}color-border-inverse),
+  'white': var(--#{$prefix}color-border-inverse),
 ) !default;
+$utilities-border-colors: map-loop($utilities-border-tokens, opacity-mix-css-var, '$value', 'border') !default;
 // scss-docs-end utilities-border-colors
 
 $negative-spacers: null !default;
