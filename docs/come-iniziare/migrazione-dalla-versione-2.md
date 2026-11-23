@@ -85,6 +85,12 @@ Alcuni esempi:
 
 Le CSS custom properties di ogni componente sono documentate nella tabella Properties delle relative schede di dettaglio. 
 
+### Classi di utility dei colori
+
+Le classi di utility legate alla palette dei colori della versione 2 sono state rimosse: `.primary-bg`, `.primary-color`, `.primary-border-color`, `.white-*`, le famiglie `analogue-*`, `complementary-*`, `neutral-*`, `lightgrey-*` e le varianti numerate (ad esempio `.primary-bg-a6`). Al loro posto si usano le classi `.text-*`, `.bg-*`, `.border-*` e le variabili CSS dei colori.
+
+[Vai alla tabella delle classi rimosse e dei sostituti]({{ site.baseurl }}/docs/personalizzare-la-libreria/colori/#classi-rimosse)
+
 ### Convenzioni di naming
 
 Bootstrap Italia 3 adotta convenzioni chiare per distinguere classi CSS e variabili:

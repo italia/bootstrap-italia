@@ -38,14 +38,14 @@ Per ancorare un elemento alla parte alta della pagina è sufficiente applicare l
 <div class="affix-example container">
   <div class="row">
     <div class="col-6 col-md-3 p-2 affix-parent">
-      <div class="neutral-1-bg-a7 p-3 mb-1">
-        <p class="mb-0 white-color">Lorem ipsum</p>
+      <div class="bg-secondary p-3 mb-1">
+        <p class="mb-0 text-white">Lorem ipsum</p>
       </div>
-      <div class="neutral-1-bg-a7 p-3 mb-1">
-        <p class="mb-0 white-color">Dolor sit</p>
+      <div class="bg-secondary p-3 mb-1">
+        <p class="mb-0 text-white">Dolor sit</p>
       </div>
-      <div class="primary-bg p-3 affix-top">
-        <p class="mb-0 white-color">Affix top</p>
+      <div class="bg-primary p-3 affix-top">
+        <p class="mb-0 text-white">Affix top</p>
       </div>
     </div>
     <div class="col-6 col-md-9 p-2">
@@ -69,20 +69,20 @@ Per ancorare un elemento alla parte bassa della pagina è sufficiente applicare 
 <div class="affix-example container">
   <div class="row">
     <div class="col-6 col-md-3 p-2 affix-parent">
-      <div class="neutral-1-bg-a7 p-3 mb-1">
-        <p class="mb-0 white-color">Lorem ipsum</p>
+      <div class="bg-secondary p-3 mb-1">
+        <p class="mb-0 text-white">Lorem ipsum</p>
       </div>
-      <div class="neutral-1-bg-a7 p-3 mb-1">
-        <p class="mb-0 white-color">Dolor sit</p>
+      <div class="bg-secondary p-3 mb-1">
+        <p class="mb-0 text-white">Dolor sit</p>
       </div>
-      <div class="neutral-1-bg-a7 p-3 mb-1">
-        <p class="mb-0 white-color">Lorem ipsum</p>
+      <div class="bg-secondary p-3 mb-1">
+        <p class="mb-0 text-white">Lorem ipsum</p>
       </div>
-      <div class="neutral-1-bg-a7 p-3 mb-1">
-        <p class="mb-0 white-color">Dolor sit</p>
+      <div class="bg-secondary p-3 mb-1">
+        <p class="mb-0 text-white">Dolor sit</p>
       </div>
-      <div class="primary-bg p-3 affix-bottom">
-        <p class="mb-0 white-color">Affix bottom</p>
+      <div class="bg-primary p-3 affix-bottom">
+        <p class="mb-0 text-white">Affix bottom</p>
       </div>
     </div>
     <div class="col-6 col-md-9 p-2">
@@ -108,8 +108,8 @@ Per ancorare un elemento a sviluppo orizzontale alla parte alta della pagina è 
 {% capture example %}
 
 <div class="affix-example container affix-parent">
-  <div class="primary-bg p-3 mb-1 text-center affix-top">
-    <p class="mb-0 white-color">Horizontal Affix top</p>
+  <div class="bg-primary p-3 mb-1 text-center affix-top">
+    <p class="mb-0 text-white">Horizontal Affix top</p>
   </div>
   <div class="row p-5">
     <p class="h3">Orci varius natoque penatibus et magnis</p>
@@ -132,8 +132,8 @@ Per ancorare un elemento a sviluppo orizzontale alla parte inferiore della pagin
     <p>Mauris placerat commodo tincidunt. Mauris finibus hendrerit molestie. Vestibulum gravida, lectus sed semper fringilla, libero felis vehicula quam, at efficitur nisl justo mattis orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla rutrum venenatis tellus, vel suscipit tellus faucibus at. Curabitur varius nisi a erat vulputate aliquet. Vivamus eu purus pretium, porta lacus id, mattis ligula. Phasellus eu aliquam nisi. Nunc dictum in nulla eget porttitor. Mauris dapibus vitae orci id posuere. Cras in mollis tortor. Sed felis turpis, auctor ullamcorper ipsum vel, porta tempor felis. Integer rutrum nulla nisi, quis facilisis ipsum hendrerit non. Aenean at fringilla ipsum. Mauris sodales fermentum magna volutpat imperdiet. Nullam condimentum orci purus, eget vulputate ipsum dapibus sit amet.</p>
     <p class="d-none d-md-block">Pellentesque faucibus scelerisque diam sit amet vulputate. Aliquam vitae justo tellus. Sed pharetra, nulla eu ullamcorper pharetra, enim sem posuere ante, eget faucibus quam nisl vitae augue. Sed fringilla augue at diam facilisis consectetur. Donec ut lorem aliquet, varius nulla et, lacinia nunc. Nullam sit amet risus posuere, egestas nisl ac, hendrerit ex. In eu fermentum felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus lacinia dictum dui, non condimentum nisi consectetur.</p>
   </div>
-  <div class="primary-bg p-3 text-center affix-bottom">
-    <p class="mb-0 white-color">Horizontal Affix bottom</p>
+  <div class="bg-primary p-3 text-center affix-bottom">
+    <p class="mb-0 text-white">Horizontal Affix bottom</p>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}

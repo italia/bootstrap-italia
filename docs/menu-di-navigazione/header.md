@@ -465,7 +465,7 @@ Le voci del menu su mobile hanno sempre sfondo bianco e link nel colore primario
                           <div class="row">
                             <div class="col-12 it-vertical it-description pb-lg-3">
                               <div class="description-content px-4 ps-sm-5 ms-3">
-                                <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
+                                <div class="ratio ratio-21x9 mb-4 rounded">
                                   <figure class="figure">
                                     <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                   </figure>
@@ -611,7 +611,7 @@ Per modificare il colore di sfondo e testi di Header Nav bisogna aggiungere la c
                           <div class="row">
                             <div class="col-12 it-vertical it-description pb-lg-3">
                               <div class="description-content px-4 ps-sm-5 ms-3">
-                                <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
+                                <div class="ratio ratio-21x9 mb-4 rounded">
                                   <figure class="figure">
                                     <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                   </figure>
@@ -750,7 +750,7 @@ Per modificare il colore di sfondo e testi di Header Nav bisogna aggiungere la c
                           <div class="row">
                             <div class="col-12 it-vertical it-description pb-lg-3">
                               <div class="description-content px-4 ps-sm-5 ms-3">
-                                <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
+                                <div class="ratio ratio-21x9 mb-4 rounded">
                                   <figure class="figure">
                                     <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                   </figure>
@@ -1029,7 +1029,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                               <div class="row">
                                 <div class="col-12 it-vertical it-description pb-lg-3">
                                   <div class="description-content px-4 ps-sm-5 ms-3">
-                                    <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
+                                    <div class="ratio ratio-21x9 mb-4 rounded">
                                       <figure class="figure">
                                         <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                       </figure>
@@ -1266,7 +1266,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                               <div class="row">
                                 <div class="col-12 it-vertical it-description pb-lg-3">
                                   <div class="description-content px-4 ps-sm-5 ms-3">
-                                    <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
+                                    <div class="ratio ratio-21x9 mb-4 rounded">
                                       <figure class="figure">
                                         <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                       </figure>
