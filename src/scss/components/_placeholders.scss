@@ -9,6 +9,9 @@
 // Variables
 //
 
+$_placeholder-opacity-max: 0.5;
+$_placeholder-opacity-min: 0.2;
+
 // Properties
 //
 
@@ -21,7 +24,7 @@
   vertical-align: middle;
   cursor: wait;
   background-color: currentcolor;
-  opacity: $placeholder-opacity-max;
+  opacity: $_placeholder-opacity-max;
 
   &.btn::before {
     display: inline-block;
@@ -51,12 +54,12 @@
 
 @keyframes placeholder-glow {
   50% {
-    opacity: $placeholder-opacity-min;
+    opacity: $_placeholder-opacity-min;
   }
 }
 
 .placeholder-wave {
-  mask-image: linear-gradient(130deg, $black 55%, rgba(0, 0, 0, (1 - $placeholder-opacity-min)) 75%, $black 95%);
+  mask-image: linear-gradient(130deg, $black 55%, rgba(0, 0, 0, (1 - $_placeholder-opacity-min)) 75%, $black 95%);
   mask-size: 200% 100%;
   animation: placeholder-wave 2s linear infinite;
 }
