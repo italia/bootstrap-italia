@@ -2,6 +2,12 @@
 @use '../base/variables' as *;
 @use '../base/mixins/breakpoints' as *;
 
+// Variables
+//
+
+$_transfer-descr-size: 0.75rem;
+$_transfer-header-line-w: 65px;
+
 //mobile
 .it-transfer-wrapper {
   border: $transfer-border;
@@ -43,7 +49,7 @@
     &:after {
       height: 1px;
       background: $transfer-header-line-color;
-      width: $transfer-header-line-w;
+      width: $_transfer-header-line-w;
       content: '';
       display: block;
       margin-left: 62px;
@@ -59,7 +65,7 @@
 
       .descr {
         display: block;
-        font-size: $transfer-descr-size;
+        font-size: $_transfer-descr-size;
         color: $transfer-descr-color;
         font-weight: normal;
       }
