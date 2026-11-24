@@ -14,6 +14,8 @@
 // Variables
 //
 
+$_progress-bar-animation-timing: 1s linear infinite;
+
 // Properties
 //
 .progress {
@@ -48,7 +50,7 @@
 
 @if $enable-transitions {
   .progress-bar-animated {
-    animation: $progress-bar-animation-timing progress-bar-stripes;
+    animation: $_progress-bar-animation-timing progress-bar-stripes;
 
     @if $enable-reduced-motion {
       @media (prefers-reduced-motion: reduce) {
