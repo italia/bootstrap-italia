@@ -9,6 +9,11 @@
 // Variables
 //
 
+$_skiplink-padding-x: 0.5rem;
+$_skiplink-padding-y: 0.5rem;
+$_skiplinks-bg: hsl(210, 62%, 97%); // was $color-background-primary-lighter
+$_skiplinks-color: hsl(210, 100%, 40%); // was $primary
+
 // Properties
 //
 
@@ -17,14 +22,14 @@
 
 //mobile
 .skiplinks {
-  background-color: $skiplinks-bg;
+  background-color: $_skiplinks-bg;
   text-align: center;
 
   a {
-    padding: $skiplink-padding-y $skiplink-padding-x;
+    padding: $_skiplink-padding-y $_skiplink-padding-x;
     display: block;
     font-weight: 600;
-    color: $skiplinks-color;
+    color: $_skiplinks-color;
     text-decoration: underline;
   }
 
