@@ -6,6 +6,13 @@
 @use '../base/mixins/transition' as *;
 @use '../base/mixins/focus' as *;
 
+// Variables
+//
+
+$_form-select-color: hsl(0, 0%, 10%); // was $input-color
+$_form-select-disabled-bg: hsl(0, 0%, 90%); // was $gray-200
+$_input-border: hsl(210, 17%, 44%); // was $gray-secondary
+
 // Properties
 
 // Form properties are :root scoped to allow for easy customization of form elements.
@@ -153,7 +160,7 @@ select {
 
   &:disabled {
     border-color: $form-select-disabled-border-color;
-    background-color: $form-select-disabled-bg;
+    background-color: $_form-select-disabled-bg;
     color: $form-select-disabled-color;
 
     &:hover {
@@ -164,7 +171,7 @@ select {
   // Remove outline from select box in FF
   &:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 $form-select-color;
+    text-shadow: 0 0 0 $_form-select-color;
   }
 
   option {
@@ -292,7 +299,7 @@ input::-webkit-datetime-edit {
       height: 100%;
       padding-top: 0;
       padding-bottom: 0;
-      border-bottom: 1px solid $input-border;
+      border-bottom: 1px solid $_input-border;
       border-radius: 0 var(--#{$prefix}form-control-border-radius) var(--#{$prefix}form-control-border-radius) 0;
     }
   }
