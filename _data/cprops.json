@@ -2073,6 +2073,15 @@
                 "/forms/_forms.scss"
             ],
             "other_values": [],
+            "value": "#{escape-svg($form-select-indicator)}",
+            "variable-name": "--bsi-form-select-indicator"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_forms.scss"
+            ],
+            "other_values": [],
             "value": "var(--bsi-spacing-m)",
             "variable-name": "--bsi-form-group-spacing-y"
         },
