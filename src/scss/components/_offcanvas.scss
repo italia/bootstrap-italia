@@ -14,6 +14,8 @@
 // Variables
 //
 
+$_offcanvas-title-line-height: 1.5; // was $modal-title-line-height
+
 // Properties
 //
 
@@ -155,7 +157,7 @@
 
 .offcanvas-title {
   margin-bottom: 0;
-  line-height: $offcanvas-title-line-height;
+  line-height: $_offcanvas-title-line-height;
 }
 
 .offcanvas-body {
