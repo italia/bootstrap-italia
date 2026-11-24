@@ -1,10 +1,7 @@
 @use '../base/config' as *;
-@use '../base/variables' as *;
 @use '../base/mixins/border-radius' as *;
-@use '../base/mixins/box-shadow' as *;
 @use '../base/mixins/reset-text' as *;
 @use '../base/mixins/breakpoints' as *;
-@use '../base/vendor/rfs' as *;
 
 // Component: popover
 //
@@ -18,26 +15,26 @@
 //
 
 .popover {
-  --#{$prefix}popover-arrow-border: var(--#{$prefix}popover-border-color);
-  --#{$prefix}popover-arrow-height: #{$popover-arrow-height};
-  --#{$prefix}popover-arrow-width: #{$popover-arrow-width};
-  --#{$prefix}popover-body-color: #{$popover-body-color};
-  --#{$prefix}popover-body-padding-x: #{$popover-body-padding-x};
-  --#{$prefix}popover-body-padding-y: #{$popover-body-padding-y};
-  --#{$prefix}popover-bg: #{$popover-bg};
-  --#{$prefix}popover-box-shadow: #{$popover-box-shadow};
-  --#{$prefix}popover-border-color: #{$popover-border-color};
-  --#{$prefix}popover-border-radius: #{$popover-border-radius};
-  --#{$prefix}popover-border-width: #{$popover-border-width};
-  @include rfs($popover-font-size, --#{$prefix}popover-font-size);
-  --#{$prefix}popover-header-bg: #{$popover-header-bg};
-  --#{$prefix}popover-header-color: #{$popover-header-color};
-  @include rfs($popover-header-font-size, --#{$prefix}popover-header-font-size);
-  --#{$prefix}popover-header-padding-x: #{$popover-header-padding-x};
-  --#{$prefix}popover-header-padding-y: #{$popover-header-padding-y};
-  --#{$prefix}popover-inner-border-radius: #{$popover-inner-border-radius};
-  --#{$prefix}popover-max-width: #{$popover-max-width};
-  --#{$prefix}popover-zindex: #{$zindex-popover};
+  --#{$prefix}popover-arrow-border: var(--#{$prefix}popover-border-color); // Controls the popover arrow border color.
+  --#{$prefix}popover-arrow-height: 0.5rem; // Controls the popover arrow height.
+  --#{$prefix}popover-arrow-width: 1rem; // Controls the popover arrow width.
+  --#{$prefix}popover-body-color: var(--#{$prefix}color-text-secondary); // Controls the popover body text color, using color tokens.
+  --#{$prefix}popover-body-padding-x: var(--#{$prefix}spacing-m); // Controls the popover body horizontal padding, using spacing tokens.
+  --#{$prefix}popover-body-padding-y: var(--#{$prefix}spacing-s); // Controls the popover body vertical padding, using spacing tokens.
+  --#{$prefix}popover-bg: var(--#{$prefix}color-background-inverse); // Controls the popover background color, using color tokens.
+  --#{$prefix}popover-box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.1); // Controls the popover box shadow.
+  --#{$prefix}popover-border-color: var(--#{$prefix}border-color-translucent); // Controls the popover border color.
+  --#{$prefix}popover-border-radius: var(--#{$prefix}radius-smooth); // Controls the popover border radius, using radius tokens.
+  --#{$prefix}popover-border-width: var(--#{$prefix}border-width); // Controls the popover border width, used to place the arrow.
+  --#{$prefix}popover-font-size: 0.875rem; // Controls the popover font size.
+  --#{$prefix}popover-header-bg: transparent; // Controls the popover header background color.
+  --#{$prefix}popover-header-color: var(--#{$prefix}color-text-base); // Controls the popover header text color, using color tokens.
+  --#{$prefix}popover-header-font-size: 1rem; // Controls the popover header font size.
+  --#{$prefix}popover-header-padding-x: var(--#{$prefix}spacing-m); // Controls the popover header horizontal padding, using spacing tokens.
+  --#{$prefix}popover-header-padding-y: var(--#{$prefix}spacing-s); // Controls the popover header top padding, using spacing tokens.
+  --#{$prefix}popover-inner-border-radius: calc(var(--#{$prefix}popover-border-radius) - var(--#{$prefix}popover-border-width)); // Controls the inner radius.
+  --#{$prefix}popover-max-width: 276px; // Controls the popover max width.
+  --#{$prefix}popover-zindex: 1070; // Controls the popover z-index.
 }
 
 // Styles
@@ -167,7 +164,7 @@
 .popover-header {
   padding: var(--#{$prefix}popover-header-padding-y) var(--#{$prefix}popover-header-padding-x);
   margin-bottom: 0; // Reset the default from Reboot
-  @include font-size(var(--#{$prefix}popover-header-font-size));
+  font-size: var(--#{$prefix}popover-header-font-size);
   color: var(--#{$prefix}popover-header-color);
   background-color: var(--#{$prefix}popover-header-bg);
   border-bottom: var(--#{$prefix}popover-border-width) solid var(--#{$prefix}popover-border-color);
@@ -191,21 +188,17 @@
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
   // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text();
-  @include font-size(var(--#{$prefix}popover-font-size));
+  font-size: var(--#{$prefix}popover-font-size);
   // Allow breaking very long words so they don't overflow the popover's bounds
   word-wrap: break-word;
   background-color: var(--#{$prefix}popover-bg);
   background-clip: padding-box;
-  border: var(--#{$prefix}popover-border-width) solid var(--#{$prefix}popover-border-color);
-  @include border-radius(var(--#{$prefix}popover-border-radius));
-  @include box-shadow(var(--#{$prefix}popover-box-shadow));
-
   border: none;
-  border-radius: var(--#{$prefix}radius-smooth);
-  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.1);
+  @include border-radius(var(--#{$prefix}popover-border-radius));
+  box-shadow: var(--#{$prefix}popover-box-shadow);
 
   &.bs-popover-top {
-    margin-bottom: $v-gap * 2;
+    margin-bottom: var(--#{$prefix}spacing-s);
     .popover-arrow {
       &:after {
         bottom: 2px;
@@ -213,7 +206,7 @@
     }
   }
   &.bs-popover-bottom {
-    margin-top: $v-gap * 2;
+    margin-top: var(--#{$prefix}spacing-s);
     .popover-arrow {
       &:after {
         top: 2px;
@@ -221,7 +214,7 @@
     }
   }
   &.bs-popover-left {
-    margin-right: $v-gap * 2;
+    margin-right: var(--#{$prefix}spacing-s);
     .popover-arrow {
       &:after {
         right: 2px;
@@ -229,7 +222,7 @@
     }
   }
   &.bs-popover-right {
-    margin-left: $v-gap * 2;
+    margin-left: var(--#{$prefix}spacing-s);
     .popover-arrow {
       &:after {
         left: 2px;
@@ -256,49 +249,48 @@
   }
   //title
   .popover-header {
-    background: none;
     border: none;
     text-transform: uppercase;
-    color: $color-text-base;
-    font-size: 1rem;
-    padding: $v-gap * 2 $v-gap * 3 0;
+    color: var(--#{$prefix}popover-header-color);
+    font-size: var(--#{$prefix}popover-header-font-size);
+    padding: var(--#{$prefix}popover-header-padding-y) var(--#{$prefix}popover-header-padding-x) 0;
     letter-spacing: 0.05em;
-    font-weight: 600;
+    font-weight: var(--#{$prefix}font-weight-solid);
     //title icon
     .icon {
-      fill: $primary;
-      margin-right: $v-gap;
-      height: $v-gap * 3;
-      width: $v-gap * 3;
+      fill: var(--#{$prefix}icon-primary);
+      margin-right: var(--#{$prefix}spacing-xxs);
+      height: var(--#{$prefix}icon-size-s);
+      width: var(--#{$prefix}icon-size-s);
     }
   }
   //text
   .popover-body {
     font-size: 0.875rem;
     line-height: 1.5em;
-    color: var(--#{$prefix}color-text-secondary);
-    padding: $v-gap * 2 $v-gap * 3;
+    color: var(--#{$prefix}popover-body-color);
+    padding: var(--#{$prefix}popover-body-padding-y) var(--#{$prefix}popover-body-padding-x);
     //inner bottom link
     a.popover-inner-link {
       text-transform: uppercase;
       letter-spacing: 0.05em;
       display: block;
-      margin-top: $v-gap * 2;
+      margin-top: var(--#{$prefix}spacing-s);
       font-size: 0.857em;
       text-align: right;
-      font-weight: 700;
+      font-weight: var(--#{$prefix}font-weight-strong);
       text-decoration: none;
       &:hover {
-        color: $primary;
+        color: var(--#{$prefix}color-link);
         text-decoration: underline;
       }
       //link icon
       .icon {
-        fill: $primary;
-        height: $v-gap * 2;
-        width: $v-gap * 2;
-        margin-left: $v-gap * 0.5;
-        margin-bottom: $v-gap * 0.5;
+        fill: var(--#{$prefix}icon-primary);
+        height: var(--#{$prefix}icon-size-xs);
+        width: var(--#{$prefix}icon-size-xs);
+        margin-left: var(--#{$prefix}spacing-3xs);
+        margin-bottom: var(--#{$prefix}spacing-3xs);
       }
     }
   }
@@ -307,10 +299,8 @@
 //small - tablet
 @include media-breakpoint-up(sm) {
   .popover {
-    //title
-    .popover-header {
-      font-size: 0.875rem;
-    }
+    --#{$prefix}popover-header-font-size: 0.875rem;
+
     //text
     .popover-body {
       font-size: 0.75rem;
