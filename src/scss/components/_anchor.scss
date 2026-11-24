@@ -10,6 +10,9 @@
 // Variables
 //
 
+$_anchor-v-offset: 96px; // mobile header height (80px) plus 16px
+$_anchor-v-offset-lg: 72px;
+
 // Properties
 //
 
@@ -20,10 +23,10 @@
 .anchor-offset:before {
   content: '';
   display: block;
-  height: $anchor-v-offset;
-  margin-top: -$anchor-v-offset;
+  height: $_anchor-v-offset;
+  margin-top: -$_anchor-v-offset;
   @include media-breakpoint-up(lg) {
-    height: $anchor-v-offset-lg;
-    margin-top: -$anchor-v-offset-lg;
+    height: $_anchor-v-offset-lg;
+    margin-top: -$_anchor-v-offset-lg;
   }
 }
