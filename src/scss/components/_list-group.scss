@@ -20,7 +20,7 @@
 //
 
 .list-group {
-  --#{$prefix}list-group-action-active-bg: #{$list-group-action-active-bg};
+  --#{$prefix}list-group-action-active-bg: hsl(0, 0%, 90%);
   --#{$prefix}list-group-action-active-color: var(--#{$prefix}color-text-base);
   --#{$prefix}list-group-action-hover-bg: var(--#{$prefix}color-background-muted);
   --#{$prefix}list-group-action-hover-color: var(--#{$prefix}list-group-action-color);
@@ -29,14 +29,14 @@
   --#{$prefix}list-group-active-border-color: var(--#{$prefix}list-group-active-bg);
   --#{$prefix}list-group-active-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}list-group-bg: var(--#{$prefix}color-background-inverse);
-  --#{$prefix}list-group-border-color: #{$list-group-border-color};
+  --#{$prefix}list-group-border-color: rgba(0, 0, 0, 0.125);
   --#{$prefix}list-group-border-radius: var(--#{$prefix}radius-smooth);
   --#{$prefix}list-group-border-width: var(--#{$prefix}border-width);
   --#{$prefix}list-group-color: var(--#{$prefix}color-text-base);
   --#{$prefix}list-group-disabled-bg: var(--#{$prefix}list-group-bg);
-  --#{$prefix}list-group-disabled-color: #{$list-group-disabled-color};
-  --#{$prefix}list-group-item-padding-x: #{$list-group-item-padding-x};
-  --#{$prefix}list-group-item-padding-y: #{$list-group-item-padding-y};
+  --#{$prefix}list-group-disabled-color: hsl(0, 0%, 32%);
+  --#{$prefix}list-group-item-padding-x: 1rem;
+  --#{$prefix}list-group-item-padding-y: 1rem;
 }
 
 // Styles
