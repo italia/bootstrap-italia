@@ -1,7 +1,6 @@
 @use '../base/config' as *;
 @use '../base/mixins/border-radius' as *;
 @use '../base/mixins/reset-text' as *;
-@use '../base/mixins/breakpoints' as *;
 
 // Component: popover
 //
@@ -26,10 +25,10 @@
   --#{$prefix}popover-border-color: var(--#{$prefix}color-border-subtle); // Controls the popover border color, using color tokens.
   --#{$prefix}popover-border-radius: var(--#{$prefix}radius-smooth); // Controls the popover border radius, using radius tokens.
   --#{$prefix}popover-border-width: var(--#{$prefix}border-width); // Controls the popover border width.
-  --#{$prefix}popover-font-size: 0.875rem; // Controls the popover font size.
+  --#{$prefix}popover-font-size: var(--#{$prefix}label-font-size); // Controls the popover font size, using typography tokens.
   --#{$prefix}popover-header-bg: transparent; // Controls the popover header background color.
   --#{$prefix}popover-header-color: var(--#{$prefix}color-text-base); // Controls the popover header text color, using color tokens.
-  --#{$prefix}popover-header-font-size: 1rem; // Controls the popover header font size.
+  --#{$prefix}popover-header-font-size: var(--#{$prefix}heading-6-font-size); // Controls the popover header font size, using typography tokens.
   --#{$prefix}popover-header-padding-x: var(--#{$prefix}spacing-m); // Controls the popover header horizontal padding, using spacing tokens.
   --#{$prefix}popover-header-padding-y: var(--#{$prefix}spacing-s); // Controls the popover header top padding, using spacing tokens.
   --#{$prefix}popover-inner-border-radius: calc(var(--#{$prefix}popover-border-radius) - var(--#{$prefix}popover-border-width)); // Controls the inner radius.
@@ -250,9 +249,9 @@
     text-transform: uppercase;
     color: var(--#{$prefix}popover-header-color);
     font-size: var(--#{$prefix}popover-header-font-size);
+    line-height: var(--#{$prefix}heading-leading);
     padding: var(--#{$prefix}popover-header-padding-y) var(--#{$prefix}popover-header-padding-x) 0;
-    letter-spacing: 0.05em;
-    font-weight: var(--#{$prefix}font-weight-solid);
+    font-weight: var(--#{$prefix}heading-font-weight-weak);
     //title icon
     .icon {
       fill: var(--#{$prefix}icon-primary);
@@ -263,24 +262,17 @@
   }
   //text
   .popover-body {
-    font-size: 0.875rem;
-    line-height: 1.5em;
+    line-height: var(--#{$prefix}body-leading);
     color: var(--#{$prefix}popover-body-color);
     padding: var(--#{$prefix}popover-body-padding-y) var(--#{$prefix}popover-body-padding-x);
     //inner bottom link
     a.popover-inner-link {
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
       display: block;
       margin-top: var(--#{$prefix}spacing-s);
-      font-size: 0.857em;
+      font-size: var(--#{$prefix}label-font-size-s);
+      line-height: var(--#{$prefix}label-leading);
       text-align: right;
-      font-weight: var(--#{$prefix}font-weight-strong);
-      text-decoration: none;
-      &:hover {
-        color: var(--#{$prefix}color-link);
-        text-decoration: underline;
-      }
+      font-weight: var(--#{$prefix}font-weight-solid);
       //link icon
       .icon {
         fill: var(--#{$prefix}icon-primary);
@@ -289,18 +281,6 @@
         margin-left: var(--#{$prefix}spacing-3xs);
         margin-bottom: var(--#{$prefix}spacing-3xs);
       }
-    }
-  }
-}
-
-//small - tablet
-@include media-breakpoint-up(sm) {
-  .popover {
-    --#{$prefix}popover-header-font-size: 0.875rem;
-
-    //text
-    .popover-body {
-      font-size: 0.75rem;
     }
   }
 }
