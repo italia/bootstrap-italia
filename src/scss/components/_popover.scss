@@ -15,8 +15,8 @@
 
 .popover {
   --#{$prefix}popover-arrow-border: var(--#{$prefix}popover-border-color); // Controls the popover arrow border color.
-  --#{$prefix}popover-arrow-height: 0.5rem; // Controls the popover arrow height.
-  --#{$prefix}popover-arrow-width: 1rem; // Controls the popover arrow width.
+  --#{$prefix}popover-arrow-height: 0.75rem; // Controls the popover arrow height.
+  --#{$prefix}popover-arrow-width: 1.5rem; // Controls the popover arrow width.
   --#{$prefix}popover-body-color: var(--#{$prefix}color-text-secondary); // Controls the popover body text color, using color tokens.
   --#{$prefix}popover-body-padding-x: var(--#{$prefix}spacing-s); // Controls the popover body horizontal padding, using spacing tokens.
   --#{$prefix}popover-body-padding-y: var(--#{$prefix}spacing-s); // Controls the popover body vertical padding, using spacing tokens.
