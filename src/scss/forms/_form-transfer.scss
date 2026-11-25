@@ -11,6 +11,10 @@
     height: $transfer-height;
     overflow-x: hidden;
     margin-bottom: $v-gap * 3;
+    // Room for the focus ring of the items at the edges, which the scrolling list would clip.
+    // Not an inset ring: the labels have no padding and it would cover the checkbox and the text
+    padding-top: calc(var(--#{$prefix}focus-inner-width) + var(--#{$prefix}focus-outer-width));
+    scroll-padding-block: calc(var(--#{$prefix}focus-inner-width) + var(--#{$prefix}focus-outer-width));
   }
 
   .form-check {

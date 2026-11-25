@@ -1,6 +1,7 @@
 @use '../base/config' as *;
 @use '../base/variables' as *;
 @use '../base/mixins/breakpoints' as *;
+@use '../base/mixins/focus' as *;
 @use 'nav';
 
 // Component: headerslim
@@ -34,6 +35,17 @@
 
   &.theme-light {
     border-bottom: 1px solid var(--#{$prefix}header-slim-border-color);
+
+    // Light band: inset focus ring with the usual colors
+    .it-header-slim-wrapper-content .dropdown-toggle:focus:not([data-focus-mouse='true']) {
+      @include focus-inset;
+    }
+
+    @include media-breakpoint-up(lg) {
+      .nav-mobile .list-item:focus:not([data-focus-mouse='true']) {
+        @include focus-inset;
+      }
+    }
   }
 
   // Text decoration for links inside header slim except buttons
@@ -61,6 +73,13 @@
         & > .icon:last-of-type {
           transform: scaleY(-1);
         }
+      }
+
+      // Inset focus ring: the toggle fills the band, so an outer ring would go off the top
+      // of the page and under the header that follows. Colors swapped on the dark band,
+      // as for the other inset rings on dark backgrounds (see .theme-light below)
+      &:focus:not([data-focus-mouse='true']) {
+        @include focus-inset($inverse: true);
       }
     }
 
@@ -129,6 +148,12 @@
       &.active {
         box-shadow: inset 0 -2px 0 var(--#{$prefix}header-slim-text-color);
         color: var(--#{$prefix}header-slim-text-color);
+      }
+      // Inset focus ring from lg, where the links fill the band (see the language toggle)
+      @include media-breakpoint-up(lg) {
+        &:focus:not([data-focus-mouse='true']) {
+          @include focus-inset($inverse: true);
+        }
       }
     }
   }

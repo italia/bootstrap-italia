@@ -1,6 +1,7 @@
 @use '../base/config' as *;
 @use '../base/variables' as *;
 @use '../base/mixins/breakpoints' as *;
+@use '../base/mixins/focus' as *;
 
 // Component: navscroll
 //
@@ -95,6 +96,23 @@
   .link-list-wrapper ul li ul li a.active {
     --#{$prefix}navscroll-item-border-color: transparent;
     text-decoration: underline;
+  }
+
+  // Inset focus ring on mobile: the links fill the scrolling menu panel and the back button
+  // spans the viewport, so an outer ring would be clipped
+  @include media-breakpoint-down(lg) {
+    .link-list-wrapper ul li a:focus:not([data-focus-mouse='true']),
+    .it-back-button:focus:not([data-focus-mouse='true']) {
+      @include focus-inset;
+    }
+
+    // Dark theme: same ring with the colors swapped
+    &.theme-dark-mobile {
+      .link-list-wrapper ul li a:focus:not([data-focus-mouse='true']),
+      .it-back-button:focus:not([data-focus-mouse='true']) {
+        @include focus-inset($inverse: true);
+      }
+    }
   }
 
   // Navscroll Heading
