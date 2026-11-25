@@ -18,7 +18,7 @@
   --#{$prefix}popover-arrow-height: 0.5rem; // Controls the popover arrow height.
   --#{$prefix}popover-arrow-width: 1rem; // Controls the popover arrow width.
   --#{$prefix}popover-body-color: var(--#{$prefix}color-text-secondary); // Controls the popover body text color, using color tokens.
-  --#{$prefix}popover-body-padding-x: var(--#{$prefix}spacing-m); // Controls the popover body horizontal padding, using spacing tokens.
+  --#{$prefix}popover-body-padding-x: var(--#{$prefix}spacing-s); // Controls the popover body horizontal padding, using spacing tokens.
   --#{$prefix}popover-body-padding-y: var(--#{$prefix}spacing-s); // Controls the popover body vertical padding, using spacing tokens.
   --#{$prefix}popover-bg: var(--#{$prefix}color-background-inverse); // Controls the popover background color, using color tokens.
   --#{$prefix}popover-box-shadow: var(--#{$prefix}elevation-medium); // Controls the popover box shadow, using elevation tokens.
@@ -29,7 +29,7 @@
   --#{$prefix}popover-header-bg: transparent; // Controls the popover header background color.
   --#{$prefix}popover-header-color: var(--#{$prefix}color-text-base); // Controls the popover header text color, using color tokens.
   --#{$prefix}popover-header-font-size: var(--#{$prefix}heading-6-font-size); // Controls the popover header font size, using typography tokens.
-  --#{$prefix}popover-header-padding-x: var(--#{$prefix}spacing-m); // Controls the popover header horizontal padding, using spacing tokens.
+  --#{$prefix}popover-header-padding-x: var(--#{$prefix}spacing-s); // Controls the popover header horizontal padding, using spacing tokens.
   --#{$prefix}popover-header-padding-y: var(--#{$prefix}spacing-s); // Controls the popover header top padding, using spacing tokens.
   --#{$prefix}popover-inner-border-radius: calc(var(--#{$prefix}popover-border-radius) - var(--#{$prefix}popover-border-width)); // Controls the inner radius.
   --#{$prefix}popover-max-width: 276px; // Controls the popover max width.
@@ -277,7 +277,7 @@
       align-items: center;
       justify-content: flex-end;
       gap: var(--#{$prefix}spacing-xxs);
-      margin-top: var(--#{$prefix}spacing-s);
+      margin-top: var(--#{$prefix}spacing-xxs);
       font-size: var(--#{$prefix}label-font-size-s);
       line-height: var(--#{$prefix}label-leading);
       font-weight: var(--#{$prefix}font-weight-solid);
@@ -289,5 +289,9 @@
         width: var(--#{$prefix}icon-size-s);
       }
     }
+  }
+  //text right under the title
+  .popover-header + .popover-body {
+    padding-top: var(--#{$prefix}spacing-xxs);
   }
 }
