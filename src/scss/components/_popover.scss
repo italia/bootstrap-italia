@@ -22,10 +22,10 @@
   --#{$prefix}popover-body-padding-x: var(--#{$prefix}spacing-m); // Controls the popover body horizontal padding, using spacing tokens.
   --#{$prefix}popover-body-padding-y: var(--#{$prefix}spacing-s); // Controls the popover body vertical padding, using spacing tokens.
   --#{$prefix}popover-bg: var(--#{$prefix}color-background-inverse); // Controls the popover background color, using color tokens.
-  --#{$prefix}popover-box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.1); // Controls the popover box shadow.
-  --#{$prefix}popover-border-color: var(--#{$prefix}border-color-translucent); // Controls the popover border color.
+  --#{$prefix}popover-box-shadow: var(--#{$prefix}elevation-medium); // Controls the popover box shadow, using elevation tokens.
+  --#{$prefix}popover-border-color: var(--#{$prefix}color-border-subtle); // Controls the popover border color, using color tokens.
   --#{$prefix}popover-border-radius: var(--#{$prefix}radius-smooth); // Controls the popover border radius, using radius tokens.
-  --#{$prefix}popover-border-width: var(--#{$prefix}border-width); // Controls the popover border width, used to place the arrow.
+  --#{$prefix}popover-border-width: var(--#{$prefix}border-width); // Controls the popover border width.
   --#{$prefix}popover-font-size: 0.875rem; // Controls the popover font size.
   --#{$prefix}popover-header-bg: transparent; // Controls the popover header background color.
   --#{$prefix}popover-header-color: var(--#{$prefix}color-text-base); // Controls the popover header text color, using color tokens.
@@ -193,7 +193,7 @@
   word-wrap: break-word;
   background-color: var(--#{$prefix}popover-bg);
   background-clip: padding-box;
-  border: none;
+  border: var(--#{$prefix}popover-border-width) solid var(--#{$prefix}popover-border-color);
   @include border-radius(var(--#{$prefix}popover-border-radius));
   box-shadow: var(--#{$prefix}popover-box-shadow);
 
@@ -234,6 +234,7 @@
     width: var(--#{$prefix}popover-arrow-width);
     height: var(--#{$prefix}popover-arrow-height);
 
+    &::before,
     &::after {
       position: absolute;
       display: block;
@@ -241,10 +242,6 @@
       border-color: transparent;
       border-style: solid;
       border-width: 0;
-    }
-
-    &:before {
-      display: none;
     }
   }
   //title
