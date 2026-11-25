@@ -151,9 +151,13 @@ select {
     padding-right: $form-select-padding-x;
   }
 
-  // No arrow on list boxes; :where() keeps the validation icons of .is-valid and .is-invalid
-  &:where([multiple], [size]:not([size='1'])) {
-    background-image: none;
+  // No arrow on list boxes; :where() keeps the validation icons of .is-valid and .is-invalid.
+  // Touch devices can render them as a closed control that opens a picker (iOS, Android),
+  // so the arrow stays wherever a coarse pointer is available
+  @media not all and (any-pointer: coarse) {
+    &:where([multiple], [size]:not([size='1'])) {
+      background-image: none;
+    }
   }
 
   &:disabled {
