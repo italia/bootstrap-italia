@@ -1056,38 +1056,9 @@ $modal-backdrop-bg: $black !default;
 // Pagination
 
 // scss-docs-start pagination-variables
-$pagination-padding-y: 0.375rem !default;
-$pagination-padding-x: 0.75rem !default;
-$pagination-padding-y-sm: 0.25rem !default;
-$pagination-padding-x-sm: 0.5rem !default;
-$pagination-padding-y-lg: 0.75rem !default;
-$pagination-padding-x-lg: 1.5rem !default;
-
 $pagination-font-size: $font-size-base !default;
-
-$pagination-color: var(--#{$prefix}color-link) !default;
-$pagination-bg: $white !default;
-$pagination-border-radius: $border-radius !default;
 $pagination-border-width: $border-width !default;
 $pagination-margin-start: ($pagination-border-width * -1) !default;
-$pagination-border-color: $gray-300 !default;
-
-$pagination-focus-color: var(--#{$prefix}color-link-hover) !default;
-$pagination-focus-bg: $gray-200 !default;
-$pagination-focus-box-shadow: $input-btn-focus-box-shadow !default;
-$pagination-focus-outline: 0 !default;
-
-$pagination-hover-color: var(--#{$prefix}color-link-hover) !default;
-$pagination-hover-bg: $gray-200 !default;
-$pagination-hover-border-color: $gray-300 !default;
-
-$pagination-active-color: $component-active-color !default;
-$pagination-active-bg: $component-active-bg !default;
-$pagination-active-border-color: $pagination-active-bg !default;
-
-$pagination-disabled-color: $gray-600 !default;
-$pagination-disabled-bg: $white !default;
-$pagination-disabled-border-color: $gray-300 !default;
 
 $pagination-transition:
   color 0.15s ease-in-out,
@@ -1095,8 +1066,6 @@ $pagination-transition:
   border-color 0.15s ease-in-out,
   box-shadow 0.15s ease-in-out !default;
 
-$pagination-border-radius-sm: $border-radius-sm !default;
-$pagination-border-radius-lg: $border-radius-lg !default;
 // scss-docs-end pagination-variables
 
 // Placeholders
@@ -1229,26 +1198,6 @@ $navigation-light-megamenu-separator-color: $gray-border !default; // UI kit
 
 // Linklist footer megamenu
 $link-list-footer-distance-bottom: 0.5rem;
-
-// Pager
-$pager-margin-bottom: 0.5rem;
-$pager-item-size-mobile: 2.5rem; // 40px
-$pager-item-size-tablet: 3rem; // 48px
-$pager-item-border-radius: 4px;
-$pager-item-margin-right: 5px;
-$pager-item-current-color: $primary !default;
-$pager-item-current-border: 1px solid $primary !default;
-$pager-font-size: 1rem;
-$pager-font-weight: 700;
-$pager-font-color: $secondary !default;
-$pager-hover-color: $primary !default;
-$pager-icon-color: $primary !default;
-$pager-icon-size: 1rem;
-$pager-disabled-color: $gray-label-disabled !default;
-$pager-jump-to-width: 4.5rem;
-$pager-jump-to-color: $gray-secondary !default; // Kit UI
-$pager-page-changer-padding: 12px;
-$pager-page-changer-border-bottom: 1px solid $gray-secondary !default; // Kit UI
 
 //sidebar dark theme
 $sidebar-dark-bg-color: $neutral-1-a8 !default; // Missing in the new UI kit
