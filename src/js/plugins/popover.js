@@ -23,7 +23,7 @@ const SELECTOR_CONTENT = '.popover-body'
 const Default = {
   ...Tooltip.Default,
   content: '',
-  offset: [0, 8],
+  offset: [0, 12],
   placement: 'right',
   template:
     '<div class="popover" role="tooltip">' +

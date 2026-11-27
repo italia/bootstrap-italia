@@ -278,7 +278,7 @@ Le opzioni possono essere passate tramite attributi data o tramite JavaScript. P
           <tr>
               <td><code>offset</code></td>
               <td>numero, stringa, funzione</td>
-              <td><code>[0, 0]</code></td>
+              <td><code>[0, 12]</code></td>
               <td>Offset del popover rispetto al suo target. Puoi passare una stringa negli attributi dati con valori
                   separati da virgole come: <code>data-bs-offset="10,20"</code>. Quando una funzione viene utilizzata per
                   determinare l'offset, viene chiamata con un oggetto contenente il posizionamento del popper, il
