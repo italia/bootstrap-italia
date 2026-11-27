@@ -1306,21 +1306,6 @@ $navigation-light-bg-color: $white !default;
 $navigation-light-text-color: $primary !default;
 $navigation-light-megamenu-separator-color: $gray-border !default; // UI kit
 
-// Megamenu
-$megamenu-padding-top-desktop: $v-gap * 4;
-$megamenu-column-gap: $v-gap * 3;
-$megamenu-link-small-line-width: 65px;
-$megamenu-link-small-line-margin-bottom: $v-gap;
-$megamenu-heading-line-height: 1.2rem;
-$megamenu-heading-font-weight: 600;
-$megamenu-heading-bottom-margin: 24px;
-$megamenu-heading-text-size: 1.125rem;
-$megamenu-heading-margin-x: 28px;
-$megamenu-linklist-link-line-height: inherit;
-$megamenu-linklist-link-v-padding: 0.5em;
-$megamenu-linklist-vertical-link-padding: 36px;
-$megamenu-vertical-description-font-size: 1rem;
-
 // Linklist footer megamenu
 $link-list-footer-distance-bottom: 0.5rem;
 
@@ -1343,23 +1328,6 @@ $pager-jump-to-width: 4.5rem;
 $pager-jump-to-color: $gray-secondary !default; // Kit UI
 $pager-page-changer-padding: 12px;
 $pager-page-changer-border-bottom: 1px solid $gray-secondary !default; // Kit UI
-
-// Sidebar
-$sidebar-heading-font-weight: 600;
-$sidebar-heading-bottom-margin: 0.8rem;
-$sidebar-heading-text-size: 1.15rem;
-$sidebar-heading-margin-top: 4px;
-$sidebar-heading-letter-spacing: 1px;
-$sidebar-linklist-link-line-height: 1.5rem;
-$sidebar-linklist-link-v-padding: 0.75rem;
-$sidebar-link-small-line-width: 65px;
-$sidebar-link-size: 1rem;
-$sidebar-dropdown-icon-size: 1.5rem;
-$sidebar-dropdown-line-selection-width: 4px;
-$sidebar-dropdown-line-selection-color: $primary !default;
-$sidebar-submenu-font-size: 1rem;
-$sidebar-submenu-link-v-padding: 0.45em;
-$sidebar-border-color: $gray-border !default;
 
 //sidebar dark theme
 $sidebar-dark-bg-color: $neutral-1-a8 !default; // Missing in the new UI kit
