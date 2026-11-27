@@ -625,8 +625,6 @@ $skiplinks-bg: $color-background-primary-lighter !default;
 
 $input-btn-padding-y: 0.375rem !default;
 $input-btn-padding-x: 0.75rem !default;
-$input-btn-font-family: null !default;
-$input-btn-font-size: $font-size-base !default;
 
 $input-btn-focus-width: 0.25rem !default;
 $input-btn-focus-color-opacity: 0.25 !default;
@@ -642,20 +640,10 @@ $input-btn-padding-y-lg: 0.5rem !default;
 $input-btn-padding-x-lg: 1rem !default;
 $input-btn-font-size-lg: $font-size-lg !default;
 
-$input-btn-border-width: $border-width !default;
-
 $input-btn-line-height: 1.5 !default;
-$input-btn-line-height-sm: 1.5rem !default;
-$input-btn-line-height-xs: 1rem !default;
-$input-btn-line-height-lg: 1.75rem !default;
 $input-disabled-bg: $gray-disabled !default;
 $input-spacing-x: 0.5rem;
-$input-spacing-y: 0.375rem;
 $input-border-width: 0;
-$input-border-radius: 0;
-$input-group-addon-bg: $white !default;
-$form-group-margin-bottom: 3rem;
-$form-group-margin-top: 0;
 $avatar-base-size: 8px;
 
 // Buttons
@@ -677,8 +665,6 @@ $btn-transition:
 $form-text-margin-top: 0.25rem !default;
 $form-text-font-size: $small-font-size !default;
 $form-text-font-style: null !default;
-$form-text-font-weight: null !default;
-$form-text-color: $text-muted !default;
 // scss-docs-end form-text-variables
 
 // scss-docs-start form-label-variables
@@ -692,9 +678,6 @@ $form-label-color: null !default;
 // scss-docs-start form-input-variables
 $input-padding-y: $input-btn-padding-y !default;
 $input-padding-x: $input-btn-padding-x !default;
-$input-font-family: $input-btn-font-family !default;
-$input-font-size: $input-btn-font-size !default;
-$input-font-weight: $font-weight-base !default;
 $input-line-height: $input-btn-line-height !default;
 
 $input-padding-y-sm: $input-btn-padding-y-sm !default;
@@ -706,23 +689,15 @@ $input-padding-x-lg: $input-btn-padding-x-lg !default;
 $input-font-size-lg: $input-btn-font-size-lg !default;
 
 $input-bg: $body-bg !default;
-$input-disabled-color: null !default;
 $input-disabled-border-color: null !default;
 
 $input-color: $body-color !default;
-$input-border-color: $gray-400 !default;
-$input-box-shadow: $box-shadow-inset !default;
 
 $input-border-radius-sm: $border-radius-sm !default;
 $input-border-radius-lg: $border-radius-lg !default;
 
-$input-focus-bg: $input-bg !default;
-$input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
 $input-focus-box-shadow: $input-btn-focus-box-shadow !default;
-
-$input-placeholder-color: $gray-600 !default;
-$input-plaintext-color: $body-color !default;
 
 $input-height-border: $input-border-width * 2 !default;
 
@@ -730,16 +705,7 @@ $input-height-inner: add($input-line-height * 1em, $input-padding-y * 2) !defaul
 $input-height-inner-half: add($input-line-height * 0.5em, $input-padding-y) !default;
 $input-height-inner-quarter: add($input-line-height * 0.25em, $input-padding-y * 0.5) !default;
 
-$input-height-sm: add($input-line-height * 1em, add($input-padding-y-sm * 2, $input-height-border, false)) !default;
-$input-height-lg: add($input-line-height * 1em, add($input-padding-y-lg * 2, $input-height-border, false)) !default;
-
-$input-transition:
-  border-color 0.15s ease-in-out,
-  box-shadow 0.15s ease-in-out !default;
-
 $input-border: $gray-secondary !default;
-$input-label-color: $color-text-base !default; // UI kit
-$input-color-placeholder: $color-text-muted !default; // UI Kit
 $input-focus-border-color: $gray-secondary !default;
 
 $form-color-width: 3rem !default;
@@ -747,9 +713,7 @@ $form-color-width: 3rem !default;
 
 // scss-docs-start form-check-variables
 $form-check-input-width: 1em !default;
-$form-check-min-height: $font-size-base * $line-height-base !default;
 $form-check-padding-start: $form-check-input-width + 0.5em !default;
-$form-check-margin-bottom: 0.125rem !default;
 $form-check-label-color: null !default;
 $form-check-label-cursor: null !default;
 $form-check-transition: null !default;
@@ -797,24 +761,10 @@ $form-switch-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3
 $form-switch-checked-bg-position: right center !default;
 // scss-docs-end form-switch-variables
 
-// scss-docs-start input-group-variables
-$input-group-addon-padding-y: $input-padding-y !default;
-$input-group-addon-padding-x: $input-padding-x !default;
-$input-group-addon-font-weight: $input-font-weight !default;
-$input-group-addon-color: $input-color !default;
-$input-group-addon-border-color: $input-border-color !default;
-// scss-docs-end input-group-variables
-
 // scss-docs-start form-select-variables
-$form-select-padding-y: $input-padding-y !default;
 $form-select-padding-x: $input-padding-x !default;
-$form-select-font-family: $input-font-family !default;
-$form-select-font-size: $input-font-size !default;
 $form-select-indicator-padding: $form-select-padding-x * 3 !default; // Extra padding for background-image
-$form-select-font-weight: $input-font-weight !default;
-$form-select-line-height: $input-line-height !default;
 $form-select-color: $input-color !default;
-$form-select-bg: $input-bg !default;
 $form-select-disabled-color: null !default;
 $form-select-disabled-bg: $gray-200 !default;
 $form-select-disabled-border-color: $input-disabled-border-color !default;
@@ -827,9 +777,6 @@ $form-select-feedback-icon-padding-end: $form-select-padding-x * 2.5 + $form-sel
 $form-select-feedback-icon-position: center right $form-select-indicator-padding !default;
 $form-select-feedback-icon-size: $input-height-inner-half $input-height-inner-half !default;
 
-$form-select-border-width: $input-border-width !default;
-$form-select-border-color: $input-border-color !default;
-$form-select-border-radius: $input-border-radius !default;
 $form-select-box-shadow: $box-shadow-inset !default;
 
 $form-select-focus-border-color: $input-focus-border-color !default;
@@ -846,7 +793,6 @@ $form-select-padding-x-lg: $input-padding-x-lg !default;
 $form-select-font-size-lg: $input-font-size-lg !default;
 $form-select-border-radius-lg: $input-border-radius-lg !default;
 
-$form-select-transition: $input-transition !default;
 // scss-docs-end form-select-variables
 
 // scss-docs-start form-range-variables
@@ -874,12 +820,6 @@ $form-range-thumb-transition:
   border-color 0.15s ease-in-out,
   box-shadow 0.15s ease-in-out !default;
 // scss-docs-end form-range-variables
-
-// scss-docs-start form-file-variables
-$form-file-button-color: $input-color !default;
-$form-file-button-bg: $input-group-addon-bg !default;
-$form-file-button-hover-bg: shade-color($form-file-button-bg, 5%) !default;
-// scss-docs-end form-file-variables
 
 // scss-docs-start form-floating-variables
 $form-floating-height: add(3.5rem, $input-height-border) !default;
@@ -1384,7 +1324,6 @@ $flag-icon-w: $v-gap * 4;
 $select-label-size: 0.875rem;
 $select-label-color: $color-text-base !default; // UI kit
 $select-label-weight: 600;
-$select-button-border: 1px solid $select-label-color !default;
 $select-button-padding: $v-gap !default;
 $select-button-text-size: 1rem;
 $select-dd-shadow: $dialog-shadow !default;
@@ -1401,16 +1340,6 @@ $select-dd-pill-font-w: 700;
 $select-dd-header-size: 0.875rem;
 $select-dd-header-w: 600;
 $select-dd-check-height: 30px;
-
-//date picker
-$dp-label-color: $color-text-base !default;
-$dp-border-bottom: 1px solid $dp-label-color !default;
-$dp-shadow: $dialog-shadow;
-$dp-arrow-size: $v-gap * 2;
-$dp-month-size: 0.875rem;
-$dp-month-l-spacing: 0.1px;
-$dp-grid-size: 0.75rem;
-$dp-current-size: $v-gap * 4;
 
 // Carousel
 $crs-dots-dimension: $v-gap * 2;
@@ -1536,10 +1465,6 @@ $badge-color: $white !default;
 $badge-padding-y: 0.25em;
 $badge-padding-x: 0.4em;
 $badge-border-radius: $border-radius !default;
-
-//Autocomplete
-$autocomplete-border: 1px solid $gray-400 !default;
-$autocomplete-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05) !default;
 
 // Offcanvas
 
