@@ -109,6 +109,10 @@ Questa distinzione garantisce compatibilità con Bootstrap 5 ed evita conflitti 
 
 - **Toast**: il plugin `Toast` non è più incluso né esportato (`bootstrap.Toast`, `import { Toast } from 'bootstrap-italia'`). Gli stili del componente erano già stati rimossi. Per i messaggi a comparsa usa il componente [Notification]({{ site.baseurl }}/docs/componenti/notification/).
 
+### Stili rimossi
+
+- **Select personalizzata (bootstrap-select)**: non ci sono più gli stili di `.bootstrap-select-wrapper` e `.bootstrap-select`, con le regole collegate su `.btn-light`. Il plugin e il suo markup non facevano parte della libreria già dalla versione 2 e questi stili non erano documentati. Usa la [select]({{ site.baseurl }}/docs/form/select/) nativa o l'[autocompletamento]({{ site.baseurl }}/docs/form/autocompletamento/).
+
 ## Breaking change componenti
 Il markup e i css di molti componenti sono cambiati. Consulta le schede di documentazione dettagliata di ogni componente e fai riferimento al paragrafo "Breaking changes" per approfondire i cambiamenti al markup.
 
