@@ -62,9 +62,9 @@
 //
 
 .nav-pills {
-  --#{$prefix}nav-pills-border-radius: #{$nav-pills-border-radius};
-  --#{$prefix}nav-pills-link-active-bg: #{$nav-pills-link-active-bg};
-  --#{$prefix}nav-pills-link-active-color: #{$nav-pills-link-active-color};
+  --#{$prefix}nav-pills-border-radius: var(--#{$prefix}radius-smooth);
+  --#{$prefix}nav-pills-link-active-bg: var(--#{$prefix}color-background-primary);
+  --#{$prefix}nav-pills-link-active-color: var(--#{$prefix}color-text-inverse);
 
   .nav-link {
     border: 0;

@@ -44,7 +44,7 @@
 .bd-callout-warning {
   @include bs-callout-variant($docs-warning);
   h4 {
-    color: $color-text-warning;
+    color: var(--#{$prefix}color-text-warning);
   }
 }
 

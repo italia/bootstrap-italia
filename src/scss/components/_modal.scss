@@ -171,15 +171,15 @@
 // Scale up the modal
 @include media-breakpoint-up(sm) {
   .modal {
-    --#{$prefix}modal-margin: #{$modal-dialog-margin-y-sm-up};
-    --#{$prefix}modal-box-shadow: #{$modal-content-box-shadow-sm-up};
+    --#{$prefix}modal-margin: 1.5rem;
+    --#{$prefix}modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   }
 
   // Keep `.modal-dialog-scrollable`/`.modal-dialog-centered` in sync with `.modal`'s margin
   // now that they carry their own copy of the custom property (see base rules above).
   .modal-dialog-scrollable,
   .modal-dialog-centered {
-    --#{$prefix}modal-margin: #{$modal-dialog-margin-y-sm-up};
+    --#{$prefix}modal-margin: 1.5rem;
   }
 
   // Automatically set modal's width for larger viewports
@@ -320,7 +320,7 @@
   // mobile browser UI chrome.
   &.it-dialog-scrollable {
     .modal-dialog {
-      --#{$prefix}modal-margin: #{$modal-dialog-margin}; // 0.5rem at the base breakpoint
+      --#{$prefix}modal-margin: 0.5rem; // the modal dialog margin at the base breakpoint
       height: calc(100% - var(--#{$prefix}modal-margin) * 2);
       margin: var(--#{$prefix}modal-margin) auto;
 
