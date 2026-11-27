@@ -346,10 +346,6 @@ $neutral-2-a7: hsb($neutral-2-h, $neutral-2-s + 4, $neutral-2-b - 85) !default;
 $color-background-muted: $gray-100 !default; // color-gray-96
 $color-text-base: $gray-900 !default; // color-gray-10
 
-// Footer
-$footer-top-background: $primary-a8 !default; // color-blue-30
-$footer-bottom-background: $primary-a10 !default; // color-blue-20
-
 // Icons
 $icon-primary: $primary;
 $icon-secondary: $secondary;
@@ -597,8 +593,6 @@ $letter-spacing-base: 0;
 $line-height-base: 1.5;
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
-
-$list-inline-padding: 0.5rem !default;
 
 $mark-bg: $analogue-2-a1;
 $mark-padding: 0.1875em !default;
@@ -876,33 +870,8 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
 
 // scss-docs-start table-variables
 $table-cell-padding-y: 0.5rem !default;
-$table-cell-padding-x: 0.5rem !default;
-$table-cell-padding-y-sm: 0.25rem !default;
-$table-cell-padding-x-sm: 0.25rem !default;
-
-$table-cell-vertical-align: top !default;
-
-$table-color: var(--#{$prefix}body-color) !default;
-$table-bg: transparent !default;
-$table-accent-bg: transparent !default;
 
 $table-th-font-weight: null !default;
-
-$table-striped-color: $table-color !default;
-$table-striped-bg-factor: 0.05 !default;
-$table-striped-bg: rgba($black, $table-striped-bg-factor) !default;
-
-$table-active-color: $table-color !default;
-$table-active-bg-factor: 0.1 !default;
-$table-active-bg: rgba($black, $table-active-bg-factor) !default;
-
-$table-hover-color: $table-color !default;
-$table-hover-bg-factor: 0.075 !default;
-$table-hover-bg: rgba($black, $table-hover-bg-factor) !default;
-
-$table-border-factor: 0.1 !default;
-$table-border-width: $border-width !default;
-$table-border-color: var(--#{$prefix}border-color) !default;
 
 $table-striped-order: odd !default;
 $table-striped-columns-order: even !default;
@@ -911,24 +880,15 @@ $table-group-separator-color: currentcolor !default;
 
 $table-caption-color: $text-muted !default;
 
-$table-bg-scale: -80% !default;
 // scss-docs-end table-variables
 
 // Progress
 $progress-height: 16px;
-$progress-border-radius: 0;
 
-$progress-font-size: $font-size-base * 0.75 !default;
-$progress-bg: $gray-200 !default;
-$progress-box-shadow: $box-shadow-inset !default;
-$progress-bar-color: $white !default;
-$progress-bar-bg: $primary !default;
 $progress-bar-animation-timing: 1s linear infinite !default;
-$progress-bar-transition: width 0.6s ease !default;
 
 // z-index
 // scss-docs-start zindex-stack
-$zoom-overlay-bg: $white !default;
 $zindex-zoom: 1080;
 $zindex-growl: 1090;
 $zindex-cookiebar: 1100;
@@ -988,24 +948,8 @@ $figure-caption-color: $gray-600 !default;
 // scss-docs-end figure-variables
 
 // Breadcrumbs
-$breadcrumb-font-size: null !default;
-$breadcrumb-padding: 0.5em;
-$breadcrumb-padding-y: 0 !default;
-$breadcrumb-padding-x: 0 !default;
-$breadcrumb-item-padding-x: 0.5rem !default;
-$breadcrumb-margin-bottom: 1rem !default;
-$breadcrumb-bg: transparent !default;
-$breadcrumb-link-font-weight: 600;
-$breadcrumb-link-color: $color-text-secondary !default;
-$breadcrumb-link-x-padding: 0.5em;
-$breadcrumb-bg-dark: $neutral-1-a8 !default; // Missing in the UI kit
-$breadcrumb-border-radius: 0;
-$breadcrumb-divider-color: $gray-600 !default;
-$breadcrumb-active-color: $gray-600 !default;
 $breadcrumb-divider: '/' !default;
 $breadcrumb-divider-flipped: $breadcrumb-divider !default;
-$breadcrumb-link-color-dark: $white !default;
-$breadcrumb-icon-color-dark: $analogue-2-b1 !default; // Missing in the UI kit
 
 // Tooltips
 $tooltip-opacity: 1 !default;
@@ -1076,36 +1020,16 @@ $placeholder-opacity-min: 0.2 !default;
 // scss-docs-end placeholders
 
 // scss-docs-start accordion-variables
-$accordion-padding-y: 1rem !default;
-$accordion-padding-x: 1.25rem !default;
 $accordion-color: $body-color !default; // Sass variable because of $accordion-button-icon
-$accordion-bg: $body-bg !default;
-$accordion-border-width: $border-width !default;
-$accordion-border-color: var(--#{$prefix}border-color) !default;
-$accordion-border-radius: $border-radius !default;
-$accordion-inner-border-radius: subtract($accordion-border-radius, $accordion-border-width) !default;
 
-$accordion-body-padding-y: $accordion-padding-y !default;
-$accordion-body-padding-x: $accordion-padding-x !default;
-
-$accordion-button-padding-y: $accordion-padding-y !default;
-$accordion-button-padding-x: $accordion-padding-x !default;
 $accordion-button-color: $accordion-color !default;
-$accordion-button-bg: var(--#{$prefix}accordion-bg) !default;
-$accordion-transition:
-  $btn-transition,
-  border-radius 0.15s ease !default;
-$accordion-button-active-bg: tint-color($component-active-bg, 90%) !default;
 $accordion-button-active-color: shade-color($primary, 10%) !default;
 
 $accordion-button-focus-border-color: $input-focus-border-color !default;
 $accordion-button-focus-box-shadow: $btn-focus-box-shadow !default;
 
-$accordion-icon-width: 1.25rem !default;
 $accordion-icon-color: $accordion-button-color !default;
 $accordion-icon-active-color: $accordion-button-active-color !default;
-$accordion-icon-transition: transform 0.2s ease-in-out !default;
-$accordion-icon-transform: rotate(-180deg) !default;
 
 $accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
 $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
@@ -1142,18 +1066,6 @@ $list-group-action-active-bg: $gray-200 !default;
 $reset-border-width: 0 !default;
 $reset-border-radius: 0 !default;
 $reset-padding: 0 !default;
-
-// Alert
-$alert-padding-y: 1rem;
-$alert-padding-x: 1rem;
-$alert-margin-bottom: 1rem !default;
-$alert-border-radius: $border-radius !default;
-$alert-link-font-weight: $font-weight-bold !default;
-$alert-border-width: $border-width !default;
-$alert-bg-scale: -80% !default;
-$alert-border-scale: -70% !default;
-$alert-color-scale: 40% !default;
-$alert-dismissible-padding-r: $alert-padding-x * 3 !default; // 3x covers width of x plus default padding on either side
 
 // Blockquote
 $blockquote-margin-y: $spacer !default;
@@ -1276,20 +1188,6 @@ $grid-item-lg-col: 33.333333%;
 $grid-item-icon-size: 24px;
 $grid-item-overlay: hsla(210deg, 54%, 20%, 0.85);
 
-// list
-$list-font-size: 1rem;
-$list-text-padding: $v-gap * 2 0 $v-gap * 2 0;
-$list-border-color: $gray-border !default; // UI kit
-$list-metadata-color: $color-text-muted !default; // Missing in the UI kit but token applicable
-$list-metadata-size: 0.75rem;
-$list-metadata-space: 0.5px;
-$list-sub-size: 0.875rem;
-$list-sub-color: $color-text-muted !default; // UI kit
-
-// stepper
-$stepper-spacing-h: 24px;
-$stepper-spacing-v: 16px;
-
 // transfer
 $transfer-border: 1px solid $neutral-1-a3 !default;
 $transfer-descr-size: 0.75rem;
@@ -1301,7 +1199,6 @@ $transfer-height: 240px;
 //Timeline
 $timeline-width: 4px;
 $timeline-padding: 12px;
-$timeline-border-color: linear-gradient(0deg, $primary 0%, hsl(210, 100%, 20%) 100%) !default; // UI kit
 $timeline-pin-size: $v-gap * 3;
 $timeline-pin-background: hsl(210, 100%, 20%); // color-blue-20
 $timeline-pin-circle-size: 48px;
@@ -1375,15 +1272,6 @@ $popover-arrow-height: 0.5rem !default;
 $popover-arrow-color: $popover-bg !default;
 $popover-arrow-outer-color: var(--#{$prefix}border-color-translucent) !default;
 // fusv-enable
-
-// Badges
-
-$badge-font-size: 0.75em !default;
-$badge-font-weight: $font-weight-bold !default;
-$badge-color: $white !default;
-$badge-padding-y: 0.25em;
-$badge-padding-x: 0.4em;
-$badge-border-radius: $border-radius !default;
 
 // Offcanvas
 
