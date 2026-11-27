@@ -659,52 +659,17 @@ $form-group-margin-top: 0;
 $avatar-base-size: 8px;
 
 // Buttons
-$btn-padding-y: $input-btn-padding-y !default;
-$btn-padding-x: $input-btn-padding-x !default;
-$btn-padding-y-sm: $input-btn-padding-y-sm !default;
-$btn-padding-x-sm: $input-btn-padding-x-sm !default;
-$btn-padding-y-lg: $input-btn-padding-y-lg !default;
-$btn-padding-x-lg: $input-btn-padding-x-lg !default;
 $btn-border-width: 0;
-$btn-border-radius: $border-radius !default;
-$btn-border-radius-sm: $border-radius-sm !default;
-$btn-border-radius-lg: $border-radius-lg !default;
-$btn-text-transform: uppercase;
-$btn-letter-spacing: normal;
-$btn-font-family: $input-btn-font-family !default;
-$btn-font-size: $input-btn-font-size !default;
-$btn-font-weight: 600 !default;
-$btn-font-size-sm: 1rem !default;
-$btn-font-size-xs: 0.875rem !default;
-$btn-font-size-lg: 1.125rem !default;
-$btn-line-height: $input-btn-line-height !default;
 $btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $btn-active-box-shadow: inset 0 3px 5px rgba($black, 0.125) !default;
 $btn-disabled-opacity: 0.65 !default;
 $btn-focus-width: $input-btn-focus-width !default;
-
-$btn-hover-bg-shade-amount: 15% !default;
-$btn-hover-bg-tint-amount: 15% !default;
-$btn-hover-border-shade-amount: 20% !default;
-$btn-hover-border-tint-amount: 10% !default;
-$btn-active-bg-shade-amount: 20% !default;
-$btn-active-bg-tint-amount: 20% !default;
-$btn-active-border-shade-amount: 25% !default;
-$btn-active-border-tint-amount: 10% !default;
-
-$btn-box-shadow:
-  inset 0 1px 0 rgba($white, 0.15),
-  0 1px 1px rgba($black, 0.075) !default;
 
 $btn-transition:
   color 0.15s ease-in-out,
   background-color 0.15s ease-in-out,
   border-color 0.15s ease-in-out,
   box-shadow 0.15s ease-in-out !default;
-
-$btn-link-color: var(--#{$prefix}color-link) !default;
-$btn-link-hover-color: var(--#{$prefix}color-link-hover) !default;
-$btn-link-disabled-color: $gray-600 !default;
 
 // Forms
 
@@ -961,17 +926,7 @@ $form-validation-states: (
 // Close
 
 // scss-docs-start close-variables
-$btn-close-width: 1em !default;
-$btn-close-height: $btn-close-width !default;
-$btn-close-padding-x: 0.25em !default;
-$btn-close-padding-y: $btn-close-padding-x !default;
 $btn-close-color: $black !default;
-$btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>") !default;
-$btn-close-focus-shadow: $input-btn-focus-box-shadow !default;
-$btn-close-opacity: 0.5 !default;
-$btn-close-hover-opacity: 0.75 !default;
-$btn-close-focus-opacity: 1 !default;
-$btn-close-disabled-opacity: 0.25 !default;
 $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
 // scss-docs-end close-variables
 
@@ -1049,8 +1004,6 @@ $zindex-tooltip: 1080 !default;
 // scss-docs-end zindex-stack
 
 // Link and button colors
-$btn-primary-bg: $primary !default;
-$btn-primary-border: $primary !default;
 $link-color: $primary !default;
 $link-shade-percentage: 20% !default;
 $link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
@@ -1752,8 +1705,6 @@ $special-card-img-width: 174px;
 $flag-icon-color: $primary !default;
 $flag-icon-h: $v-gap * 6;
 $flag-icon-w: $v-gap * 4;
-// tag
-$tag-radius: 50px;
 
 // select
 $select-label-size: 0.875rem;
@@ -1821,15 +1772,6 @@ $list-metadata-size: 0.75rem;
 $list-metadata-space: 0.5px;
 $list-sub-size: 0.875rem;
 $list-sub-color: $color-text-muted !default; // UI kit
-
-//chips
-$chips-background: $color-background-muted !default; // UI kit
-$chips-background-hover: $color-background-secondary-hover !default; // UI kit
-$chips-label-color: $color-text-secondary !default; // UI kit
-$chips-label-color-disabled: $gray-label-disabled !default; // UI kit
-$chips-label-font-size: 0.875rem;
-$chips-label-font-size-l: 1rem;
-$chips-border: $color-border-subtle !default;
 
 // stepper
 $stepper-spacing-h: 24px;
