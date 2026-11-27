@@ -581,7 +581,6 @@ $input-border-width: 0;
 $btn-border-width: 0;
 $btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $btn-active-box-shadow: inset 0 3px 5px rgba($black, 0.125) !default;
-$btn-disabled-opacity: 0.65 !default;
 
 // Forms
 
@@ -612,7 +611,6 @@ $input-padding-y-lg: $input-btn-padding-y-lg !default;
 $input-padding-x-lg: $input-btn-padding-x-lg !default;
 $input-font-size-lg: $input-btn-font-size-lg !default;
 
-$input-bg: $body-bg !default;
 $input-disabled-border-color: null !default;
 
 $input-color: $body-color !default;
@@ -634,56 +632,6 @@ $input-focus-border-color: $gray-secondary !default;
 
 $form-color-width: 3rem !default;
 // scss-docs-end form-input-variables
-
-// scss-docs-start form-check-variables
-$form-check-input-width: 1em !default;
-$form-check-padding-start: $form-check-input-width + 0.5em !default;
-$form-check-label-color: null !default;
-$form-check-label-cursor: null !default;
-$form-check-transition: null !default;
-
-$form-check-input-active-filter: brightness(90%) !default;
-
-$form-check-input-bg: $input-bg !default;
-$form-check-input-border: 1px solid rgba($black, 0.25) !default;
-$form-check-input-border-radius: 0.25em !default;
-$form-check-radio-border-radius: 50% !default;
-$form-check-input-focus-border: $input-focus-border-color !default;
-$form-check-input-focus-box-shadow: $input-btn-focus-box-shadow !default;
-
-$form-check-input-checked-color: $component-active-color !default;
-$form-check-input-checked-bg-color: $component-active-bg !default;
-$form-check-input-checked-border-color: $form-check-input-checked-bg-color !default;
-$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>") !default;
-$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
-
-$form-check-input-indeterminate-color: $component-active-color !default;
-$form-check-input-indeterminate-bg-color: $component-active-bg !default;
-$form-check-input-indeterminate-border-color: $form-check-input-indeterminate-bg-color !default;
-$form-check-input-indeterminate-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-indeterminate-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/></svg>") !default;
-
-$form-check-input-disabled-opacity: 0.5 !default;
-$form-check-label-disabled-opacity: $form-check-input-disabled-opacity !default;
-$form-check-btn-check-disabled-opacity: $btn-disabled-opacity !default;
-
-$form-check-inline-margin-end: 1rem !default;
-// scss-docs-end form-check-variables
-
-// scss-docs-start form-switch-variables
-$form-switch-color: rgba($black, 0.25) !default;
-$form-switch-width: 2em !default;
-$form-switch-padding-start: $form-switch-width + 0.5em !default;
-$form-switch-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color}'/></svg>") !default;
-$form-switch-border-radius: $form-switch-width !default;
-$form-switch-transition: background-position 0.15s ease-in-out !default;
-
-$form-switch-focus-color: $input-focus-border-color !default;
-$form-switch-focus-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-focus-color}'/></svg>") !default;
-
-$form-switch-checked-color: $component-active-color !default;
-$form-switch-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-checked-color}'/></svg>") !default;
-$form-switch-checked-bg-position: right center !default;
-// scss-docs-end form-switch-variables
 
 // scss-docs-start form-select-variables
 $form-select-padding-x: $input-padding-x !default;
