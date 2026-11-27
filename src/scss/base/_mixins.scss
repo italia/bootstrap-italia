@@ -10,24 +10,18 @@
 
 // Helpers
 @forward 'mixins/breakpoints';
-@forward 'mixins/color-scheme';
 @forward 'mixins/image';
-@forward 'mixins/resize';
 @forward 'mixins/visually-hidden';
 @forward 'mixins/reset-text';
 @forward 'mixins/text-truncate';
-@forward 'mixins/text-emphasis';
 
 // Utilities
 @forward 'mixins/utilities';
 @forward 'mixins/focus';
 
 // Components
-@forward 'mixins/alert';
 @forward 'mixins/backdrop';
-@forward 'mixins/buttons';
 @forward 'mixins/caret';
-@forward 'mixins/pagination';
 @forward 'mixins/lists';
 @forward 'mixins/list-group';
 @forward 'mixins/forms';

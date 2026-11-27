@@ -90,16 +90,6 @@
 
 // stylelint-enable scss/dollar-variable-pattern
 
-@function varify($list) {
-  $result: null;
-
-  @each $entry in $list {
-    $result: append($result, var(--#{$prefix}#{$entry}), space);
-  }
-
-  @return $result;
-}
-
 // Internal Bootstrap function to turn maps into its negative variant.
 // It prefixes the keys with `n` and makes the value negative.
 @function negativify-map($map) {
@@ -112,35 +102,6 @@
   }
 
   @return $result;
-}
-
-// Get multiple keys from a sass map
-@function map-get-multiple($map, $values) {
-  $result: ();
-
-  @each $key, $value in $map {
-    @if (list.index($values, $key) != null) {
-      $result: map.merge(
-        $result,
-        (
-          $key: $value,
-        )
-      );
-    }
-  }
-
-  @return $result;
-}
-
-// Merge multiple maps
-@function map-merge-multiple($maps...) {
-  $merged-maps: ();
-
-  @each $map in $maps {
-    $merged-maps: map.merge($merged-maps, $map);
-  }
-
-  @return $merged-maps;
 }
 
 // Replace `$search` with `$replace` in `$string`
@@ -423,22 +384,5 @@ $_luminance-list: 0.0008 0.001 0.0011 0.0013 0.0015 0.0017 0.002 0.0022 0.0025 0
     }
     $s-hsl: calc(($b-hsb * $s-hsb) / $divisor);
     @return hsl($h-hsb, $s-hsl * 1%, $l-hsl * 1%);
-  }
-}
-
-@function hsb-with-brightness-modifier($h-hsb, $s-hsb, $b-hsb, $b-variant) {
-  $b-hsb: $b-hsb + $b-variant;
-  @return hsb($h-hsb, $s-hsb, $b-hsb);
-}
-
-@function color-hover($color) {
-  @return color.scale(shade-color($color, 10%), $saturation: -20%);
-}
-
-@function url-friendly-color($color) {
-  @if string.slice('#{$color}', 1, 1) == '#' {
-    @return '%23' + string.slice('#{$color}', 2, -1);
-  } @else {
-    @return $color;
   }
 }

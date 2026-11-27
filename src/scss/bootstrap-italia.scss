@@ -75,7 +75,6 @@
 @forward 'components/skiplinks';
 @forward 'components/affix';
 @forward 'components/sidebar';
-// @forward 'components/sidebarthemes';
 @forward 'components/megamenu';
 @forward 'components/bottomnav';
 @forward 'components/navscroll';
@@ -122,7 +121,6 @@
 @forward 'forms/forms';
 // @forward 'forms/labels'; // Keep? It was already removed in 3.x before this merge
 @forward 'forms/form-control';
-// @forward 'forms/form-check'; // Keep? It was already removed in 3.x before this merge
 // @forward 'forms/form-range'; // Keep? It was already removed in 3.x before this merge
 // @forward 'forms/floating-labels'; // Keep? It was already removed in 3.x before this merge
 @forward 'forms/input-group';
