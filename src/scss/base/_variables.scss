@@ -458,7 +458,6 @@ $border-color-translucent: rgba($black, 0.175) !default;
 // Typography
 
 $font-family-base: var(--#{$prefix}font-sans-serif) !default;
-$font-family-code: var(--#{$prefix}font-monospace) !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
@@ -473,8 +472,6 @@ $font-weight-normal: 400 !default;
 $font-weight-semibold: 600 !default;
 $font-weight-bold: 700 !default;
 $font-weight-bolder: bolder !default;
-
-$font-weight-base: $font-weight-normal !default;
 
 $h1-font-size: $font-size-base * 2.5 !default;
 $h2-font-size: $font-size-base * 2 !default;
@@ -495,12 +492,6 @@ $hr-border-color: null !default; // Allows for inherited colors
 $hr-border-width: $border-width !default;
 $hr-opacity: 0.25 !default;
 
-$legend-margin-bottom: 0.5rem !default;
-$legend-font-size: 1.5rem !default;
-$legend-font-weight: null !default;
-
-$dt-font-weight: $font-weight-bold !default;
-
 // scss-docs-start font-sizes
 $font-sizes: (
   1: $h1-font-size,
@@ -513,28 +504,8 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom: $spacer * 0.5 !default;
-$headings-font-family: null !default;
-$headings-font-style: null !default;
-$headings-font-weight: 500 !default;
-$headings-line-height: 1.2 !default;
 $headings-color: null !default;
 // scss-docs-end headings-variables
-
-// scss-docs-start display-headings
-$display-font-sizes: (
-  1: 5rem,
-  2: 4.5rem,
-  3: 4rem,
-  4: 3.5rem,
-  5: 3rem,
-  6: 2.5rem,
-) !default;
-
-$display-font-family: null !default;
-$display-font-style: null !default;
-$display-font-weight: 300 !default;
-$display-line-height: $headings-line-height !default;
 
 // Border Radius - using pixels instead or rems as it has to be consistent across devices
 $border-radius: 4px !default;
@@ -586,27 +557,13 @@ $aspect-ratios: (
 // Text
 $font-family-serif: 'Lora', Georgia, serif !default;
 $font-family-sans-serif: 'Titillium Web', 'Titillium Sans Pro', Geneva, Tahoma, sans-serif !default;
-$font-family-monospace: 'Roboto Mono', monospace !default;
-$text-color: $gray-700 !default;
 $text-muted: $color-text-muted !default;
-$letter-spacing-base: 0;
 $line-height-base: 1.5;
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
-$mark-bg: $analogue-2-a1;
-$mark-padding: 0.1875em !default;
-
-$lead-font-size: $font-size-base * 1.25 !default;
-$lead-font-weight: 300 !default;
-
 // Paragraphs
-$paragraph-margin-bottom: 1rem !default;
 $small-font-size: 0.875rem !default;
-
-$initialism-font-size: $small-font-size !default;
-
-$sub-sup-font-size: 0.75em !default;
 
 // Links
 $link-decoration: underline;
@@ -916,18 +873,7 @@ $stretched-link-z-index: 1 !default;
 $theme-color-interval: 8% !default;
 
 // Code
-$code-font-size: $small-font-size !default;
-$code-color: $dark !default;
 $yiq-contrasted-threshold: 120 !default;
-
-$kbd-padding-y: 0.1875rem !default;
-$kbd-padding-x: 0.375rem !default;
-$kbd-font-size: $code-font-size !default;
-$kbd-color: var(--#{$prefix}body-bg) !default;
-$kbd-bg: var(--#{$prefix}body-color) !default;
-$nested-kbd-font-weight: null !default; // Deprecated in v5.2.0, removing in v6
-
-$pre-color: null !default;
 
 // Image thumbnails
 
@@ -1066,15 +1012,6 @@ $list-group-action-active-bg: $gray-200 !default;
 $reset-border-width: 0 !default;
 $reset-border-radius: 0 !default;
 $reset-padding: 0 !default;
-
-// Blockquote
-$blockquote-margin-y: $spacer !default;
-$blockquote-font-size: $font-size-base * 1.25 !default;
-$blockquote-footer-color: $gray-600 !default;
-$blockquote-footer-font-size: $small-font-size !default;
-
-$blockquote-small-color: $gray-600 !default;
-$blockquote-small-color-dark: $gray-400 !default;
 
 // Skiplinks
 $skiplink-padding-y: 0.5rem;
