@@ -21,18 +21,12 @@ $cyan: hsb(178, 100, 100) !default;
 $blue: hsb(210, 100, 90) !default;
 $light: hsb(255, 5, 95) !default;
 
-$yiq-text-light: $white !default;
-$yiq-text-dark: $black !default;
-
 $red-accessible: $red !default;
 $orange-accessible: $orange !default;
-$yellow-accessible: hsb(44, 100, 59) !default;
 $green-accessible: $green !default;
 
-$gray-primary: hsb(210, 38.9, 44.3) !default;
 $gray-tertiary: hsb(205, 35, 54) !default;
 $gray-quaternary: hsb(238, 1, 100) !default;
-$gray-border-disabled: $gray-disabled !default; // color-border-disabled
 
 $secondary: $gray-secondary !default;
 
@@ -349,7 +343,6 @@ $color-text-base: $gray-900 !default; // color-gray-10
 // Icons
 $icon-primary: $primary;
 $icon-secondary: $secondary;
-$icon-base: $color-text-base;
 
 // Other vars ===============================================================
 
@@ -395,7 +388,6 @@ $spacers: (
 // scss-docs-start box-shadow-variables
 $box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
 $box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
-$box-shadow-lg: 0 1rem 3rem rgba($black, 0.175) !default;
 $box-shadow-inset: inset 0 1px 2px rgba($black, 0.075) !default;
 // scss-docs-end box-shadow-variables
 
@@ -432,7 +424,6 @@ $position-values: (
 
 $body-bg: $white !default;
 $body-color: $gray-900 !default;
-$body-text-align: null !default;
 
 // Links
 //
@@ -452,7 +443,6 @@ $border-widths: (
   5: 5px,
 ) !default;
 
-$border-style: solid !default;
 $border-color-translucent: rgba($black, 0.175) !default;
 
 // Typography
@@ -483,11 +473,6 @@ $h6-font-size: $font-size-base !default;
 $hr-margin-y: $spacer !default;
 $hr-color: inherit !default;
 
-// fusv-disable
-$hr-bg-color: null !default; // Deprecated in v5.2.0
-$hr-height: null !default; // Deprecated in v5.2.0
-// fusv-enable
-
 $hr-border-color: null !default; // Allows for inherited colors
 $hr-border-width: $border-width !default;
 $hr-opacity: 0.25 !default;
@@ -511,10 +496,6 @@ $headings-color: null !default;
 $border-radius: 4px !default;
 $border-radius-sm: 2px !default;
 $border-radius-lg: 8px !default;
-$border-radius-xl: 1rem !default;
-$border-radius-2xl: 2rem !default;
-$border-radius-pill: 50rem !default;
-$radius-rounded: 40px;
 
 // =======
 
@@ -595,20 +576,12 @@ $input-btn-line-height: 1.5 !default;
 $input-disabled-bg: $gray-disabled !default;
 $input-spacing-x: 0.5rem;
 $input-border-width: 0;
-$avatar-base-size: 8px;
 
 // Buttons
 $btn-border-width: 0;
 $btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $btn-active-box-shadow: inset 0 3px 5px rgba($black, 0.125) !default;
 $btn-disabled-opacity: 0.65 !default;
-$btn-focus-width: $input-btn-focus-width !default;
-
-$btn-transition:
-  color 0.15s ease-in-out,
-  background-color 0.15s ease-in-out,
-  border-color 0.15s ease-in-out,
-  box-shadow 0.15s ease-in-out !default;
 
 // Forms
 
@@ -846,8 +819,6 @@ $progress-bar-animation-timing: 1s linear infinite !default;
 
 // z-index
 // scss-docs-start zindex-stack
-$zindex-zoom: 1080;
-$zindex-growl: 1090;
 $zindex-cookiebar: 1100;
 $zindex-dropdown: 1000 !default;
 $zindex-sticky: 1020 !default;
@@ -863,17 +834,10 @@ $zindex-tooltip: 1080 !default;
 // Link and button colors
 $link-color: $primary !default;
 $link-shade-percentage: 20% !default;
-$link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration: underline !default;
 
 $stretched-link-pseudo-element: after !default;
 $stretched-link-z-index: 1 !default;
-
-// Set a specific jump point for requesting color jumps
-$theme-color-interval: 8% !default;
-
-// Code
-$yiq-contrasted-threshold: 120 !default;
 
 // Image thumbnails
 
@@ -1008,11 +972,6 @@ $list-group-action-hover-color: $list-group-action-color !default;
 $list-group-action-active-color: $body-color !default;
 $list-group-action-active-bg: $gray-200 !default;
 
-//Reset
-$reset-border-width: 0 !default;
-$reset-border-radius: 0 !default;
-$reset-padding: 0 !default;
-
 // Skiplinks
 $skiplink-padding-y: 0.5rem;
 $skiplink-padding-x: 0.5rem;
@@ -1044,9 +1003,6 @@ $navigation-dark-text-color: $white !default; // missing in UI kit
 $navigation-light-bg-color: $white !default;
 $navigation-light-text-color: $primary !default;
 $navigation-light-megamenu-separator-color: $gray-border !default; // UI kit
-
-// Linklist footer megamenu
-$link-list-footer-distance-bottom: 0.5rem;
 
 //sidebar dark theme
 $sidebar-dark-bg-color: $neutral-1-a8 !default; // Missing in the new UI kit
@@ -1083,11 +1039,6 @@ $anchor-v-offset: $header-center-max-height-mob + 16px;
 
 //cards
 $card-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1) !default;
-// flag icon
-$flag-icon-color: $primary !default;
-$flag-icon-h: $v-gap * 6;
-$flag-icon-w: $v-gap * 4;
-
 // select
 $select-label-size: 0.875rem;
 $select-label-color: $color-text-base !default; // UI kit
@@ -1116,12 +1067,8 @@ $crs-dots-dimension: $v-gap * 2;
 $grid-item-df-proportion: 66.81222707423581%;
 $grid-item-df-double-proportion: 33.4061135371179%;
 $grid-item-text-size: 0.75rem;
-$grid-item-text-color: $neutral-1 !default; // Missing in the UI kit - need more attention
-$grid-item-text-overlay-bg: $neutral-1-a10 !default; // Missing in the UI kit - need more attention
 $grid-list-default-gap: 2px;
 $grid-list-text-gap: $v-gap;
-$grid-item-sm-col: 50%;
-$grid-item-lg-col: 33.333333%;
 $grid-item-icon-size: 24px;
 $grid-item-overlay: hsla(210deg, 54%, 20%, 0.85);
 
@@ -1159,10 +1106,6 @@ $grid-breakpoints: (
   xl: 1200px,
   xxl: 1400px,
 ) !default;
-
-// Hover states breakpoint
-// Define minimum dimension for over states activation
-$grid-breakpoints-hover: 1025px;
 
 // Grid containers
 // Define the maximum width of `.container` for different screen sizes.
@@ -1232,8 +1175,3 @@ $offcanvas-backdrop-opacity: $modal-backdrop-opacity !default;
 // Global colors used inside sass loops and maps
 $color-primary: var(--#{$prefix}theme-primary);
 $color-secondary: var(--#{$prefix}color-background-secondary);
-$color-accent: var(--#{$prefix}color-background-accent);
-$color-success: var(--#{$prefix}color-background-success);
-$color-warning: var(--#{$prefix}color-background-warning);
-$color-danger: var(--#{$prefix}color-background-danger);
-$color-inverse: var(--#{$prefix}color-background-inverse);

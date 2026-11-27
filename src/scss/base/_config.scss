@@ -31,7 +31,6 @@ $gray-900: hsl(0, 0%, 10%) !default; // color-gray-10
 $primary-h: 210 !default;
 $primary-s: 100 !default;
 $primary-b: 80 !default;
-$primary-l: 40 !default; // Kit UI
 
 // ============================================================================
 // COLOR CONTRAST (per la funzione color-contrast)
@@ -53,7 +52,6 @@ $dark: hsl(210, 54%, 20%) !default; // color-slate-20
 $gray-secondary: hsl(210, 17%, 44%) !default; // color-slate-44
 $gray-border: hsl(210, 4%, 78%) !default; // color-border-subtle
 $gray-disabled: hsl(210, 3%, 85%) !default; // color-background-disabled
-$gray-label-disabled: hsl(210, 12%, 44%) !default; // color-text-disabled
 
 // Light Greys A
 $lightgrey-a1: hsl(210, 3%, 85%); // progress-background-default
@@ -70,20 +68,12 @@ $lightgrey-c2: hsl(210, 62%, 97%); // color-background-primary-lighter
 // ============================================================================
 
 // Backgrounds
-$color-background-emphasis: hsl(210, 54%, 20%); // color-slate-20
 $color-background-primary-lighter: hsl(210, 62%, 97%); // color-blue-97
-$color-background-primary-hover: hsl(210, 100%, 30%); // color-blue-30
-$color-background-secondary-hover: hsl(210, 33%, 28%); // color-slate-28
-$color-background-secondary-lighter: hsl(210, 3%, 85%); // color-slate-85
 
 // Borders
-$color-border-secondary: hsl(210, 17%, 44%); // color-slate-44
-$color-border-subtle: hsl(210, 4%, 78%) !default; // color-slate-78
-$color-border-warning: hsl(36, 100%, 30%); // color-orange-30
 
 // Text
 $color-text-primary-active: hsl(210, 100%, 15%); // color-blue-15
-$color-text-primary-hover: hsl(210, 100%, 30%); // color-blue-30
 $color-text-muted: hsl(210, 17%, 44%); // color-slate-44
 $color-text-secondary: hsl(210, 33%, 28%); // color-slate-28
 $color-text-warning: hsl(36, 100%, 30%); // color-orange-30
