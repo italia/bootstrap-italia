@@ -1220,26 +1220,6 @@ $placeholder-opacity-max: 0.5 !default;
 $placeholder-opacity-min: 0.2 !default;
 // scss-docs-end placeholders
 
-// Cards (Deprecated)
-$card-cap-bg: transparent !default;
-$card-spacer-y: 1rem !default;
-$card-spacer-x: 2rem !default;
-$card-border-radius: 0 !default;
-$card-body-spacer: 1rem !default;
-$card-title-spacer-y: $spacer * 0.5 !default;
-$card-border-width: $border-width !default;
-$card-box-shadow: null !default;
-$card-inner-border-radius: subtract($card-border-radius, $card-border-width) !default;
-$card-cap-padding-y: $card-spacer-y * 0.5 !default;
-$card-cap-padding-x: $card-spacer-x !default;
-$card-cap-color: null !default;
-$card-height: null !default;
-$card-color: null !default;
-$card-bg: $white !default;
-$card-img-overlay-padding: $spacer !default;
-$card-group-margin: $grid-gutter-width * 0.5 !default;
-// scss-docs-end card-variables
-
 // scss-docs-start accordion-variables
 $accordion-padding-y: 1rem !default;
 $accordion-padding-x: 1.25rem !default;
@@ -1666,41 +1646,7 @@ $anchor-v-offset-lg: 72px;
 $anchor-v-offset: $header-center-max-height-mob + 16px;
 
 //cards
-$card-padding: $v-gap * 3;
-$card-h5-size: 1.125rem;
-$card-h5-line-height: 1.5rem;
-$card-h5-fw: 700;
-$card-h5-color: $color-text-secondary !default; // UI kit
-$card-p-size: 1rem;
-$card-p-size-desk: 1.125rem;
-$card-p-l-h: 1.5rem;
-$card-p-color: $color-text-base !default;
-$card-border-color: $gray-border !default; // Missing in the UI kit but aligned to new colors
-$card-small-line-height: 1px;
-$card-small-line-w: 128px;
-$card-small-line-color: $neutral-1-a2 !default; // Not used
-$card-small-line-margin: $v-gap * 6;
-$card-category-size: 0.875rem;
-$card-category-l-spacing: 0.9px;
-$card-category-m-bottom: $v-gap * 2;
-$card-big-head-size: 1.5rem;
-$card-big-head-l-h: 1.75rem;
-$card-signature-size: 0.875rem;
-$card-link-color: $primary !default;
-$card-link-icon-size: $v-gap * 2;
-$card-cat-icon-block-margin: $v-gap * 2;
-$card-cat-icon-size: $v-gap * 5;
-$card-simple-link-margin: $v-gap * 4;
 $card-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1) !default;
-$card-shadow-bg: $white !default;
-$card-big-h5-size: 1.25rem;
-$card-big-h5-l-h: 1.5rem;
-$card-big-p-size: 1.125rem;
-$card-big-p-l-h: 1.5rem;
-$card-big-top-icon-size: $v-gap * 10;
-$card-img-heading-size: 1.1111111111111112rem;
-$card-img-heading-l-h: 1.5555555555555556rem;
-$special-card-img-width: 174px;
 // flag icon
 $flag-icon-color: $primary !default;
 $flag-icon-h: $v-gap * 6;
