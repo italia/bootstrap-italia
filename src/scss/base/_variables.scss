@@ -1132,41 +1132,6 @@ $modal-footer-margin-between: 0.5rem !default;
 
 $modal-backdrop-bg: $black !default;
 
-// Carousel
-$carousel-bg: #444e57 !default;
-$carousel-padding: 3em !default;
-$carousel-control-color: $secondary !default;
-$carousel-control-width: auto !default;
-$carousel-control-opacity: 1 !default;
-$carousel-control-hover-opacity: 0.9 !default;
-$carousel-control-icon-width: 32px !default;
-
-$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>") !default;
-$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") !default;
-
-$carousel-control-transition: opacity 0.15s ease !default;
-
-$carousel-indicator-width: 30px !default;
-$carousel-indicator-height: 3px !default;
-$carousel-indicator-hit-area-height: 10px !default;
-$carousel-indicator-spacer: 3px !default;
-$carousel-indicator-opacity: 0.5 !default;
-$carousel-indicator-active-bg: $white !default;
-$carousel-indicator-active-opacity: 1 !default;
-$carousel-indicator-transition: opacity 0.6s ease !default;
-
-$carousel-caption-width: 70% !default;
-$carousel-caption-color: $white !default;
-$carousel-caption-padding-y: 1.25rem !default;
-$carousel-caption-spacer: 1.25rem !default;
-
-$carousel-transition-duration: 0.6s !default;
-$carousel-transition: transform $carousel-transition-duration ease-in-out !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
-
-$carousel-dark-indicator-active-bg: $black !default;
-$carousel-dark-caption-color: $black !default;
-$carousel-dark-control-icon-filter: invert(1) grayscale(100) !default;
-
 // Pagination
 
 // scss-docs-start pagination-variables
@@ -1685,16 +1650,7 @@ $dp-grid-size: 0.75rem;
 $dp-current-size: $v-gap * 4;
 
 // Carousel
-$crs-margin-bottom: $v-gap * 3;
-$crs-mob-live-padding: $v-gap * 2;
 $crs-dots-dimension: $v-gap * 2;
-$crs-dots-color: hsl(210, 83%, 77%) !default;
-$crs-dots-margin-left: 38px;
-$crs-dots-margin-left-desk: $v-gap * 2;
-$crs-heading-h-padding: $v-gap * 3;
-$crs-heading-h-size: 1.75rem;
-$crs-landcape-card-padding: $v-gap * 6; // Variabile non usata
-$crs-landscape-bottom: 5px;
 
 // Gridlist **************
 $grid-item-df-proportion: 66.81222707423581%;
