@@ -69,7 +69,7 @@ Aggiungendo la classe `.dark` al link si ottiene un pulsante utilizzabile su sfo
 
 {% comment %}Example name: Per sfondo scuro, esempio{% endcomment %}
 {% capture example %}
-<div class="d-flex align-items-center p-4 neutral-1-bg-a8">
+<div class="d-flex align-items-center p-4 bg-dark">
   <a href="#" aria-label="Torna su" data-bs-toggle="backtotop" class="back-to-top dark">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
   </a>
@@ -85,7 +85,7 @@ Aggiungendo le classi `.dark` e `.shadow` al link si ottiene un pulsante con omb
 
 {% comment %}Example name: Con ombra, per sfondo scuro, esempio{% endcomment %}
 {% capture example %}
-<div class="d-flex align-items-center p-4 neutral-1-bg-a8">
+<div class="d-flex align-items-center p-4 bg-dark">
   <a href="#" aria-label="Torna su" data-bs-toggle="backtotop" class="back-to-top dark shadow">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
   </a>

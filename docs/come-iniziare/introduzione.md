@@ -84,7 +84,7 @@ Per importare solo i componenti necessari e ridurre le dimensioni del bundle fin
 @use 'bootstrap-italia/src/scss/base/root' as *;
 @use 'bootstrap-italia/src/scss/base/reboot' as *;
 @use 'bootstrap-italia/src/scss/components/buttons' as *;
-@use 'bootstrap-italia/src/scss/utilities/colors' as *;
+@use 'bootstrap-italia/src/scss/utilities/icons' as *;
 // ... altri moduli
 ```
 
@@ -111,9 +111,6 @@ Quando si importano i moduli selettivamente, è necessario usare `as *` per rend
 
 //variables
 @import 'bootstrap-italia/src/scss/variables';
-
-//classi colore
-@import 'bootstrap-italia/src/scss/utilities/colors';
 
 // ...
 ```

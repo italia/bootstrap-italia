@@ -92,14 +92,14 @@ Al componente Section può essere applicato uno sfondo di colore tenue utilizzan
 
 Aggiungendo invece classe `.section-primary` si otterrà un sfondo del colore primario.
 
-Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio) per garantire la leggibilità dei testi contenuti.
+Si consiglia di applicare la classe `.text-white` al contenuto (come da esempio) per garantire la leggibilità dei testi contenuti.
 
 {% comment %}Example name: Sfondo primario{% endcomment %}
 {% capture example %}
 <section class="section section-primary" aria-labelledby="titleEx3">
   <div class="section-content">
     <!-- contenuto di esempio START -->
-    <div class="container white-color">
+    <div class="container text-white">
       <div class="row mb-3">
         <div class="col-12">
           <h2 id="titleEx3" class="no_toc">Morbi fermentum amet</h2>
@@ -124,14 +124,14 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 
 ### Sfondo in evidenza
 Aggiungendo la classe `.section-emphasis` si otterrà un sfondo di colore in evidenza.
-Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio) per garantire la leggibilità dei testi contenuti.
+Si consiglia di applicare la classe `.text-white` al contenuto (come da esempio) per garantire la leggibilità dei testi contenuti.
 
 {% comment %}Example name: Sfondo in evidenza{% endcomment %}
 {% capture example %}
 <section class="section section-emphasis" aria-labelledby="titleEx4">
   <div class="section-content">
     <!-- contenuto di esempio START -->
-    <div class="container white-color">
+    <div class="container text-white">
       <div class="row mb-3">
         <div class="col-12">
           <h2 id="titleEx4" class="no_toc">Morbi fermentum amet</h2>
@@ -158,14 +158,14 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 
 Aggiungendo la classe `.section-image` alla section e indicando attraverso CSS in linea l'URL dell'immagine da utilizzare (es: `style="background-image: url('URL-IMMAGINE')"`) la Section utilizzerà l'immagine indicata come sfondo, adattandone automaticamente le dimensioni per coprire l'intera Section.
 
-A seconda della luminosità dell'immagine si consiglia di applicare la classe `.white-color` al contenuto (come da esempio) per garantire il corretto contrasto fra testi e sfondo.
+A seconda della luminosità dell'immagine si consiglia di applicare la classe `.text-white` al contenuto (come da esempio) per garantire il corretto contrasto fra testi e sfondo.
 
 {% comment %}Example name: Con immagine di sfondo{% endcomment %}
 {% capture example %}
 <section class="section section-image" style="background-image: url('https://picsum.photos/1280/720?image=811')"  aria-labelledby="titleEx5">
   <div class="section-content">
     <!-- contenuto di esempio START -->
-    <div class="container white-color">
+    <div class="container text-white">
       <div class="row mb-3">
         <div class="col-12">
           <h2 id="titleEx5" class="no_toc">Morbi fermentum amet</h2>

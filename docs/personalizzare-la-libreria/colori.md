@@ -208,21 +208,68 @@ Basta sovrascrivere le principali variabili `primary` per categoria seguendo la 
 Questo approccio è valido per tutte le [variabili disponibili nella libreria]({{ site.baseurl }}/docs/personalizzare-la-libreria/variabili-css/).
 
 
+## Altri colori della palette
+
+Le variabili CSS di Bootstrap Italia coprono i colori usati dai componenti. Gli altri colori della palette del Design system .italia, ad esempio le scale `orange`, `emerald` o `teal`, si usano direttamente da [Design Tokens Italia](https://github.com/italia/design-tokens-italia), con il prefisso `--it-` (CSS) o `$it-` (Sass).
+
+Il pacchetto `design-tokens-italia` è una dipendenza di Bootstrap Italia; se lo usi direttamente, aggiungilo anche alle dipendenze del tuo progetto, per controllarne la versione:
+
+```bash
+npm i design-tokens-italia
+```
+
+Puoi caricare i token in tre modi.
+
+**Foglio di stile CSS**, che definisce le variabili `--it-color-*` su `:root`:
+
+```html
+<link rel="stylesheet" href="node_modules/design-tokens-italia/dist/css/variables.css">
+```
+
+Lo stesso file è disponibile anche da CDN, sconsigliato in produzione: `https://cdn.jsdelivr.net/npm/design-tokens-italia@1/dist/css/variables.css`.
+
+**Import CSS** nel tuo foglio di stile:
+
+```css
+@import 'design-tokens-italia/dist/css/variables.css';
+```
+
+**Modulo Sass**, che non genera CSS:
+
+```scss
+@use 'design-tokens-italia/dist/scss/variables' as tokens;
+
+.my-element {
+  background-color: tokens.$it-color-orange-40;
+}
+```
+
+Con il CSS caricato, nei primi due modi, le variabili si usano così:
+
+```css
+.my-element {
+  background-color: var(--it-color-orange-40);
+}
+```
+
+Trovi la palette completa nella pagina [Colori del Design system .italia](https://designers.italia.it/design-system/fondamenti/colori/).
+
 ## Migrazione dalla versione 2
 
-La versione `2.x` di Bootstrap Italia metteva a disposizione molte classi di utility legate alla palette dei colori che ora sono state rimosse in favore delle variabili CSS.
+La versione `2.x` di Bootstrap Italia metteva a disposizione molte classi di utility legate alla palette dei colori. Nella versione 3 sono state rimosse in favore delle variabili CSS e delle classi di utility `.text-*`, `.bg-*` e `.border-*`.
 
 Se hai utilizzato queste classi in precedenza, puoi sostituirle con le variabili CSS simili o equivalenti verificando che i valori siano compatibili, secondo il contesto di utilizzo.
 
 ### Classi rimosse
 
-In questa tabella sono riportate le classi per le quali è disponibile una variabile o classe CSS equivalente. Quelle elencate come rimosse invece non hanno un sostituto diretto.
+In questa tabella sono riportate le classi per le quali è disponibile una variabile o classe CSS equivalente. Quelle senza sostituto diretto si possono rimpiazzare con le varianti dei colori semantici o con gli [altri colori della palette](#altri-colori-della-palette).
 
 | v2.x | v3.0.0 |
 |---|---|
 | `.primary-bg` | `--bsi-color-background-primary`<br> `.bg-primary` |
 | `.primary-color` | `--bsi-color-text-primary`<br> `.text-primary` |
 | `.primary-border-color` | `--bsi-color-border-primary`<br> `.border-primary` |
+| `.white-bg` <br> `.white-color` <br> `.white-border-color-` | `.bg-white` <br> `.text-white` <br> `.border-white` |
 | `.primary-bg-a*`  <br> `.primary-bg-b*`  <br> `.primary-bg-c*` | Rimosse, nessun sostituto diretto. <br> Prova le varianti `-light`, `-lighter`, `-subtle`, `-muted`, `-deep` |
 | `.analogue-1-bg` <br> `.analogue-1-color`  <br> `.analogue-1-border-color` |  Rimosse, nessun sostituto diretto |
 | `.analogue-2-bg` <br> `.analogue-2-color`  <br> `.analogue-2-border-color` |  `--bsi-color-background-accent`<br> `--bsi-color-text-accent` |
@@ -231,11 +278,16 @@ In questa tabella sono riportate le classi per le quali è disponibile una varia
 | `.complementary-2-bg` <br> `.complementary-2-color`  <br> `.complementary-2-border-color` | `--bsi-color-background-warning` <br> `--bsi-color-text-warning` <br> `--bsi-color-border-warning` |
 | `.complementary-3-bg` <br> `.complementary-3-color`  <br> `.complementary-3-border-color` | `--bsi-color-background-success` <br> `--bsi-color-text-success` <br> `--bsi-color-border-success` |
 | `.complementary-*-bg-a*`  <br> `.complementary-*-bg-b*` | Rimosse, nessun sostituto diretto |
-| `.neutral-1-bg` <br> `.neutral-1-color` <br> `.neutral-1-border-color` | `--bsi-color-background-emphasis)` <br> `--bsi-color-text-secondary` <br> `--bsi-color-border-secondary` |
-| `.neutral-2-bg` <br> `neutral-2-color` <br> `neutral-2-border-color` | `--bsi-color-background-muted` <br> `--bsi-color-text-muted` <br> `--bsi-color-border-subtle` |
+| `.neutral-1-bg` <br> `.neutral-1-color` <br> `.neutral-1-border-color` | `--bsi-color-background-emphasis` <br> `--bsi-color-text-secondary` <br> `--bsi-color-border-secondary` |
+| `.neutral-2-bg` <br> `.neutral-2-color` <br> `.neutral-2-border-color` | `--bsi-color-background-muted` <br> `--bsi-color-text-muted` <br> `--bsi-color-border-subtle` |
 | `.neutral-*-bg-a*`  <br> `.neutral-*-bg-b*` | Rimosse, nessun sostituto diretto |
 | `.lightgrey-bg-*` | `--bsi-color-background-subtle` |
 | `.lightgrey-color-*` | `--bsi-color-text-muted` |
 | `.lightgrey-border-color-*` | `--bsi-color-border-subtle` |
 {: .table .table-cols-equal .mb-4}
 
+## Breaking change
+
+{% capture callout %}
+- Rimosse le classi di utility dei colori della versione 2: `.primary-bg`, `.primary-color`, `.primary-border-color`, `.white-bg`, `.white-color`, `.white-border-color-`, le famiglie `analogue-*`, `complementary-*`, `neutral-*`, `lightgrey-*` e tutte le varianti numerate (ad esempio `.primary-bg-a6`, `.neutral-1-bg-a7`). Sostituti nella tabella [Classi rimosse](#classi-rimosse).
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
