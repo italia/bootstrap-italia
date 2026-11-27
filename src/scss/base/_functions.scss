@@ -61,6 +61,13 @@
   }
 }
 
+// Applies an opacity custom property (`--{prefix}{target}-opacity`) to a color that has no
+// RGB channels, such as a semantic token: color-mix() with transparent. At opacity 1 the
+// color is unchanged. Browsers without color-mix() need a fallback (see utilities/_api.scss).
+@function opacity-mix-css-var($color, $target) {
+  @return color-mix(in srgb, #{$color} calc(var(--#{$prefix}#{$target}-opacity) * 100%), transparent);
+}
+
 @function map-loop($map, $func, $args...) {
   $_map: ();
 

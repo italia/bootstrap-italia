@@ -48,6 +48,21 @@ Cambia il colore del bordo scegliendo dalla palette del tema utilizzato.
 {% endcapture %}{% include example.html content=example %}
 </div>
 
+### Opacità
+
+Le classi `.border-opacity-*` regolano l'opacità del colore del bordo: `.border-opacity-10`, `.border-opacity-25`, `.border-opacity-50`, `.border-opacity-75` e `.border-opacity-100`. Vanno usate insieme a una classe di colore del bordo, ad esempio `.border-primary`.
+
+<div class="bd-example-border-utils">
+{% comment %}Example name: Opacità{% endcomment %}
+{% capture example %}
+<span class="border border-primary"></span>
+<span class="border border-primary border-opacity-75"></span>
+<span class="border border-primary border-opacity-50"></span>
+<span class="border border-primary border-opacity-25"></span>
+<span class="border border-primary border-opacity-10"></span>
+{% endcapture %}{% include example.html content=example %}
+</div>
+
 ## Bordi arrotondati
 
 Classi per arrotondare facilmente gli angoli di un elemento.

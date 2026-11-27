@@ -45,7 +45,10 @@ $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, '$key', 'bg') !defau
 // scss-docs-end utilities-bg-colors
 
 // scss-docs-start utilities-border-colors
-$utilities-border-colors: (
+// Border colors read the semantic tokens directly. The tokens have no RGB channels, so
+// rgba-css-var() can't apply `.border-opacity-*`: opacity-mix-css-var() does it with
+// color-mix(). The plain tokens are kept for the fallback in utilities/_api.scss.
+$utilities-border-tokens: (
   'primary': var(--#{$prefix}color-border-primary),
   'secondary': var(--#{$prefix}color-border-secondary),
   'success': var(--#{$prefix}color-border-success),
@@ -54,6 +57,7 @@ $utilities-border-colors: (
   'inverse': var(--#{$prefix}color-border-inverse),
   'white': var(--#{$prefix}color-border-inverse),
 ) !default;
+$utilities-border-colors: map-loop($utilities-border-tokens, opacity-mix-css-var, '$value', 'border') !default;
 // scss-docs-end utilities-border-colors
 
 $negative-spacers: null !default;

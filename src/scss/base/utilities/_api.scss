@@ -6,6 +6,7 @@
 @use '../mixins/breakpoints' as *;
 @use '../vendor/rfs' as *;
 @use '../utilities' as *;
+@use '../maps' as *;
 
 // Loop over each breakpoint
 @each $breakpoint in map.keys($grid-breakpoints) {
@@ -19,6 +20,31 @@
       // Only proceed if responsive media queries are enabled or if it's the base media query
       @if meta.type-of($utility) == 'map' and (map.get($utility, responsive) or $infix == '') {
         @include generate-utility($utility, $infix);
+      }
+    }
+  }
+}
+
+// Border color fallback for browsers without color-mix() (e.g. Chrome 109, the last version
+// on Windows 7/8.1, still in our browserslist). There the color-mix() value of
+// --{prefix}border-color is invalid at computed-value time, so the whole `border` shorthand
+// of `.border` is dropped and the border disappears. Here the plain token is used instead:
+// the border keeps its color, without `.border-opacity-*`. Placed after the utilities so it
+// wins at equal specificity. Only the values still set by opacity-mix-css-var() get a
+// fallback: builds that pass their own $utilities map (like Dev Kit Italia components, which
+// may drop the utility or replace its values) get no extra classes.
+$_border-color-utility: map.get($utilities, 'border-color');
+$_border-color-values: null;
+@if meta.type-of($_border-color-utility) == 'map' {
+  $_border-color-values: map.get($_border-color-utility, values);
+}
+@if meta.type-of($_border-color-values) == 'map' {
+  @supports not (color: color-mix(in srgb, red 50%, blue)) {
+    @each $color, $value in $_border-color-values {
+      @if map.has-key($utilities-border-tokens, $color) and $value == map.get($utilities-border-colors, $color) {
+        .#{map.get($_border-color-utility, class)}-#{$color} {
+          --#{$prefix}border-color: #{map.get($utilities-border-tokens, $color)};
+        }
       }
     }
   }
