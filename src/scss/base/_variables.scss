@@ -1008,20 +1008,13 @@ $breadcrumb-link-color-dark: $white !default;
 $breadcrumb-icon-color-dark: $analogue-2-b1 !default; // Missing in the UI kit
 
 // Tooltips
-$tooltip-max-width: 32em !default;
 $tooltip-opacity: 1 !default;
 $tooltip-padding-y: 1rem !default;
 $tooltip-padding-x: 1rem !default;
 $tooltip-font-size: $font-size-sm !default;
 $tooltip-color: $white !default;
-$tooltip-bg: $black !default;
 $tooltip-border-radius: $border-radius !default;
 $tooltip-margin: null !default;
-$tooltip-arrow-width: 0.8rem !default;
-$tooltip-arrow-height: 0.4rem !default;
-// fusv-disable
-$tooltip-arrow-color: null !default; // Deprecated in Bootstrap 5.2.0 for CSS variables
-// fusv-enable
 
 // Form tooltips must come after regular tooltips
 // scss-docs-start tooltip-feedback-variables
@@ -1034,22 +1027,15 @@ $form-feedback-tooltip-border-radius: $tooltip-border-radius !default;
 // scss-docs-end tooltip-feedback-variables
 
 //Modals
-$modal-sm: 300px !default;
-$modal-md: 500px !default;
-$modal-lg: 800px !default;
-$modal-xl: 1140px !default;
 
 $modal-content-color: null !default;
 $modal-content-bg: $white !default;
 $modal-content-border-color: var(--#{$prefix}border-color-translucent) !default;
 $modal-content-border-width: $border-width !default;
-$modal-content-border-radius: $border-radius-lg !default;
-$modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width) !default;
 $modal-content-box-shadow-xs: $box-shadow-sm !default;
 $modal-content-box-shadow-sm-up: $box-shadow !default;
 
 $modal-backdrop-opacity: 0.8 !default;
-$modal-max-width: 32rem !default;
 $modal-dialog-margin: 0.5rem !default;
 $modal-dialog-margin-y-sm-up: 1.5rem !default;
 // $modal-inner-padding: 1.5rem !default;
@@ -1059,15 +1045,10 @@ $modal-dialog-margin-y-sm-up: 1.5rem !default;
 // $modal-header-padding-y: $modal-inner-padding !default;
 // $modal-header-padding-x: $modal-inner-padding !default;
 // $modal-header-padding: 1.5rem !default;
-$modal-show-transform: none !default;
-$modal-fade-transform: translate(0, -50px) !default;
-$modal-transition: transform 0.3s ease-out !default;
-$modal-scale-transform: scale(1.02) !default;
 $modal-title-line-height: $line-height-base !default;
 
 // $modal-footer-bg: null !default;
 // $modal-footer-border-color: $modal-header-border-color !default;
-$modal-footer-margin-between: 0.5rem !default;
 // $modal-footer-border-width: 0 !default;
 
 $modal-backdrop-bg: $black !default;
@@ -1281,19 +1262,8 @@ $navscroll-dark-separator-color: rgba(229, 229, 229, 0.3) !default; // Missing i
 
 //dialog
 $dialog-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1) !default;
-$modal-padding: $v-gap * 3;
-$modal-margin: $v-gap * 6;
-$modal-padding-close: $v-gap * 2;
-$modal-heading-color: $color-text-base !default; // UI kit
 $modal-icon-color: $primary !default;
 $modal-icon-distance: $v-gap * 2;
-$modal-alert-p-distance: 32px + $v-gap * 2;
-$modal-heading-border: 1px solid $color-border-subtle !default;
-$modal-sticky-bg: $white !default;
-$modal-body-height: 50vh;
-$modal-popconfirm-p-size-mobile: 0.875rem;
-$modal-popconfirm-p-size: 1rem;
-$modal-popconfirm-max-width: 300px;
 
 // ##### HEADER #####
 
