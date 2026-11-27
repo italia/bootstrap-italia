@@ -1,0 +1,6 @@
+[
+    {
+        "name": "Anello di focus interno",
+        "content": "\n<div class=\"overflow-hidden border rounded\">\n  <a href=\"#\" class=\"d-block p-3 border-bottom\">Anello di focus esterno, tagliato dal contenitore</a>\n  <a href=\"#\" class=\"d-block p-3 focus-inset\">Anello di focus interno con <code>.focus-inset</code></a>\n</div>\n"
+    }
+]

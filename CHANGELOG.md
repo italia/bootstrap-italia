@@ -1,3 +1,61 @@
+# [3.0.0-beta.9](https://github.com/italia/bootstrap-italia/compare/v3.0.0-beta.8...v3.0.0-beta.9) (2026-11-24)
+
+
+### Bug Fixes
+
+* **autocomplete:** remove dead focus border on options ([3349cfc](https://github.com/italia/bootstrap-italia/commit/3349cfcaf)), closes [#2036](https://github.com/italia/bootstrap-italia/issues/2036)
+* **chips:** default chip border at 3:1 contrast ([c163c93](https://github.com/italia/bootstrap-italia/commit/c163c93e20e609ad793f14c8109aaac97575f717)), closes [#2031](https://github.com/italia/bootstrap-italia/issues/2031)
+* **dropdown:** opening button with icon aligned to buttons ([13aaee7](https://github.com/italia/bootstrap-italia/commit/13aaee76207ce6dec6d272db5e8041fca493778b))
+* **dropdown:** rename notch position variables, flush panel in navbar ([20b6c16](https://github.com/italia/bootstrap-italia/commit/20b6c160a65a58550475e433cabb69a864a95832)), closes [#2010](https://github.com/italia/bootstrap-italia/issues/2010)
+* **forms:** anchor the checkbox and radio control to the first line ([5326c6b](https://github.com/italia/bootstrap-italia/commit/5326c6bd5a68d9eeab9ab6f132424be75e30f9bc))
+* **forms:** scope input-group sibling rules to .input-group ([#1982](https://github.com/italia/bootstrap-italia/issues/1982)) ([1a2ab0e](https://github.com/italia/bootstrap-italia/commit/1a2ab0e1e337243c49df975bfa37028c714ae08f)), closes [#1981](https://github.com/italia/bootstrap-italia/issues/1981)
+* icon–text distance inside lists of links, dropdown and navbar ([a520d9d](https://github.com/italia/bootstrap-italia/commit/a520d9d7e4f9f0e16d7316fb9d09ad2f4da86e21)), closes [#2008](https://github.com/italia/bootstrap-italia/issues/2008)
+* **js:** remove the toast plugin ([ef88bc6](https://github.com/italia/bootstrap-italia/commit/ef88bc67f)), closes [#1868](https://github.com/italia/bootstrap-italia/issues/1868)
+* migrate form controls to the tokens and align field heights to ui kit italia ([5d7a1d1](https://github.com/italia/bootstrap-italia/commit/5d7a1d11b8a6610463f103fa7645d363a53f9413)), closes [#1927](https://github.com/italia/bootstrap-italia/issues/1927)
+* **navbar:** remove dead .navbar-dark and declare brand-hover-color on .navbar ([56300c8](https://github.com/italia/bootstrap-italia/commit/56300c82d9fafbeaca678deb77c8c9293557706f)), closes [#1920](https://github.com/italia/bootstrap-italia/issues/1920) [#1924](https://github.com/italia/bootstrap-italia/issues/1924)
+* remove bsi border radius variables scale from root ([3ba8488](https://github.com/italia/bootstrap-italia/commit/3ba8488456d4c71074e8180de980fbfc971c5c56)), closes [#2002](https://github.com/italia/bootstrap-italia/issues/2002)
+* remove dead .inline-menu styles and variables ([8bcb28e](https://github.com/italia/bootstrap-italia/commit/8bcb28e8888820bbe171384cd8344a3f5ee64d0c)), closes [#1925](https://github.com/italia/bootstrap-italia/issues/1925)
+* **root:** remove unused color-blue-30 token ([b06f471](https://github.com/italia/bootstrap-italia/commit/b06f471ec50fcf0cc0a23ea50763726557b2ef3c))
+* **scss:** missing functions use, accordion icons follow text color ([2163910](https://github.com/italia/bootstrap-italia/commit/2163910ed3e29143c108f091d25b2933d57a1983)), closes [#1920](https://github.com/italia/bootstrap-italia/issues/1920)
+* **scss:** remove dead hero sass variables ([069dd0b](https://github.com/italia/bootstrap-italia/commit/069dd0b17cfa54a445262c9f66180b8bbf1977c7)), closes [#1871](https://github.com/italia/bootstrap-italia/issues/1871)
+
+
+### Code Refactoring
+
+* custom property order for components status ([33f8197](https://github.com/italia/bootstrap-italia/commit/33f8197d4)), closes [#2021](https://github.com/italia/bootstrap-italia/issues/2021)
+
+
+### Features
+
+* **focus:** add focus-inset mixin and utility class ([#1985](https://github.com/italia/bootstrap-italia/issues/1985)) ([9f6e7c8](https://github.com/italia/bootstrap-italia/commit/9f6e7c8c230490f90c55a39c40493b55c466b6ff)), closes [#1983](https://github.com/italia/bootstrap-italia/issues/1983)
+* **focus:** custom property for focus ring and removed sass vars ([8384246](https://github.com/italia/bootstrap-italia/commit/8384246ce)), closes [#1913](https://github.com/italia/bootstrap-italia/issues/1913)
+* **forms:** expose the select indicator as a custom property ([#1986](https://github.com/italia/bootstrap-italia/issues/1986)) ([f3ddd0c](https://github.com/italia/bootstrap-italia/commit/f3ddd0cab832f2554205c8abc01cfc0d0704f95f)), closes [#1984](https://github.com/italia/bootstrap-italia/issues/1984)
+
+### Breaking changes
+
+* **focus:** `$focus-outline-color-in`, `$focus-outline-color-out` and `$focus-outline-color` are removed. Use `--bsi-focus-inner-color` and `--bsi-focus-outer-color`; widths are `--bsi-focus-inner-width` and `--bsi-focus-outer-width`.
+* **js:** the toast plugin is removed.
+* **navbar:** `.navbar-dark` is removed.
+* **root:** the `--bsi-border-radius*` scale is removed.
+* **root:** the unused `color-blue-30` token is removed.
+* **navigation:** the `.inline-menu` styles and the `$inline-menu-*` Sass variables are removed.
+* **scss:** the `$hero-*` Sass variables are removed; `_hero.scss` reads the `--hero-*` custom properties.
+* **dropdown:** `--bsi-dropdown-notch-position-x` and `--bsi-dropdown-notch-position-y` are replaced by `--bsi-dropdown-notch-inset` (position along the edge the notch sits on) and `--bsi-dropdown-notch-offset` (how far it sticks out of that edge).
+* **components:** 12 component state custom properties now follow the Bootstrap order `<component>-<state>-<property>` (`--bsi-` prefix omitted). Values are unchanged:
+  * `bottom-nav-link-color-active` → `bottom-nav-link-active-color`
+  * `bottom-nav-icon-color-active` → `bottom-nav-icon-active-color`
+  * `chip-link-hover` → `chip-link-hover-text-color`
+  * `stepper-item-border-color-active` → `stepper-item-active-border-color`
+  * `tab-close-btn-color-hover` → `tab-close-btn-hover-color`
+  * `tab-close-btn-color-disabled` → `tab-close-btn-disabled-color`
+  * `thumb-nav-overlay-bg-active` → `thumb-nav-active-overlay-bg`
+  * `thumb-nav-transition-duration-hover` → `thumb-nav-hover-transition-duration`
+  * `toggle-track-background-checked` → `toggle-track-checked-background`
+  * `toggle-track-background-disabled` → `toggle-track-disabled-background`
+  * `toggle-knob-background-disabled` → `toggle-knob-disabled-background`
+  * `toggle-knob-offset-checked` → `toggle-knob-checked-offset`
+
+
 # [3.0.0-beta.8](https://github.com/italia/bootstrap-italia/compare/v3.0.0-beta.7...v3.0.0-beta.8) (2026-11-05)
 
 

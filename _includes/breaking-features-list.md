@@ -13,12 +13,18 @@
 - Nelle varianti avatar con testo i colori di fondo possono essere solo `.avatar-primary` e `.avatar-secondary`. Sono state rimosse le classi `.avatar-green`, `.avatar-orange` e `.avatar-red`.
 - Corretta l'icona nella variante Avatar con icona (`sprites.svg#it-user`).
 - Rimossi dagli esempi liste i colori di sfondo custom, ad esempio `.complementary-3-bg`.
+- Aggiunto `role="group"` al contenitore `.dropdown-menu` del dropdown, che ha già `aria-labelledby` riferito al pulsante di apertura.
 
 
 ### Badge
 
 - Le classi che controllano il colore diventano specifiche per il componente e hanno cambiato nome, ad esempio le classi `.bg-secondary` e `.bg-white` diventano `.badge-secondary` e `.badge-inverse`.
 - Viene definita la classe `.badge-sm` per l'uso mirato all'intero di pulsanti.  
+
+
+### Bordi
+
+Le custom properties `--bsi-border-radius`, `--bsi-border-radius-sm`, `-lg`, `-xl`, `-2xl` e `-pill` sono state rimosse: i raggi dei bordi usano i token `--bsi-radius-smooth`, `--bsi-radius-rounded` e `--bsi-radius-circle`. Al posto di `--bsi-border-radius` usa `--bsi-radius-smooth`. Le classi `.rounded-top`, `.rounded-end`, `.rounded-bottom` e `.rounded-start`, così come popover, cookiebar e transfer, leggono ora `--bsi-radius-smooth`.
 
 
 ### Breadcrumbs
@@ -69,6 +75,8 @@
 - Per quanto riguarda le icone le classi che ne controllano il colore potrebbero aver cambiato nome, ad esempio `.icon-white` diventa `.icon-inverse`.
 - Aggiunta classe `.dropdown-item` alla voce attiva nell'esempio di menu voci attive ed a tutti agli elementi dei menu dropdown laddove mancava.
 - Corretto markup dell'intestazione nel Menu con intestazioni e separatori, `<div>` diventa `<h4>`. Sarà da far attenzione alla corretta gerarchia in pagina di questa intestazione scegliendone il livello a seconda del contesto. 
+- Aggiunta la classe `.btn-icon` al pulsante di apertura con icona (`.dropdown-toggle`), per allineare icona e testo e avere la stessa altezza degli altri pulsanti con icona.
+- Aggiunto `role="group"` al contenitore `.dropdown-menu` degli esempi, insieme ad `aria-labelledby` riferito al pulsante di apertura. Nelle varianti di colore sono stati aggiunti anche l'`id` al pulsante e `aria-labelledby` al menu.
 
 
 ### Footer
@@ -88,8 +96,9 @@
 - Rimossa la variante `theme-dark-mobile`: le voci del menu su mobile hanno sempre sfondo bianco e link nel colore primario.
 - I link accessori dello Slim Header non sono più raccolti in un menu a tendina che si apre dal nome dell'ente: su mobile confluiscono nel menu di navigazione insieme al logo e ai social. Negli esempi il pulsante `.it-opener` è stato rimosso e l'elenco è nascosto sotto il breakpoint `lg` con `.d-none.d-lg-flex`. Le regole di stile di `.it-opener` restano disponibili per retrocompatibilità ma sono da considerarsi deprecate.
 - Cambiata la dimensione del pulsante Accedi: cambiato classe da `.btn-sm` a `.btn-sx`.
-- Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi.
+- Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi: la distanza tra testo e icona (8px) è gestita dal CSS e `.ms-1`, con `!important`, la riporterebbe a 4px.
 - È stato rimossa la classe `.shadow-lg` sull'elemento `.dropdown-menu` in tutte le varianti. L'ombra è controllata dalle property "elevation".  
+- Rimossa la classe `.navbar-dark`, ereditata dal tema scuro di Bootstrap: la navbar usa i colori inversi per impostazione predefinita.
 
 
 ### Icone
@@ -102,6 +111,9 @@
 - Nel caso di input con icona o pulsanti, l'elemento `label` è stato spostato fuori dal contenitore `.input-group` per leggibilità del markup.
 - Nel paragrafo dimensioni sono stati integrati gli esempi con icone, pulsanti di invio e istruzioni specifiche.
 - Nei due esempi grafici di liste di ricerca è stato aggiunto l'attributo `role="list"` sull'elemento `<ul>` per ripristinarne la semantica lista su Safari e VoiceOver (macOS/iOS). 
+- L'esempio di varianti di dimensione, che mostrava degli input ma stava nel paragrafo Area di testo, è stato spostato nel paragrafo Dimensioni. Su `textarea` le classi `.form-control-sm` e `.form-control-lg` cambiano la grandezza del carattere e la spaziatura interna, l'altezza minima è quella di `--bsi-form-control-height` per tutte le dimensioni. Il bordo segue `--bsi-form-control-border-color`, quindi in readonly è uguale a quello degli input.
+- Rimossa la classe `.form-control-color` per `<input type="color">`, ereditata da Bootstrap e mai documentata.
+- I campi, comprese le select e i gruppi con icone o pulsanti, sono alti quanto `--bsi-form-control-height`: 40px nelle dimensioni base e piccola, 48px nella grande, come in UI Kit Italia, con qualsiasi font. In precedenza l'altezza dipendeva dalle metriche del font, ad esempio circa 45px e 54px con Titillium Web. La spaziatura verticale dei campi a una riga è fissa (`--bsi-spacing-3xs`) e non segue più `--bsi-form-control-spacing`, che resta per la spaziatura orizzontale e per le aree di testo: per cambiare l'altezza dei campi si usa `--bsi-form-control-height`.
 
 
 ### Generale
@@ -135,6 +147,7 @@ La validazione con JustValidate, e le classi che applicano gli stili di validazi
 - Il contenuto del megamenu ora ha classe `.megamenu-content` invece di `.megamenu`, e non ha più le classi `.pb-5 .pt-3 .py-lg-0`.
 - Nella parte descrittiva del megamenu contenuta nell'elemento `.description-content`, la classe `.ps-4` è stata sostituita da `.px-4` per garantire un padding coerente anche su mobile.
 - Nella variante con Call to action in basso: rimossa la classe `.justify-content-around` sul contenitore e aggiunta la classe `.flex-grow-1` agli elementi `<a>` con classe `.it-footer-link`.
+- Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu: la distanza tra testo e icona (8px) è gestita dal CSS e `.ms-1`, con `!important`, la riporterebbe a 4px.
 - È stato rimossa la classe `.shadow-lg` sull'elemento `.dropdown-menu` in tutte le varianti. L'ombra è controllata dalle property "elevation".  
   
 
@@ -165,6 +178,8 @@ La validazione con JustValidate, e le classi che applicano gli stili di validazi
 
 - È stato corretto il colore delle icone chevron per gli elementi disabilitati sostituendo la classe `.icon-primary` con `.icon-disabled`.
 - È stato corretto l'esempio "Changer" aggiungendo la classe `.dropdown-item` che mancava sul primo elemento `.list-item`. 
+- Aggiunta la classe `.btn-icon` al pulsante di apertura del "Changer", per allineare icona e testo.
+- Aggiunto `role="group"` al contenitore `.dropdown-menu` del dropdown, che ha già `aria-labelledby` riferito al pulsante di apertura.
 
 
 ### Progress indicators
@@ -222,6 +237,7 @@ La variabile per il controllo della proporzione custom è ora `--bsi-aspect-rati
 - L'icona del dropdown è ora gestita con il tag `<svg>`
 - Il contenuto di ogni voce è racchiuso in un contenitore dedicato nel caso di versione con dropdown.
 - Modificata la gestione dell'ombreggiatura, altezza e posizione della toolbar.
+- Aggiunto `role="group"` al contenitore `.dropdown-menu` dei dropdown, che ha già `aria-labelledby` riferito al pulsante di apertura. Corretto l'`id` duplicato del quinto pulsante del primo esempio, ora `dropdownMenuButton5`.
 
 
 ### Torna indietro
