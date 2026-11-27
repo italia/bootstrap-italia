@@ -85,6 +85,28 @@ Alcuni esempi:
 
 Le CSS custom properties di ogni componente sono documentate nella tabella Properties delle relative schede di dettaglio. 
 
+### Variabili Sass, mixin e funzioni rimossi
+
+La versione 3 non usa più le variabili Sass come superficie di personalizzazione: colori, tipografia, spaziature e stati dei componenti si cambiano con le CSS custom properties. Le variabili Sass della versione 2 che non hanno più effetto sul CSS compilato sono state rimosse da `base/_variables.scss` e `base/_config.scss`. Se il tuo progetto ne ridefinisce una, sostituiscila con la custom property corrispondente: con `@use … with (…)` una variabile rimossa dà errore di compilazione, con `@import` resta senza effetto.
+
+Per chi compila Bootstrap Italia dal sorgente o ne mantiene un fork resta un piccolo insieme di variabili Sass di configurazione con `!default`.
+
+Alcune corrispondenze frequenti:
+
+| Versione 2 | Versione 3 |
+|---|---|
+| `$header-center-bg-color` | `--bsi-header-center-background` |
+| `$header-slim-bg-color` | `--bsi-header-slim-background` |
+| `$card-link-color` | `--bsi-card-link-color` |
+| `$color-text-primary-hover` | `--bsi-color-link-hover` |
+
+Sono stati rimossi anche mixin e funzioni che non venivano più usati:
+
+- mixin: `alert-variant`, `button-variant`, `button-outline-variant`, `button-size`, `color-scheme`, `gradient-x`, `gradient-y`, `gradient-directional`, `gradient-x-three-colors`, `gradient-y-three-colors`, `gradient-radial`, `pagination-size`, `resizable`, `text-emphasis-variant`;
+- funzioni: `color-hover`, `hsb-with-brightness-modifier`, `map-get-multiple`, `map-merge-multiple`, `url-friendly-color`, `varify`.
+
+Restano i mixin documentati in [Organizzare gli spazi]({{ site.baseurl }}/docs/organizzare-gli-spazi/introduzione/) e [Display]({{ site.baseurl }}/docs/organizzare-gli-spazi/display/): `media-breakpoint-only`, `media-breakpoint-between`, `visually-hidden-focusable`.
+
 ### Convenzioni di naming
 
 Bootstrap Italia 3 adotta convenzioni chiare per distinguere classi CSS e variabili:
