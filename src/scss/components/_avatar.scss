@@ -38,8 +38,8 @@
 // Avatar variants map
 // Edit the colors to match your theme or add more variants
 $avatar-variants: (
-  primary: $color-primary,
-  secondary: $color-secondary,
+  primary: var(--#{$prefix}theme-primary),
+  secondary: var(--#{$prefix}color-background-secondary),
 );
 
 /* stylelint-disable-next-line no-duplicate-selectors */

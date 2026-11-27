@@ -11,6 +11,10 @@
 // Variables
 //
 
+$_table-group-separator-color: currentcolor;
+$_table-striped-columns-order: even;
+$_table-striped-order: odd;
+
 // scss-docs-start table-variants
 $table-variants: (
   'primary': (
@@ -110,7 +114,7 @@ $table-variants: (
 }
 
 .table-group-divider {
-  border-top: calc(var(--#{$prefix}table-border-width) * 2) solid $table-group-separator-color;
+  border-top: calc(var(--#{$prefix}table-border-width) * 2) solid $_table-group-separator-color;
 }
 
 //
@@ -169,13 +173,13 @@ $table-variants: (
 
 // For rows
 .table-striped {
-  > tbody > tr:nth-of-type(#{$table-striped-order}) > * {
+  > tbody > tr:nth-of-type(#{$_table-striped-order}) > * {
     --#{$prefix}table-bg: var(--#{$prefix}table-striped-bg, var(--#{$prefix}color-background-muted));
     --#{$prefix}table-color: var(--#{$prefix}table-striped-color);
   }
 
   &.table-dark {
-    > tbody > tr:nth-of-type(#{$table-striped-order}) > * {
+    > tbody > tr:nth-of-type(#{$_table-striped-order}) > * {
       --#{$prefix}table-bg: var(--#{$prefix}color-background-primary-muted);
       --#{$prefix}table-color: var(--#{$prefix}color-text-inverse);
     }
@@ -184,7 +188,7 @@ $table-variants: (
 
 // For columns
 .table-striped-columns {
-  > :not(caption) > tr > :nth-child(#{$table-striped-columns-order}) {
+  > :not(caption) > tr > :nth-child(#{$_table-striped-columns-order}) {
     --#{$prefix}table-bg: var(--#{$prefix}table-striped-bg, var(--#{$prefix}color-background-muted));
     --#{$prefix}table-color: var(--#{$prefix}table-striped-color);
   }

@@ -16,6 +16,9 @@
 // Variables
 //
 
+$_list-group-item-bg-scale: -80%;
+$_list-group-item-color-scale: 40%;
+
 // Properties
 //
 
@@ -208,10 +211,10 @@
 // Organizationally, this must come after the `:hover` states.
 
 @each $state, $value in $theme-colors {
-  $list-group-variant-bg: shift-color($value, $list-group-item-bg-scale);
-  $list-group-variant-color: shift-color($value, $list-group-item-color-scale);
+  $list-group-variant-bg: shift-color($value, $_list-group-item-bg-scale);
+  $list-group-variant-color: shift-color($value, $_list-group-item-color-scale);
   @if (contrast-ratio($list-group-variant-bg, $list-group-variant-color) < $min-contrast-ratio) {
-    $list-group-variant-color: color.mix($value, color-contrast($list-group-variant-bg), math.abs($list-group-item-color-scale));
+    $list-group-variant-color: color.mix($value, color-contrast($list-group-variant-bg), math.abs($_list-group-item-color-scale));
   }
 
   @include list-group-item-variant($state, $list-group-variant-bg, $list-group-variant-color);

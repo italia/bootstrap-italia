@@ -12,6 +12,9 @@
 // Variables
 //
 
+$_section-header-background-color: hsl(210, 100%, 35%); // was $primary-a7
+$_section-user-header-background-color: hsl(210, 92.523364486%, 86.625%); // was $primary-a1
+
 // Properties
 //
 
@@ -85,7 +88,7 @@
       content: '';
       width: 100%;
       height: 300px;
-      background-color: $section-header-background-color;
+      background-color: $_section-header-background-color;
       background-repeat: no-repeat;
       background-position: top center;
     }
@@ -95,7 +98,7 @@
       &::before {
         content: '';
         min-height: 450px;
-        background-color: $section-user-header-background-color;
+        background-color: $_section-user-header-background-color;
       }
 
       .user-settings {

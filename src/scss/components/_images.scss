@@ -14,6 +14,12 @@
 // Variables
 //
 
+$_figure-caption-color: hsl(0, 0%, 32%); // was $gray-600
+$_thumbnail-bg: hsl(0, 0%, 100%); // was $body-bg
+$_thumbnail-border-color: var(--#{$prefix}border-color);
+$_thumbnail-border-width: 1px; // was $border-width
+$_thumbnail-padding: 0.25rem;
+
 // Properties
 //
 
@@ -33,9 +39,9 @@
 
 // Image thumbnails
 .img-thumbnail {
-  padding: $thumbnail-padding;
-  background-color: $thumbnail-bg;
-  border: $thumbnail-border-width solid $thumbnail-border-color;
+  padding: $_thumbnail-padding;
+  background-color: $_thumbnail-bg;
+  border: $_thumbnail-border-width solid $_thumbnail-border-color;
   @include border-radius($thumbnail-border-radius);
   @include box-shadow($thumbnail-box-shadow);
 
@@ -54,7 +60,7 @@
 
 .figure-caption {
   @include font-size($figure-caption-font-size);
-  color: $figure-caption-color;
+  color: $_figure-caption-color;
 }
 
 .figure {
