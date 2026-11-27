@@ -1298,41 +1298,12 @@ $nav-pills-link-active-bg: $component-active-bg !default;
 
 // scss-docs-end navbar-variables
 
-$navigation-bg-color: $white !default;
-$navigation-bg-color-desktop: $primary !default;
-
-$navigation-h-padding: 24px;
-$navigation-v-padding: 13px;
-$navigation-sidebar-bg-color-mobile: rgba(0, 0, 0, 0.6) !default;
-$navigation-close-button-size: 44px !default;
-$navigation-close-button-text-color: $primary !default;
-$navigation-close-button-text-size: 0.75rem;
-$navigation-close-button-icon-size: 2rem;
-$navigation-links-margin-top: 102px;
-$navigation-link-color: $primary !default;
-$navigation-link-color-desk: $white !default;
-$navigation-link-active-bar-size: 3px;
-$navigation-link-active-bar-color: $primary !default;
-$navigation-link-active-bar-color-desk: $white !default;
-$navigation-toggle-button-icon-color: $white !default;
-$navigation-toggle-button-icon-size: 1.5rem;
-$navigation-dropdown-icon-size: 0.75rem;
-$navigation-dropdown-icon-line-height: 1rem;
-$navigation-dropdown-icon-width: 1rem;
-$navigation-disabled-item-opacity: 0.7 !default;
-$navigation-disabled-item-mobile-opacity: 0.6 !default;
-$navigation-hamburger-size: 24px;
-
 // navigation dark theme (mobile)
-$navigation-dark-bg-color: $primary !default; // missing in UI kit
 $navigation-dark-text-color: $white !default; // missing in UI kit
-$navigation-dark-bg-color: $primary-b1 !default; // missing in UI kit
-$navigation-dark-separator-color: $primary-c5 !default; // missing in UI kit
 
 // navigation light theme (desktop)
 $navigation-light-bg-color: $white !default;
 $navigation-light-text-color: $primary !default;
-$navigation-light-separator-color: $neutral-1-a2 !default;
 $navigation-light-megamenu-separator-color: $gray-border !default; // UI kit
 
 // Megamenu
@@ -1394,23 +1365,6 @@ $sidebar-border-color: $gray-border !default;
 $sidebar-dark-bg-color: $neutral-1-a8 !default; // Missing in the new UI kit
 $sidebar-dark-text-color: $white !default;
 $sidebar-dark-separator-color: rgba(229, 229, 229, 0.3) !default; // Missing in the new UI kit
-
-// Navscroll
-$navscroll-bg-color: $white !default;
-$navscroll-toggler-color: $primary !default;
-$navscroll-button-text-weight: 600;
-$navscroll-top-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, 0.05) !default;
-$navscroll-bottom-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, 0.05) !default;
-$navscroll-primary-font-weight: 600;
-$navscroll-font-size: 1rem;
-$navscroll-selection-link-left: $sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color !default;
-$navscroll-secondary-active-color: $color-text-primary-active !default;
-$navscroll-links-padding: 0.55em;
-$navscroll-bg-color-desk: $white !default;
-$navscroll-line-color: $gray-border !default; // UI kit
-$navscroll-backbutton-padding: $v-gap * 2 $v-gap * 3;
-$navscroll-backbutton-weight: 600;
-$navscroll-backbutton-margin-top: $v-gap * 3;
 
 //navscroll dark theme mobile
 $navscroll-dark-bg-color: $neutral-1-a8 !default; // Missing in the new UI kit
